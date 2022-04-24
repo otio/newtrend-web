@@ -19,11 +19,7 @@
     <div class="image">
       <div class="rectangle-3"></div>
       <div class="rectangle-4"></div>
-      <img
-        alt=""
-        class="richard-breuner-1"
-        src="@/assets/css/images/profile.png"
-      />
+      <img alt="" class="richard-breuner-1" src="@/assets/images/profile.png" />
     </div>
   </div>
 </template>
