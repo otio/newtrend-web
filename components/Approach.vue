@@ -1,0 +1,136 @@
+<template>
+  <div class="nt-approach-cta">
+    <div class="content">
+      <div class="text">
+        <p class="header-1">Your circumstances</p>
+        <p class="header-2">The Approach</p>
+        <p class="body">
+          Aging is often tentative and frightful for the aging individual as
+          well as for loved ones, when independence becomes an issue. While
+          living at home is preferred, how and where one will age best is among
+          the most fraught circumstances for a family.
+        </p>
+      </div>
+      <div class="button">
+        <p class="button-text">
+          Discover<br />
+          the Approach
+        </p>
+      </div>
+    </div>
+    <div class="image">
+      <div class="rectangle-8"></div>
+      <div class="rectangle-7"></div>
+      <img
+        alt=""
+        class="photo-1527525443983-6e60c75fff46-1"
+        src="@/assets/css/images/approach-home.png"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style scoped>
+.nt-approach-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  margin-right: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header-1 {
+  height: 43px;
+  width: 375px;
+  color: var(--midnight-blue);
+  display: flex;
+  text-align: center;
+  margin-bottom: 86px;
+  margin-left: 20px;
+  font-family: var(--dm-sans-33-regular-family);
+  font-size: var(--dm-sans-33-regular-size);
+  font-weight: var(--dm-sans-33-regular-weight);
+  line-height: var(--dm-sans-33-regular-line-height);
+}
+.header-2 {
+  height: 43px;
+  width: 375px;
+  color: var(--midnight-blue);
+  display: flex;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-left: 20px;
+  font-family: var(--dm-sans-33-regular-family);
+  font-size: var(--dm-sans-33-regular-size);
+  font-weight: var(--dm-sans-33-regular-weight);
+  line-height: var(--dm-sans-33-regular-line-height);
+}
+.body {
+  height: 244px;
+  width: 471px;
+  color: var(--dim-gray);
+  display: flex;
+  text-align: center;
+  font-family: var(--dm-sans-23-regular-family);
+  font-size: var(--dm-sans-23-regular-size);
+  font-weight: var(--dm-sans-23-regular-weight);
+  line-height: var(--dm-sans-23-regular-line-height);
+}
+.button {
+  background-color: var(--midnight-blue);
+  padding: 9px 5px 8px 6px;
+  box-shadow: 0 2px 1px 0 var(--transparent-white-1);
+  display: flex;
+  align-items: center;
+}
+.button-text {
+  max-width: 344px;
+  color: var(--white);
+  text-align: center;
+  font-family: var(--dm-sans-30-regular-family);
+  font-size: var(--dm-sans-30-regular-size);
+  font-weight: var(--dm-sans-30-regular-weight);
+  line-height: var(--dm-sans-30-regular-line-height);
+}
+.image {
+  padding: 0 0 38px 50px;
+  position: relative;
+}
+.rectangle-8 {
+  width: 368px;
+  height: 445px;
+  background-color: var(--gainsboro-2);
+  position: relative;
+}
+.rectangle-7 {
+  width: 368px;
+  height: 445px;
+  background-color: var(--dark-slate-blue);
+  position: absolute;
+  left: 25px;
+  top: 22px;
+}
+.photo-1527525443983-6e60c75fff46-1 {
+  width: 365px;
+  height: 444px;
+  position: absolute;
+  left: 0;
+  top: 39px;
+}
+</style>

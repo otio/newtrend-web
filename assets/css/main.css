@@ -1,0 +1,236 @@
+/* This is the project stylesheet */
+
+:root {
+  /* Colors */
+  --black: rgba(35, 31, 32, 1);
+  --black-2: rgba(0, 0, 0, 1);
+  --black-primary: rgba(35, 35, 35, 1);
+  --black-secondary: rgba(57, 64, 64, 1);
+  --dark-slate-blue: rgba(66, 104, 141, 1);
+  --dim-gray: rgba(114, 114, 114, 1);
+  --fire-brick: rgba(205, 24, 21, 1);
+  --gainsboro: rgba(229, 229, 229, 1);
+  --gainsboro-2: rgba(217, 225, 232, 1);
+  --grayscale-off-black: rgba(20, 20, 43, 1);
+  --grayscale-off-white: rgba(252, 252, 252, 1);
+  --grey-secondary: rgba(157, 173, 173, 1);
+  --midnight-blue: rgba(0, 51, 102, 1);
+  --midnight-blue-2: rgba(2, 64, 125, 1);
+  --primary-default: rgba(255, 0, 0, 1);
+  --silver: rgba(196, 196, 196, 1);
+  --transparent-black: rgba(0, 0, 0, 0.04);
+  --transparent-black-2: rgba(0, 0, 0, 0.06);
+  --transparent-black-3: rgba(0, 0, 0, 0.25);
+  --transparent-silver: rgba(196, 196, 196, 0.25);
+  --transparent-white: rgba(255, 255, 255, 0);
+  --transparent-white-1: rgba(255, 255, 255, 0.4);
+  --transparent-white-smoke: rgba(239, 240, 246, 0.1);
+  --white: rgba(255, 255, 255, 1);
+  --white-smoke: rgba(241, 241, 241, 1);
+  --white-smoke-1: rgba(250, 243, 243, 1);
+
+  /* Typographies */
+  /* a-bee-zee-15-regular */
+  --a-bee-zee-15-regular-family: "ABeeZee";
+  --a-bee-zee-15-regular-size: 15px;
+  --a-bee-zee-15-regular-weight: 400;
+  --a-bee-zee-15-regular-line-height: normal;
+
+  /* a-bee-zee-36-regular */
+  --a-bee-zee-36-regular-family: "ABeeZee";
+  --a-bee-zee-36-regular-size: 36px;
+  --a-bee-zee-36-regular-weight: 400;
+  --a-bee-zee-36-regular-line-height: normal;
+
+  /* acme-gothic-24-bold */
+  --acme-gothic-24-bold-family: "Acme Gothic";
+  --acme-gothic-24-bold-size: 24px;
+  --acme-gothic-24-bold-weight: 700;
+  --acme-gothic-24-bold-line-height: 32px;
+
+  /* acme-gothic-36-semi-bold */
+  --acme-gothic-36-semi-bold-family: "Acme Gothic";
+  --acme-gothic-36-semi-bold-size: 36px;
+  --acme-gothic-36-semi-bold-weight: 600;
+  --acme-gothic-36-semi-bold-line-height: 40px;
+
+  /* acme-gothic-51-semi-bold */
+  --acme-gothic-51-semi-bold-family: "Acme Gothic";
+  --acme-gothic-51-semi-bold-size: 51px;
+  --acme-gothic-51-semi-bold-weight: 600;
+  --acme-gothic-51-semi-bold-line-height: 40px;
+
+  /* acme-gothic-60-light */
+  --acme-gothic-60-light-family: "Acme Gothic";
+  --acme-gothic-60-light-size: 60px;
+  --acme-gothic-60-light-weight: 300;
+  --acme-gothic-60-light-line-height: 50px;
+
+  /* acme-gothic-64-regular */
+  --acme-gothic-64-regular-family: "Acme Gothic";
+  --acme-gothic-64-regular-size: 64px;
+  --acme-gothic-64-regular-weight: 400;
+  --acme-gothic-64-regular-line-height: 88px;
+
+  /* acme-gothic-85-regular */
+  --acme-gothic-85-regular-family: "Acme Gothic";
+  --acme-gothic-85-regular-size: 85px;
+  --acme-gothic-85-regular-weight: 400;
+  --acme-gothic-85-regular-line-height: 50px;
+
+  /* acme-gothic-96-regular */
+  --acme-gothic-96-regular-family: "Acme Gothic";
+  --acme-gothic-96-regular-size: 96px;
+  --acme-gothic-96-regular-weight: 400;
+  --acme-gothic-96-regular-line-height: 110px;
+
+  /* dm-sans-12-regular */
+  --dm-sans-12-regular-family: "DM Sans";
+  --dm-sans-12-regular-size: 12px;
+  --dm-sans-12-regular-weight: 400;
+  --dm-sans-12-regular-line-height: normal;
+
+  /* dm-sans-14-regular */
+  --dm-sans-14-regular-family: "DM Sans";
+  --dm-sans-14-regular-size: 14px;
+  --dm-sans-14-regular-weight: 400;
+  --dm-sans-14-regular-line-height: normal;
+
+  /* dm-sans-15-regular */
+  --dm-sans-15-regular-family: "DM Sans";
+  --dm-sans-15-regular-size: 15px;
+  --dm-sans-15-regular-weight: 400;
+  --dm-sans-15-regular-line-height: normal;
+
+  /* dm-sans-16-regular */
+  --dm-sans-16-regular-family: "DM Sans";
+  --dm-sans-16-regular-size: 16px;
+  --dm-sans-16-regular-weight: 400;
+  --dm-sans-16-regular-line-height: normal;
+
+  /* dm-sans-18-regular */
+  --dm-sans-18-regular-family: "DM Sans";
+  --dm-sans-18-regular-size: 18px;
+  --dm-sans-18-regular-weight: 400;
+  --dm-sans-18-regular-line-height: 36px;
+
+  /* dm-sans-22-regular */
+  --dm-sans-22-regular-family: "DM Sans";
+  --dm-sans-22-regular-size: 22px;
+  --dm-sans-22-regular-weight: 400;
+  --dm-sans-22-regular-line-height: normal;
+
+  /* dm-sans-23-regular */
+  --dm-sans-23-regular-family: "DM Sans";
+  --dm-sans-23-regular-size: 23px;
+  --dm-sans-23-regular-weight: 400;
+  --dm-sans-23-regular-line-height: normal;
+
+  /* dm-sans-30-regular */
+  --dm-sans-30-regular-family: "DM Sans";
+  --dm-sans-30-regular-size: 30px;
+  --dm-sans-30-regular-weight: 400;
+  --dm-sans-30-regular-line-height: normal;
+
+  /* dm-sans-33-regular */
+  --dm-sans-33-regular-family: "DM Sans";
+  --dm-sans-33-regular-size: 33px;
+  --dm-sans-33-regular-weight: 400;
+  --dm-sans-33-regular-line-height: normal;
+
+  /* dm-serif-text-30-regular */
+  --dm-serif-text-30-regular-family: "DM Serif Text";
+  --dm-serif-text-30-regular-size: 30px;
+  --dm-serif-text-30-regular-weight: 400;
+  --dm-serif-text-30-regular-line-height: normal;
+
+  /* dm-serif-text-33-regular */
+  --dm-serif-text-33-regular-family: "DM Serif Text";
+  --dm-serif-text-33-regular-size: 33px;
+  --dm-serif-text-33-regular-weight: 400;
+  --dm-serif-text-33-regular-line-height: normal;
+
+  /* dm-serif-text-39-regular */
+  --dm-serif-text-39-regular-family: "DM Serif Text";
+  --dm-serif-text-39-regular-size: 39px;
+  --dm-serif-text-39-regular-weight: 400;
+  --dm-serif-text-39-regular-line-height: normal;
+
+  /* dm-serif-text-46-regular */
+  --dm-serif-text-46-regular-family: "DM Serif Text";
+  --dm-serif-text-46-regular-size: 46px;
+  --dm-serif-text-46-regular-weight: 400;
+  --dm-serif-text-46-regular-line-height: normal;
+
+  /* hanuman-24-bold */
+  --hanuman-24-bold-family: "Hanuman";
+  --hanuman-24-bold-size: 24px;
+  --hanuman-24-bold-weight: 700;
+  --hanuman-24-bold-line-height: 32px;
+
+  /* hanuman-30-bold */
+  --hanuman-30-bold-family: "Hanuman";
+  --hanuman-30-bold-size: 30px;
+  --hanuman-30-bold-weight: 700;
+  --hanuman-30-bold-line-height: 56px;
+
+  /* hanuman-48-bold */
+  --hanuman-48-bold-family: "Hanuman";
+  --hanuman-48-bold-size: 48px;
+  --hanuman-48-bold-weight: 700;
+  --hanuman-48-bold-line-height: 32px;
+
+  /* hanuman-55-bold */
+  --hanuman-55-bold-family: "Hanuman";
+  --hanuman-55-bold-size: 55px;
+  --hanuman-55-bold-weight: 700;
+  --hanuman-55-bold-line-height: 32px;
+
+  /* hanuman-60-regular */
+  --hanuman-60-regular-family: "Hanuman";
+  --hanuman-60-regular-size: 60px;
+  --hanuman-60-regular-weight: 400;
+  --hanuman-60-regular-line-height: 50px;
+
+  /* inter-16-regular */
+  --inter-16-regular-family: "Inter";
+  --inter-16-regular-size: 16px;
+  --inter-16-regular-weight: 400;
+  --inter-16-regular-line-height: normal;
+
+  /* inter-16-semibold */
+  --inter-16-semibold-family: "Inter";
+  --inter-16-semibold-size: 16px;
+  --inter-16-semibold-weight: 600;
+  --inter-16-semibold-line-height: normal;
+
+  /* inter-20-regular */
+  --inter-20-regular-family: "Inter";
+  --inter-20-regular-size: 20px;
+  --inter-20-regular-weight: 400;
+  --inter-20-regular-line-height: normal;
+
+  /* inter-24-bold */
+  --inter-24-bold-family: "Inter";
+  --inter-24-bold-size: 24px;
+  --inter-24-bold-weight: 700;
+  --inter-24-bold-line-height: normal;
+
+  /* inter-24-regular */
+  --inter-24-regular-family: "Inter";
+  --inter-24-regular-size: 24px;
+  --inter-24-regular-weight: 400;
+  --inter-24-regular-line-height: normal;
+
+  /* roboto-43-regular */
+  --roboto-43-regular-family: "Roboto";
+  --roboto-43-regular-size: 43px;
+  --roboto-43-regular-weight: 400;
+  --roboto-43-regular-line-height: 67px;
+
+  /* roboto-56-bold */
+  --roboto-56-bold-family: "Roboto";
+  --roboto-56-bold-size: 56px;
+  --roboto-56-bold-weight: 700;
+  --roboto-56-bold-line-height: 72px;
+}

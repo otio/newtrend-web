@@ -1,0 +1,195 @@
+<template>
+  <div class="nt-footer">
+    <div class="inner-footer">
+      <div class="logo">
+        <p class="adult">ADULT BEHAVIOR ANALYSIS</p>
+        <p class="new-trend">NEW TREND</p>
+      </div>
+      <div class="nav-links">
+        <p class="home">Home</p>
+        <p class="the-approach">The Approach</p>
+        <p class="tailored-assessment">Tailored Assessment</p>
+        <p class="about">About</p>
+        <p class="contact">Contact</p>
+      </div>
+      <div class="nav-links">
+        <p class="richard-w-breuner-ma-bcba">Richard W. Breuner, MA, BCBA</p>
+        <p class="new-trend-applied-behavior-analysis">
+          New Trend Applied Behavior Analysis
+        </p>
+        <p class="num-530-414-1388">530-414-1388</p>
+        <p class="rbreuner-com">rbreuner&#64;newtrendaba.com</p>
+      </div>
+      <div class="cta-button">
+        <p class="schedule-a-free-informal-assessment">
+          Schedule a free Informal Assessment
+        </p>
+      </div>
+    </div>
+    <p class="all-rights-reserved-newtrendaba-com">
+      All Rights Reserved | Newtrendaba.com
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style scoped>
+.nt-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-footer {
+  display: flex;
+  align-items: center;
+  width: 1148px;
+}
+.logo {
+  margin-right: 50px;
+  padding: 0 0 10px;
+  position: relative;
+}
+.adult {
+  width: 304px;
+  color: var(--midnight-blue);
+  text-align: center;
+  position: absolute;
+  left: calc(50% - 304px / 2);
+  top: calc(50% - 18px / 2);
+  font-family: var(--a-bee-zee-15-regular-family);
+  font-size: var(--a-bee-zee-15-regular-size);
+  font-weight: var(--a-bee-zee-15-regular-weight);
+  line-height: var(--a-bee-zee-15-regular-line-height);
+}
+.new-trend {
+  width: 304px;
+  color: var(--midnight-blue);
+  position: relative;
+  font-family: var(--a-bee-zee-36-regular-family);
+  font-size: var(--a-bee-zee-36-regular-size);
+  font-weight: var(--a-bee-zee-36-regular-weight);
+  line-height: var(--a-bee-zee-36-regular-line-height);
+}
+.nav-links {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home {
+  width: 46px;
+  color: var(--midnight-blue);
+  margin-bottom: 16px;
+  letter-spacing: 0.48px;
+  font-family: var(--dm-sans-16-regular-family);
+  font-size: var(--dm-sans-16-regular-size);
+  font-weight: var(--dm-sans-16-regular-weight);
+  line-height: var(--dm-sans-16-regular-line-height);
+}
+.the-approach {
+  width: 124px;
+  color: var(--midnight-blue);
+  margin-bottom: 16px;
+  letter-spacing: 0.42px;
+  font-family: var(--dm-sans-16-regular-family);
+  font-size: var(--dm-sans-16-regular-size);
+  font-weight: var(--dm-sans-16-regular-weight);
+  line-height: var(--dm-sans-16-regular-line-height);
+}
+.tailored-assessment {
+  width: 175px;
+  color: var(--midnight-blue-2);
+  margin-bottom: 16px;
+  letter-spacing: 0.42px;
+  font-family: var(--dm-sans-16-regular-family);
+  font-size: var(--dm-sans-16-regular-size);
+  font-weight: var(--dm-sans-16-regular-weight);
+  line-height: var(--dm-sans-16-regular-line-height);
+}
+.about {
+  width: 50px;
+  color: var(--midnight-blue);
+  margin-bottom: 16px;
+  letter-spacing: 0.48px;
+  font-family: var(--dm-sans-16-regular-family);
+  font-size: var(--dm-sans-16-regular-size);
+  font-weight: var(--dm-sans-16-regular-weight);
+  line-height: var(--dm-sans-16-regular-line-height);
+}
+.contact {
+  width: 63px;
+  color: var(--midnight-blue);
+  letter-spacing: 0.48px;
+  font-family: var(--dm-sans-16-regular-family);
+  font-size: var(--dm-sans-16-regular-size);
+  font-weight: var(--dm-sans-16-regular-weight);
+  line-height: var(--dm-sans-16-regular-line-height);
+}
+.richard-w-breuner-ma-bcba {
+  width: 205px;
+  color: var(--midnight-blue);
+  margin-bottom: 17px;
+  font-family: var(--dm-sans-15-regular-family);
+  font-size: var(--dm-sans-15-regular-size);
+  font-weight: var(--dm-sans-15-regular-weight);
+  line-height: var(--dm-sans-15-regular-line-height);
+}
+.new-trend-applied-behavior-analysis {
+  width: 255px;
+  color: var(--midnight-blue);
+  margin-bottom: 17px;
+  font-family: var(--dm-sans-15-regular-family);
+  font-size: var(--dm-sans-15-regular-size);
+  font-weight: var(--dm-sans-15-regular-weight);
+  line-height: var(--dm-sans-15-regular-line-height);
+}
+.num-530-414-1388 {
+  width: 98px;
+  color: var(--midnight-blue);
+  margin-bottom: 17px;
+  font-family: var(--dm-sans-14-regular-family);
+  font-size: var(--dm-sans-14-regular-size);
+  font-weight: var(--dm-sans-14-regular-weight);
+  line-height: var(--dm-sans-14-regular-line-height);
+}
+.rbreuner-com {
+  width: 200px;
+  color: var(--midnight-blue);
+  font-family: var(--dm-sans-14-regular-family);
+  font-size: var(--dm-sans-14-regular-size);
+  font-weight: var(--dm-sans-14-regular-weight);
+  line-height: var(--dm-sans-14-regular-line-height);
+}
+.cta-button {
+  background-color: var(--midnight-blue);
+  padding: 24px 4px 26px;
+  display: flex;
+  align-items: center;
+}
+.schedule-a-free-informal-assessment {
+  width: 256px;
+  color: var(--white);
+  text-align: center;
+  font-family: var(--dm-sans-14-regular-family);
+  font-size: var(--dm-sans-14-regular-size);
+  font-weight: var(--dm-sans-14-regular-weight);
+  line-height: var(--dm-sans-14-regular-line-height);
+}
+.all-rights-reserved-newtrendaba-com {
+  color: var(--midnight-blue);
+  align-self: stretch;
+  display: flex;
+  font-family: var(--dm-sans-12-regular-family);
+  font-size: var(--dm-sans-12-regular-size);
+  font-weight: var(--dm-sans-12-regular-weight);
+  line-height: var(--dm-sans-12-regular-line-height);
+}
+</style>
