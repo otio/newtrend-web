@@ -24,7 +24,7 @@
       <img
         alt=""
         class="photo-1527525443983-6e60c75fff46-1"
-        src="@/assets/css/images/approach-home.png"
+        src="@/assets/images/approach-home.png"
       />
     </div>
   </div>

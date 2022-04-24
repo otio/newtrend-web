@@ -8,7 +8,7 @@
         <img
           alt=""
           class="checkmark-2-1"
-          src="@/assets/css/images/check-mark.svg"
+          src="@/assets/images/check-mark.svg"
         />
         <p class="text-1">Get support from a qualified Behavioral Analyst</p>
       </div>
@@ -16,7 +16,7 @@
         <img
           alt=""
           class="checkmark-2-1-two"
-          src="@/assets/css/images/check-mark.svg"
+          src="@/assets/images/check-mark.svg"
         />
         <p class="text-2">Scientific and proven methods</p>
       </div>
@@ -24,7 +24,7 @@
         <img
           alt=""
           class="checkmark-2-1-three"
-          src="@/assets/css/images/check-mark.svg"
+          src="@/assets/images/check-mark.svg"
         />
         <p class="text-3">Witness change and improvement</p>
       </div>
@@ -32,7 +32,7 @@
         <img
           alt=""
           class="checkmark-2-1-two"
-          src="@/assets/css/images/check-mark.svg"
+          src="@/assets/images/check-mark.svg"
         />
         <p class="text-4">Find peace again</p>
       </div>
@@ -40,7 +40,7 @@
         <img
           alt=""
           class="checkmark-2-1-two"
-          src="@/assets/css/images/check-mark.svg"
+          src="@/assets/images/check-mark.svg"
         />
         <p class="text-5">Track your growth with personal reports</p>
       </div>

@@ -11,11 +11,7 @@
         </div>
       </div>
     </div>
-    <img
-      alt=""
-      class="hero-graphic"
-      src="@/assets/css/images/hero-cutout.svg"
-    />
+    <img alt="" class="hero-graphic" src="@/assets/images/hero-cutout.svg" />
   </div>
 </template>
 

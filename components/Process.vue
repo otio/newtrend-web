@@ -6,7 +6,7 @@
       <img
         alt=""
         class="photo-1535231540604-72e8fbaf8cdb-1"
-        src="@/assets/css/images/process-home.png"
+        src="@/assets/images/process-home.png"
       />
     </div>
     <div class="content">
