@@ -1,0 +1,90 @@
+<template>
+  <div class="full-width-hero">
+    <div class="hero-content">
+      <p class="page-title">The Approach</p>
+    </div>
+    <div class="groups-served">
+      <div class="group-box">
+        <p class="adults">Adults</p>
+      </div>
+      <div class="group-box">
+        <p class="adults">Elders</p>
+      </div>
+      <div class="group-box-two">
+        <p class="caretakers">Caretakers</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style scoped>
+.full-width-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-content {
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("~/assets/images/plant-bg.png");
+  margin-bottom: 15px;
+  padding: 103px 210px;
+  display: flex;
+  align-items: center;
+}
+.page-title {
+  width: 800px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-serif-text-64-regular-family);
+  font-size: var(--dm-serif-text-64-regular-size);
+  font-weight: var(--dm-serif-text-64-regular-weight);
+  line-height: var(--dm-serif-text-64-regular-line-height);
+}
+.groups-served {
+  display: flex;
+  align-items: flex-start;
+}
+.group-box {
+  background-color: var(--white);
+  padding: 18px 145px 10px 128px;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid var(--midnight-blue-2);
+}
+.adults {
+  width: 105px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-sans-33-regular-family);
+  font-size: var(--dm-sans-33-regular-size);
+  font-weight: var(--dm-sans-33-regular-weight);
+  line-height: var(--dm-sans-33-regular-line-height);
+}
+.group-box-two {
+  background-color: var(--white);
+  padding: 18px 99px 10px;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid var(--midnight-blue-2);
+}
+.caretakers {
+  height: 43px;
+  width: 180px;
+  color: var(--midnight-blue);
+  display: flex;
+  text-align: center;
+  font-family: var(--dm-sans-33-regular-family);
+  font-size: var(--dm-sans-33-regular-size);
+  font-weight: var(--dm-sans-33-regular-weight);
+  line-height: var(--dm-sans-33-regular-line-height);
+}
+</style>

@@ -6,10 +6,15 @@
         <p class="new-trend">NEW TREND</p>
       </div>
       <div class="nav-links">
-        <p class="the-approach">The Approach</p>
-        <p class="the-process">The Process</p>
-        <p class="about">About</p>
-        <p class="contact">Contact</p>
+        <NuxtLink to="/approach" class="the-approach">The Approach</NuxtLink>
+        <NuxtLink to="/assessment" class="assessment"
+          >Tailored Assessment</NuxtLink
+        >
+        <NuxtLink to="/about" class="about">About</NuxtLink>
+        <NuxtLink to="/contact" class="contact">Contact</NuxtLink>
+      </div>
+      <div class="cta-button">
+        <p class="btn-txt">Schedule a free Informal Assessment</p>
       </div>
     </div>
   </div>
@@ -78,7 +83,7 @@ export default {
   font-weight: var(--dm-sans-14-regular-weight);
   line-height: var(--dm-sans-14-regular-line-height);
 }
-.the-process {
+.assessment {
   width: 83px;
   color: var(--midnight-blue-2);
   margin-right: 74px;
@@ -102,6 +107,21 @@ export default {
   width: 56px;
   color: var(--midnight-blue);
   letter-spacing: 0.42px;
+  font-family: var(--dm-sans-14-regular-family);
+  font-size: var(--dm-sans-14-regular-size);
+  font-weight: var(--dm-sans-14-regular-weight);
+  line-height: var(--dm-sans-14-regular-line-height);
+}
+.cta-button {
+  background-color: var(--midnight-blue);
+  padding: 24px 13.18px 26px 12.17px;
+  display: flex;
+  align-items: center;
+}
+.btn-txt {
+  width: 259.61px;
+  color: var(--white);
+  text-align: center;
   font-family: var(--dm-sans-14-regular-family);
   font-size: var(--dm-sans-14-regular-size);
   font-weight: var(--dm-sans-14-regular-weight);

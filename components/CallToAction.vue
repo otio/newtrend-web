@@ -1,5 +1,5 @@
 <template>
-  <div class="nt-cta">
+  <section class="nt-cta">
     <img alt="" class="cta-bg-img" src="@/assets/images/cta-bg.png" />
     <div class="cta-card"></div>
     <div class="content">
@@ -12,7 +12,7 @@
         <p class="btn-txt">Schedule a free Informal Assessment</p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -138,6 +138,12 @@
   --dm-sans-33-regular-weight: 400;
   --dm-sans-33-regular-line-height: normal;
 
+  /* dm-serif-text-29-regular */
+  --dm-serif-text-29-regular-family: "DM Serif Text";
+  --dm-serif-text-29-regular-size: 29px;
+  --dm-serif-text-29-regular-weight: 400;
+  --dm-serif-text-29-regular-line-height: normal;
+
   /* dm-serif-text-30-regular */
   --dm-serif-text-30-regular-family: "DM Serif Text";
   --dm-serif-text-30-regular-size: 30px;
@@ -161,6 +167,18 @@
   --dm-serif-text-46-regular-size: 46px;
   --dm-serif-text-46-regular-weight: 400;
   --dm-serif-text-46-regular-line-height: normal;
+
+  /* dm-serif-text-60-regular */
+  --dm-serif-text-60-regular-family: "DM Serif Text";
+  --dm-serif-text-60-regular-size: 60px;
+  --dm-serif-text-60-regular-weight: 400;
+  --dm-serif-text-60-regular-line-height: normal;
+
+  /* dm-serif-text-64-regular */
+  --dm-serif-text-64-regular-family: "DM Serif Text";
+  --dm-serif-text-64-regular-size: 64px;
+  --dm-serif-text-64-regular-weight: 400;
+  --dm-serif-text-64-regular-line-height: normal;
 
   /* hanuman-24-bold */
   --hanuman-24-bold-family: "Hanuman";
