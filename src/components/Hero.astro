@@ -1,18 +1,22 @@
+---
+import CtaButton from "./CtaButton.astro";
+---
 
-<div class="nt-hero">
-  <div class="flex-wrapper-one">
-    <div class="content">
-      <div class="hero-text">
-        <p class="hero-header">Behavior Analysis and Therapy</p>
-        <p class="hero-chaser">for Adults, Elders and Their Caretakers</p>
+
+<section id="nt-hero" class="w-full flex flex-row items-center">
+  <div id="flex-wrapper-one" class="w-1/2">
+    <div id="content" class="flex flex-col items-center">
+      <div id="hero-text" class="flex flex-col mb-36 text-midnight-blue font-dserif">
+        <p id="hero-header" class="w-3/5 h-2/3 text-6xl mb-4">Behavior Analysis and Therapy</p>
+        <p id="hero-chaser" class="h-1/3 text-4xl">for Adults, Elders and Their Caretakers</p>
       </div>
-      <div class="cta-btn">
-        <p class="schedule-a-free-assessment">Schedule a Free Assessment</p>
-      </div>
+      <CtaButton>Schedule a Free Assessment</CtaButton>
     </div>
   </div>
-  <img alt="" class="hero-graphic" src="/images/hero-cutout.svg" />
-</div>
+  <div class="w-1/2 self-start">
+    <img class="w-full" id="hero-graphic" src="/images/hero-cutout.svg" />
+  </div>
+</section>
 
 <style>
 .nt-hero {

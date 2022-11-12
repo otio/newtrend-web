@@ -1,17 +1,33 @@
-<nav id="nav-links" class="font-dsans">
-    <ul class="list-none flex flex-row">
-      <li><a href="/approach" id="the-approach">The Approach</a></li>
-      <li><a href="/assessment" id="assessment">Tailored Assessment</a></li>
-      <li><a href="/about" id="about">About</a></li>
-      <li><a href="/contact" id="contact">Contact</a></li>
+---
+const navLinks = [
+    {
+        route: '/approach',
+        label: 'The Approach'
+    },
+    {
+        route: '/assessment',
+        label: 'Tailored Assessment'
+    },
+    {
+        route: '/about',
+        label: 'About'
+    },
+    {
+        route: '/contact',
+        label: 'Contact'
+    },
+]
+---
+<nav id="nav-links" class="font-dsans w-full">
+    <ul class="list-none flex flex-row justify-center">
+        {navLinks.map((link) => (
+            <li class="w-full px-2 text-center">
+                <a class="w-full text-midnight-blue text-2xl no-underline" href={link.route}>{link.label}</a>
+            </li>
+        ))}
     </ul>
 </nav>
 
 <style>
-ul > li {
-    @apply mx-4;
-}
-a {
-    @apply no-underline;
-}
+
 </style>
