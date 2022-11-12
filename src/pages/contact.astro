@@ -1,0 +1,449 @@
+---
+  import Base from '../layouts/Base.astro'
+---
+<Base name="base">
+  <div><h1>Change starts with a single step forward</h1></div>
+  <!-- FORM -->
+  <div class="contact-form">
+    <div class="form-box">
+      <div class="form-fields">
+        <h2 class="heading">Let&#039;s Connect</h2>
+        <div class="name-fields">
+          <div class="first-name-wrapper">
+            <input class="first-name" placeholder="First name" />
+            <div class="rectangle"></div>
+          </div>
+          <div class="first-name-wrapper">
+            <input class="last-name" placeholder="Last name" />
+            <div class="rectangle-two"></div>
+          </div>
+        </div>
+        <div class="email-wrapper">
+          <input class="email" placeholder="Email" />
+          <div class="rectangle-three"></div>
+        </div>
+        <div class="email-wrapper">
+          <input class="phone" placeholder="Phone number" />
+          <div class="rectangle-four"></div>
+        </div>
+        <div class="email-wrapper">
+          <textarea
+            class="leave-message"
+            placeholder="Leave a message"
+          ></textarea>
+          <div class="rectangle-five"></div>
+          <div class="rectangle-six"></div>
+        </div>
+        <button class="form-submit">
+          <p class="btn-text">Send</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- CONTACT INFO & SESSION OPTIONS -->
+  <div class="info">
+    <div class="contact-info-two">
+      <div class="contact-heading">
+        <p class="contact">Contact</p>
+        <p class="information">Information</p>
+      </div>
+      <div class="contact-info">
+        <p class="richard-w-breuner">Richard W. Breuner</p>
+        <p class="num-530-414-1388">(530)-414-1388</p>
+        <p class="rbreuner-com">rbreuner&#64;newtrendaba.com</p>
+      </div>
+    </div>
+    <div class="session-options">
+      <p class="options-heading">Session Options Including:</p>
+      <div class="options-tiles">
+        <div class="phone-option">
+          <div class="phone-icon">
+            <img alt="" class="vector" src="~/assets/images/phone-icon.svg" />
+          </div>
+          <p class="over-the-telephone">Over the telephone</p>
+        </div>
+        <div class="video-option">
+          <div class="frame">
+            <img
+              alt=""
+              class="vector-two"
+              src="~/assets/images/computer-icon.svg"
+            />
+          </div>
+          <p class="video-conference">Video conference</p>
+        </div>
+        <div class="house-option">
+          <div class="house-icon">
+            <img
+              alt=""
+              class="vector-two"
+              src="~/assets/images/house-icon.svg"
+            />
+          </div>
+          <p class="at-your-home">At your home</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+/* FORM CSS */
+.contact-form {
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("https://static.overlay-tech.com/assets/f4a47fe9-3f55-49de-ad4a-f1197648457f.png");
+  padding: 15px 71px 9px 586px;
+  display: flex;
+  align-items: flex-start;
+}
+.form-box {
+  background-color: var(--white);
+  padding: 42px 59px 78px 58px;
+  box-shadow: 0 3px 11px 0 var(--transparent-dark-gray);
+  display: flex;
+  align-items: flex-start;
+}
+.form-fields {
+  padding: 0 0 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  align-self: stretch;
+  position: relative;
+}
+.heading {
+  width: 235px;
+  color: var(--midnight-blue);
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: var(--dm-sans-35-regular-family);
+  font-size: var(--dm-sans-35-regular-size);
+  font-weight: var(--dm-sans-35-regular-weight);
+  line-height: var(--dm-sans-35-regular-line-height);
+}
+.name-fields {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.first-name-wrapper {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.first-name-wrapper:not(:last-of-type) {
+  margin-right: 30px;
+}
+.first-name {
+  flex: 1;
+  align-self: stretch;
+  padding: 0 171px 0 0;
+  position: relative;
+  color: var(--midnight-blue);
+  font-family: var(--dm-sans-15-regular-family);
+  font-size: var(--dm-sans-15-regular-size);
+  font-weight: var(--dm-sans-15-regular-weight);
+  line-height: var(--dm-sans-15-regular-line-height);
+}
+.rectangle {
+  width: 156px;
+  height: 1px;
+  background-color: var(--light-grey);
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+}
+.last-name {
+  flex: 1;
+  align-self: stretch;
+  padding: 0 119.54px 0 0;
+  position: relative;
+  color: var(--midnight-blue);
+  font-family: var(--dm-sans-15-regular-family);
+  font-size: var(--dm-sans-15-regular-size);
+  font-weight: var(--dm-sans-15-regular-weight);
+  line-height: var(--dm-sans-15-regular-line-height);
+}
+.rectangle-two {
+  width: 115.83px;
+  height: 1px;
+  background-color: var(--light-grey);
+  position: absolute;
+  left: 57.17px;
+  bottom: 1px;
+}
+.email-wrapper {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.email-wrapper:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.email {
+  flex: 1;
+  align-self: stretch;
+  padding: 0 411.74px 0 0;
+  position: relative;
+  color: var(--midnight-blue);
+  font-family: var(--dm-sans-15-regular-family);
+  font-size: var(--dm-sans-15-regular-size);
+  font-weight: var(--dm-sans-15-regular-weight);
+  line-height: var(--dm-sans-15-regular-line-height);
+}
+.rectangle-three {
+  width: 342.16px;
+  height: 1px;
+  background-color: var(--light-grey);
+  position: absolute;
+  right: 0;
+  top: 17px;
+}
+.phone {
+  flex: 1;
+  align-self: stretch;
+  padding: 0 350.74px 0 0;
+  position: relative;
+  color: var(--midnight-blue);
+  font-family: var(--dm-sans-14-regular-family);
+  font-size: var(--dm-sans-14-regular-size);
+  font-weight: var(--dm-sans-14-regular-weight);
+  line-height: var(--dm-sans-14-regular-line-height);
+}
+.rectangle-four {
+  width: 342.16px;
+  height: 1px;
+  background-color: var(--light-grey);
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+.leave-message {
+  flex: 1;
+  align-self: stretch;
+  padding: 0 335.19px 75.68px 0;
+  resize: none;
+  position: relative;
+  color: var(--midnight-blue);
+  font-family: var(--dm-sans-15-regular-family);
+  font-size: var(--dm-sans-15-regular-size);
+  font-weight: var(--dm-sans-15-regular-weight);
+  line-height: var(--dm-sans-15-regular-line-height);
+}
+.rectangle-five {
+  width: 444.16px;
+  height: 1.07px;
+  background-color: var(--light-grey);
+  position: absolute;
+  right: 0;
+  top: 57.56px;
+}
+.rectangle-six {
+  width: 444.16px;
+  height: 1.07px;
+  background-color: var(--light-grey);
+  position: absolute;
+  left: 0;
+  top: 95.93px;
+}
+.form-submit {
+  background-color: var(--midnight-blue);
+  padding: 16px 7px 17px 0;
+  box-shadow: 0 2px 1px 0 var(--transparent-white-1);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+  cursor: pointer;
+}
+.btn-text {
+  width: 162px;
+  color: var(--white);
+  text-align: center;
+  font-family: var(--dm-sans-14-regular-family);
+  font-size: var(--dm-sans-14-regular-size);
+  font-weight: var(--dm-sans-14-regular-weight);
+  line-height: var(--dm-sans-14-regular-line-height);
+}
+/* OPTIONS CSS */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-info-two {
+  width: 23.39%;
+  height: 37.86%;
+  margin-bottom: 93px;
+  margin-left: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-heading {
+  margin-bottom: 9px;
+  padding: 54px 0 0;
+  position: relative;
+}
+.contact {
+  width: 146px;
+  color: var(--midnight-blue);
+  text-align: center;
+  position: absolute;
+  left: 33px;
+  top: 0;
+  font-family: var(--dm-serif-text-40-regular-family);
+  font-size: var(--dm-serif-text-40-regular-size);
+  font-weight: var(--dm-serif-text-40-regular-weight);
+  line-height: var(--dm-serif-text-40-regular-line-height);
+}
+.information {
+  width: 212px;
+  color: var(--midnight-blue);
+  text-align: center;
+  position: relative;
+  font-family: var(--dm-serif-text-40-regular-family);
+  font-size: var(--dm-serif-text-40-regular-size);
+  font-weight: var(--dm-serif-text-40-regular-weight);
+  line-height: var(--dm-serif-text-40-regular-line-height);
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.richard-w-breuner {
+  width: 157px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-sans-18-regular-family);
+  font-size: var(--dm-sans-18-regular-size);
+  font-weight: var(--dm-sans-18-regular-weight);
+  line-height: var(--dm-sans-18-regular-line-height);
+}
+.num-530-414-1388 {
+  width: 130px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-sans-17-regular-family);
+  font-size: var(--dm-sans-17-regular-size);
+  font-weight: var(--dm-sans-17-regular-weight);
+  line-height: var(--dm-sans-17-regular-line-height);
+}
+.rbreuner-com {
+  width: 254px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-sans-18-regular-family);
+  font-size: var(--dm-sans-18-regular-size);
+  font-weight: var(--dm-sans-18-regular-weight);
+  line-height: var(--dm-sans-18-regular-line-height);
+}
+.session-options {
+  height: 46.57%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+.options-heading {
+  width: 462px;
+  color: var(--midnight-blue);
+  text-align: center;
+  margin-bottom: 63px;
+  font-family: var(--dm-serif-text-39-regular-family);
+  font-size: var(--dm-serif-text-39-regular-size);
+  font-weight: var(--dm-serif-text-39-regular-weight);
+  line-height: var(--dm-serif-text-39-regular-line-height);
+}
+.options-tiles {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 1086px;
+}
+.phone-option {
+  background-color: var(--white);
+  padding: 10px 65px 30px 66px;
+  box-shadow: 0 3px 11px 0 var(--transparent-dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.phone-icon {
+  margin-bottom: 12px;
+  padding: 5.79px 0 11.57px;
+  display: flex;
+  align-items: flex-start;
+}
+.vector {
+  height: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+.over-the-telephone {
+  width: 187px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-sans-20-regular-family);
+  font-size: var(--dm-sans-20-regular-size);
+  font-weight: var(--dm-sans-20-regular-weight);
+  line-height: var(--dm-sans-20-regular-line-height);
+}
+.video-option {
+  background-color: var(--white);
+  padding: 10px 73px 30px;
+  box-shadow: 0 3px 11px 0 var(--transparent-dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.frame {
+  margin-bottom: 16px;
+  padding: 11.29px 0 11.28px;
+  display: flex;
+  align-items: center;
+}
+.vector-two {
+  flex: 1;
+  align-self: stretch;
+  object-fit: cover;
+}
+.video-conference {
+  width: 172px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-sans-20-regular-family);
+  font-size: var(--dm-sans-20-regular-size);
+  font-weight: var(--dm-sans-20-regular-weight);
+  line-height: var(--dm-sans-20-regular-line-height);
+}
+.house-option {
+  background-color: var(--white);
+  padding: 10px 55px 30px 94px;
+  box-shadow: 0 3px 11px 0 var(--transparent-dark-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.house-icon {
+  margin-bottom: 12px;
+  margin-left: 21px;
+  padding: 11.86px 1.36px 12px 1.35px;
+  display: flex;
+  align-items: center;
+}
+.at-your-home {
+  width: 169px;
+  color: var(--midnight-blue);
+  text-align: center;
+  font-family: var(--dm-sans-20-regular-family);
+  font-size: var(--dm-sans-20-regular-size);
+  font-weight: var(--dm-sans-20-regular-weight);
+  line-height: var(--dm-sans-20-regular-line-height);
+}
+</style>

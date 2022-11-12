@@ -1,13 +1,29 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.1",
-    "nuxt-windicss": "^2.3.1"
+    "color": "^4.2.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.7.0",
+    "vite-plugin-windicss": "^1.8.8",
+    "windicss": "^3.5.6"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^2.1.2",
+    "@fontsource/abeezee": "^4.5.10",
+    "@fontsource/acme": "^4.5.9",
+    "@fontsource/dm-sans": "^4.5.9",
+    "@fontsource/dm-serif-text": "^4.5.9",
+    "@fontsource/hanuman": "^4.5.11",
+    "@fontsource/inter": "^4.5.14",
+    "@fontsource/roboto": "^4.5.8",
+    "astro": "^1.6.7",
+    "tailwindcss": "^3.0.24"
   }
 }
