@@ -1,34 +1,23 @@
-<div class="nt-footer">
-  <div class="inner-footer">
-    <div class="logo">
-      <p class="adult">ADULT BEHAVIOR ANALYSIS</p>
-      <p class="new-trend">NEW TREND</p>
-    </div>
-    <div class="nav-links">
-      <p class="home">Home</p>
-      <p class="the-approach">The Approach</p>
-      <p class="tailored-assessment">Tailored Assessment</p>
-      <p class="about">About</p>
-      <p class="contact">Contact</p>
-    </div>
-    <div class="nav-links">
-      <p class="richard-w-breuner-ma-bcba">Richard W. Breuner, MA, BCBA</p>
-      <p class="new-trend-applied-behavior-analysis">
-        New Trend Applied Behavior Analysis
-      </p>
-      <p class="num-530-414-1388">530-414-1388</p>
-      <p class="rbreuner-com">rbreuner&#64;newtrendaba.com</p>
-    </div>
-    <div class="cta-button">
-      <p class="schedule-a-free-informal-assessment">
-        Schedule a free Informal Assessment
-      </p>
+---
+import Logo from './Logo.astro'
+import Nav from './Nav.astro'
+import ContactCard from './ContactCard.astro'
+import CtaButton from './CtaButton.astro'
+const year = new Date().getFullYear()
+---
+<footer id="nt-footer" class="relative w-full h-2/3 flex flex-col justify-center items-center bg-white shadow-xl">
+  <div id="inner-footer" class="w-4/5 inline-grid grid-cols-4 mb-3rem">
+    <Logo/>
+    <Nav vertical />
+    <ContactCard />
+    <div>
+      <CtaButton>Schedule a Free Assessment</CtaButton>
     </div>
   </div>
-  <p class="all-rights-reserved-newtrendaba-com">
-    All Rights Reserved | Newtrendaba.com
-  </p>
-</div>
+  <div >
+    <span class="text-lg">All Rights Reserved | Newtrendaba.com | {year}</span>
+  </div>
+</footer>
 
 <style>
 .nt-footer {

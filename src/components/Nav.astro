@@ -17,12 +17,16 @@ const navLinks = [
         label: 'Contact'
     },
 ]
+const { vertical = false } = Astro.props
+const layout = () => !vertical ? 'flex flex-row' : 'flex flex-col'
+const alignment = () => !vertical ? 'text-center' : 'py-2'
+const fontSize = () => !vertical ? 'text-2xl' : 'text-xl'
 ---
 <nav id="nav-links" class="font-dsans w-full">
-    <ul class="list-none flex flex-row justify-center">
+    <ul class:list={['list-none', layout(), 'justify-evenly']}>
         {navLinks.map((link) => (
-            <li class="w-full px-2 text-center">
-                <a class="w-full text-midnight-blue text-2xl no-underline" href={link.route}>{link.label}</a>
+            <li class:list={['w-full', 'px-2', alignment()]}>
+                <a class:list={['text-midnight-blue', 'no-underline', fontSize()]} href={link.route}>{link.label}</a>
             </li>
         ))}
     </ul>

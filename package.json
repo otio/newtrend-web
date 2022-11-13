@@ -11,11 +11,13 @@
     "color": "^4.2.3",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.7.0",
+    "sharp": "^0.31.2",
     "vite-plugin-windicss": "^1.8.8",
     "windicss": "^3.5.6"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.1.2",
+    "@astrojs/image": "^0.11.4",
     "@astrojs/tailwind": "^2.1.2",
     "@fontsource/abeezee": "^4.5.10",
     "@fontsource/acme": "^4.5.9",

@@ -13,8 +13,8 @@ const COLORS = () => ({
     'dark-slate-blue': Color.rgb(66, 104, 141).hex(),
     'dim-gray': Color.rgb(114, 114, 114).hex(),
     'fire-brick': Color.rgb(205, 24, 21).hex(),
-    'gainsboro': Color.rgb(229, 229, 229).hex(),
-    'gainsboro-2': Color.rgb(217, 225, 232).hex(),
+    // 'gainsboro': Color.rgb(229, 229, 229).hex(),
+    'gainsboro': Color.rgb(217, 225, 232).hex(),
     'grayscale-off-black': Color.rgb(20, 20, 43).hex(),
     'grayscale-off-white': Color.rgb(252, 252, 252).hex(),
     'grey-secondary': Color.rgb(157, 173, 173).hex(),
@@ -31,10 +31,29 @@ const COLORS = () => ({
     'white-smoke-1': Color.rgb(250, 243, 243).hex(),
 })
 
+const SCREENS = () => ({
+	xs: { max: '530px' },
+	sm: { max: '640px', min: '531px' },
+	md: { max: '768px', min: '641px' },
+	lg: { max: '1024px', min: '769px' },
+	xl: { max: '1280px', min: '1025px' },
+	'2xl': { max: '1536px', min: '1281px' },
+	hd: { max: '1920px', min: '1537px' },
+	'2k': { max: '2048px', min: '1921px' },
+	'4k': { max: '3840px', min: '2049px' },
+})
+
 export default defineConfig({
 	preflight: true,
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	alias: {
+		'hstack': 'flex flex-row',
+		'vstack': 'flex flex-col',
+	},
 	theme: {
+		screens: {
+			...SCREENS()
+		},
 		extend: {
 			fontFamily: {
 				'abz': ['ABeeZee', 'sans-serif'],

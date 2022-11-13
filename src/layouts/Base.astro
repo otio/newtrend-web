@@ -6,9 +6,9 @@ import "@fontsource/dm-serif-text"
 import "@fontsource/hanuman"
 import "@fontsource/inter"
 import "@fontsource/roboto"
-import '../styles/base.css';
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
+import '../styles/base.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -20,7 +20,7 @@ let title = 'New Trend Adult Behavior Analysis'
     <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+  <body class="">
     <Header />
     <main class="pt-48">
       <slot /> <!-- your content is injected here -->
@@ -29,6 +29,11 @@ let title = 'New Trend Adult Behavior Analysis'
   </body>
 </html>
 
-<style>
-  
+<style is:global>
+.h2 {
+  @apply font-dsans text-5xl text-midnight-blue;
+}
+.body-text {
+  @apply font-inter text-dim-gray text-3xl;
+}
 </style>

@@ -1,126 +1,21 @@
-<section id="nt-approach-cta">
-  <div id="content">
-    <div id="text">
-      <p id="header-1">Your circumstances</p>
-      <p id="header-2">The Approach</p>
-      <p id="body">
-        Aging is often tentative and frightful for the aging individual as
+---
+import { Debug } from 'astro/components';
+import { Image, Picture } from '@astrojs/image/components';
+import ImageCard from '../components/ImageCard.astro'
+import CtaButton from '../components/CtaButton.astro'
+import approach from '../assets/images/approach-home.png'
+---
+<ImageCard img-file={approach}>
+  <Debug {approach} />
+    <div class="flex flex-col items-center">
+      <h2 class="h2">Your circumstances</h2>
+      <h3 class="h2">The Approach</h3>
+      <p class="body-text inline-block">Aging is often tentative and frightful for the aging individual as
         well as for loved ones, when independence becomes an issue. While
         living at home is preferred, how and where one will age best is among
         the most fraught circumstances for a family.
       </p>
+      <CtaButton>Discover the Approach</CtaButton>
     </div>
-    <div id="button">
-      <p id="button-text">
-        Discover<br />
-        the Approach
-      </p>
-    </div>
-  </div>
-  <div id="image">
-    <div id="rectangle-8"></div>
-    <div id="rectangle-7"></div>
-    <img
-      alt=""
-      id="photo-1527525443983-6e60c75fff46-1"
-      src="/images/approach-home.png"
-    />
-  </div>
-</section>
-
-<style>
-.nt-approach-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.content {
-  margin-right: 140px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.header-1 {
-  height: 43px;
-  width: 375px;
-  color: var(--midnight-blue);
-  display: flex;
-  text-align: center;
-  margin-bottom: 86px;
-  margin-left: 20px;
-  font-family: var(--dm-sans-33-regular-family);
-  font-size: var(--dm-sans-33-regular-size);
-  font-weight: var(--dm-sans-33-regular-weight);
-  line-height: var(--dm-sans-33-regular-line-height);
-}
-.header-2 {
-  height: 43px;
-  width: 375px;
-  color: var(--midnight-blue);
-  display: flex;
-  text-align: center;
-  margin-bottom: 48px;
-  margin-left: 20px;
-  font-family: var(--dm-sans-33-regular-family);
-  font-size: var(--dm-sans-33-regular-size);
-  font-weight: var(--dm-sans-33-regular-weight);
-  line-height: var(--dm-sans-33-regular-line-height);
-}
-.body {
-  height: 244px;
-  width: 471px;
-  color: var(--dim-gray);
-  display: flex;
-  text-align: center;
-  font-family: var(--dm-sans-23-regular-family);
-  font-size: var(--dm-sans-23-regular-size);
-  font-weight: var(--dm-sans-23-regular-weight);
-  line-height: var(--dm-sans-23-regular-line-height);
-}
-.button {
-  background-color: var(--midnight-blue);
-  padding: 9px 5px 8px 6px;
-  box-shadow: 0 2px 1px 0 var(--transparent-white-1);
-  display: flex;
-  align-items: center;
-}
-.button-text {
-  max-width: 344px;
-  color: var(--white);
-  text-align: center;
-  font-family: var(--dm-sans-30-regular-family);
-  font-size: var(--dm-sans-30-regular-size);
-  font-weight: var(--dm-sans-30-regular-weight);
-  line-height: var(--dm-sans-30-regular-line-height);
-}
-.image {
-  padding: 0 0 38px 50px;
-  position: relative;
-}
-.rectangle-8 {
-  width: 368px;
-  height: 445px;
-  background-color: var(--gainsboro-2);
-  position: relative;
-}
-.rectangle-7 {
-  width: 368px;
-  height: 445px;
-  background-color: var(--dark-slate-blue);
-  position: absolute;
-  left: 25px;
-  top: 22px;
-}
-.photo-1527525443983-6e60c75fff46-1 {
-  width: 365px;
-  height: 444px;
-  position: absolute;
-  left: 0;
-  top: 39px;
-}
-</style>
+    <Picture class="w-1/3" src={approach} widths={[approach.width]} height={approach.height} sizes="" format="webp" alt="" />
+</ImageCard>

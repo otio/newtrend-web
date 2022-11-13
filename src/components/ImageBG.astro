@@ -1,0 +1,25 @@
+---
+const { width, height } = Astro.props
+const isWidthSet = () => width ? `w-${width}` : 'w-full'
+const isHeightSet = () => width ? `h-${height}` : 'h-full'
+---
+<div id="rectangle-8" class:list={['bg-gainsboro', isWidthSet(), isHeightSet()]}></div>
+<div id="rectangle-7" class:list={['bg-dark-slate-blue', isWidthSet(), isHeightSet()]}></div>
+
+
+<style>
+    .rectangle-8 {
+      width: 368px;
+      height: 445px;
+      background-color: var(--gainsboro-2);
+      position: relative;
+    }
+    .rectangle-7 {
+      width: 368px;
+      height: 445px;
+      background-color: var(--dark-slate-blue);
+      position: absolute;
+      left: 25px;
+      top: 22px;
+    }
+    </style>

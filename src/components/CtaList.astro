@@ -1,154 +1,31 @@
-
-<section id="nt-pointers-list">
-  <p id="header">
-    Let&#039;s do something to produce positive change you will believe in
-  </p>
-  <div id="list">
-    <div id="argument-1">
-      <img
-        alt=""
-        id="checkmark-2-1"
-        src="/images/check-mark.svg"
-      />
-      <p id="text-1">Get support from a qualified Behavioral Analyst</p>
-    </div>
-    <div id="argument-1">
-      <img
-        alt=""
-        id="checkmark-2-1-two"
-        src="/images/check-mark.svg"
-      />
-      <p id="text-2">Scientific and proven methods</p>
-    </div>
-    <div id="argument-1">
-      <img
-        alt=""
-        id="checkmark-2-1-three"
-        src="/images/check-mark.svg"
-      />
-      <p id="text-3">Witness change and improvement</p>
-    </div>
-    <div id="argument-1">
-      <img
-        alt=""
-        id="checkmark-2-1-two"
-        src="/images/check-mark.svg"
-      />
-      <p id="text-4">Find peace again</p>
-    </div>
-    <div id="argument-1">
-      <img
-        alt=""
-        id="checkmark-2-1-two"
-        src="/images/check-mark.svg"
-      />
-      <p id="text-5">Track your growth with personal reports</p>
-    </div>
+--- 
+import { Image } from '@astrojs/image/components';
+import DividerThin from '../components/DividerThin.astro'
+import checkmark from '../assets/images/check-mark.svg'
+const headline = "Let's do something to produce positive change you will believe in"
+const offerings = [
+  'Get support from a qualified Behavioral Analyst',
+  'Scientific and proven methods',
+  'Witness change and improvement',
+  'Find peace again',
+  'Track your growth with personal reports'
+]
+---
+<section id="nt-pointers-list" class="w-full h-full flex flex-col items-center">
+  <div class="py-24">
+    <h2 class="font-dserif text-midnight-blue text-5xl">
+      {headline}
+    </h2>
   </div>
-  <div id="divider"></div>
+  <ul>
+    {offerings.map((offer) => (
+      <li class="flex flex-row items-center justify-start mb-4rem">
+        <Image class="inline-block" src={checkmark} width="60" height="60" alt="" />
+          <span class="inline-block my-12">
+            <p class="font-inter text-dim-gray text-3xl">{offer}</p>
+          </span>
+      </li>
+    ))}
+  </ul>
+  <DividerThin/>
 </section>
-
-<style>
-.nt-pointers-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.header {
-  width: 1110px;
-  color: var(--midnight-blue);
-  text-align: center;
-  margin-bottom: 72px;
-  font-family: var(--dm-serif-text-33-regular-family);
-  font-size: var(--dm-serif-text-33-regular-size);
-  font-weight: var(--dm-serif-text-33-regular-weight);
-  line-height: var(--dm-serif-text-33-regular-line-height);
-}
-.list {
-  margin-bottom: 72px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-.argument-1 {
-  display: flex;
-  align-items: flex-start;
-}
-.argument-1:not(:last-of-type) {
-  margin-bottom: 22px;
-}
-.checkmark-2-1 {
-  width: 19.5px;
-  height: 20px;
-  margin-top: 3.97px;
-  margin-right: 19.5px;
-}
-.text-1 {
-  height: 20px;
-  width: 461.17px;
-  color: var(--dim-gray);
-  display: flex;
-  font-family: var(--inter-20-regular-family);
-  font-size: var(--inter-20-regular-size);
-  font-weight: var(--inter-20-regular-weight);
-  line-height: var(--inter-20-regular-line-height);
-}
-.checkmark-2-1-two {
-  width: 19.5px;
-  height: 20px;
-  margin-top: 3.97px;
-  margin-right: 19.56px;
-}
-.text-2 {
-  height: 19.87px;
-  width: 417.04px;
-  color: var(--dim-gray);
-  display: flex;
-  font-family: var(--inter-20-regular-family);
-  font-size: var(--inter-20-regular-size);
-  font-weight: var(--inter-20-regular-weight);
-  line-height: var(--inter-20-regular-line-height);
-}
-.checkmark-2-1-three {
-  width: 19.5px;
-  height: 20px;
-  margin-top: 4.07px;
-  margin-right: 19.5px;
-}
-.text-3 {
-  height: 20px;
-  width: 507px;
-  color: var(--dim-gray);
-  display: flex;
-  font-family: var(--inter-20-regular-family);
-  font-size: var(--inter-20-regular-size);
-  font-weight: var(--inter-20-regular-weight);
-  line-height: var(--inter-20-regular-line-height);
-}
-.text-4 {
-  height: 19.87px;
-  width: 386.11px;
-  color: var(--dim-gray);
-  display: flex;
-  font-family: var(--inter-20-regular-family);
-  font-size: var(--inter-20-regular-size);
-  font-weight: var(--inter-20-regular-weight);
-  line-height: var(--inter-20-regular-line-height);
-}
-.text-5 {
-  height: 19.87px;
-  width: 380.78px;
-  color: var(--dim-gray);
-  display: flex;
-  font-family: var(--inter-20-regular-family);
-  font-size: var(--inter-20-regular-size);
-  font-weight: var(--inter-20-regular-weight);
-  line-height: var(--inter-20-regular-line-height);
-}
-.divider {
-  width: 468.75px;
-  height: 1px;
-  background-color: var(--midnight-blue);
-}
-</style>

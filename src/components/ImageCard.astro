@@ -1,0 +1,98 @@
+---
+import { Image, Picture } from '@astrojs/image/components';
+const { reverse = false, file } = Astro.props
+const layout = () => reverse ? 'flex-row-reverse' : 'flex-row'
+const visible = () => file.src ? true : false 
+---
+<section class="w-full">
+    <!-- <div class:list={['w-full','flex', layout(), 'items-center']}> -->
+    <div class:list={['w-full', 'auto-cols-auto']}>
+        
+            <slot/>
+
+        <!-- <Image src={file.src} width={file.width} format="webp" aspectRatio="3.6:4.4" fit="cover" alt="" /> -->
+    </div>
+</section>
+<!-- <section class="w-full flex flex-row items-center">
+  <div class="w-1/2">
+    <div class="flex flex-col items-center">
+      <div class="flex flex-col mb-36 text-midnight-blue font-dserif">
+        <p class="w-3/5 h-2/3 text-6xl mb-4">Behavior Analysis and Therapy</p>
+        <p class="h-1/3 text-4xl">for Adults, Elders and Their Caretakers</p>
+      </div>
+      <CtaButton>Schedule a Free Assessment</CtaButton>
+    </div>
+  </div>
+  <div class="w-1/2 self-start">
+    <Picture class="w-full" src={hero} widths={[575]} aspectRatio="5:3" sizes="" alt=""/>
+  </div>
+</section> -->
+  
+  <style >
+  .rectangle-6 {
+    width: 560px;
+    height: 327px;
+    background-color: var(--gainsboro-2);
+    position: relative;
+  }
+  .rectangle-5 {
+    width: 560px;
+    height: 327px;
+    background-color: var(--dark-slate-blue);
+    position: absolute;
+    left: 5px;
+    top: 25px;
+  }
+  .photo-1535231540604-72e8fbaf8cdb-1 {
+    width: 547px;
+    height: 302px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header {
+    height: 43px;
+    width: 375px;
+    color: var(--midnight-blue);
+    display: flex;
+    text-align: center;
+    font-family: var(--dm-sans-33-regular-family);
+    font-size: var(--dm-sans-33-regular-size);
+    font-weight: var(--dm-sans-33-regular-weight);
+    line-height: var(--dm-sans-33-regular-line-height);
+  }
+  .body {
+    height: 244px;
+    width: 471px;
+    color: var(--dim-gray);
+    display: flex;
+    text-align: center;
+    font-family: var(--dm-sans-23-regular-family);
+    font-size: var(--dm-sans-23-regular-size);
+    font-weight: var(--dm-sans-23-regular-weight);
+    line-height: var(--dm-sans-23-regular-line-height);
+  }
+  .button {
+    background-color: var(--midnight-blue);
+    padding: 8px 5px 9px 6px;
+    box-shadow: 0 2px 1px 0 var(--transparent-white-1);
+    display: flex;
+    align-items: center;
+  }
+  .text {
+    max-width: 344px;
+    color: var(--white);
+    text-align: center;
+    font-family: var(--dm-sans-30-regular-family);
+    font-size: var(--dm-sans-30-regular-size);
+    font-weight: var(--dm-sans-30-regular-weight);
+    line-height: var(--dm-sans-30-regular-line-height);
+  }
+  </style>
+  
