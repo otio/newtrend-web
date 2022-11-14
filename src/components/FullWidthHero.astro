@@ -1,19 +1,27 @@
-<div class="full-width-hero">
-  <div class="hero-content">
-    <p class="page-title">The Approach</p>
+---
+import { Image, Picture } from '@astrojs/image/components';
+import plant from "../assets/images/plant-bg.png"
+const title = 'The Approach'
+const clientele = ['Adults', 'Elders', 'Caretakers']
+---
+<section id="nt-cta" class="relative flex flex-col items-center bg-white w-full px-3.5rem">
+  <Picture alt="" id="cta-bg-img" sizes="" src={plant} widths={[plant.width]} />
+ <div class="absolute flex flex-row justify-center items-center w-full h-full">
+    <div id="cta-card" class="flex flex-col justify-start items-center w-2/5 h-1/2 bg-transparent">
+      <div id="content" class="h-full flex flex-col justify-between items-center p-12">
+        <h1 id="card-header" class="font-dserif text-5xl text-midnight-blue" >{title}</h1>
+      </div>
+    </div>
+ </div>
+  <div class="groups-served" class:list={['flex', 'flex-row', 'justify-center', 'font-dsans']}>
+
+    {clientele.map((client) => (
+      <div class:list={['bg-white','py-2rem', 'px-10rem']}>
+        <p class="fonst-dsans text-2xl text-midnight-blue">{client}</p>
+      </div>
+    ))}
   </div>
-  <div class="groups-served">
-    <div class="group-box">
-      <p class="adults">Adults</p>
-    </div>
-    <div class="group-box">
-      <p class="adults">Elders</p>
-    </div>
-    <div class="group-box-two">
-      <p class="caretakers">Caretakers</p>
-    </div>
-  </div>
-</div>
+</section>
 
 <style>
 .full-width-hero {
@@ -24,7 +32,7 @@
 .hero-content {
   background-size: 100% 100%;
   background-position: center;
-  background-image: url("~/assets/images/plant-bg.png");
+  background-image: url("");
   margin-bottom: 15px;
   padding: 103px 210px;
   display: flex;
