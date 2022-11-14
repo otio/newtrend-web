@@ -1,155 +1,19 @@
 ---
 import { Image, Picture } from '@astrojs/image/components';
 import ImageBG from '../components/ImageBG.astro'
-import tile1 from '../assets/images/tiles-1.png'
-import tile2 from '../assets/images/tiles-2.png'
-import tile3 from '../assets/images/tiles-3.png'
-const tiles = [
-  {
-    title: 'Mindful Training',
-    img: tile1,
-  },
-  {
-    title: 'Behavioral Skills Training',
-    img: tile2,
-  },
-  {
-    title: 'Acceptance and Commitment Training',
-    img: tile3,
-  },
-]
+const { tiles = [] } = Astro.props
 ---
 
-<section id="tiles" class="flex flex-row justify-evenly items-center">
+<section id="tiles" class:list={['flex', 'flex-row', 'justify-evenly', 'items-center']}>
   {
     tiles.map((tile) => (
-      <div id="tile">
-        <div id="tile-image" class="relative">
-          <Image src={tile.img} width={tile.img.width} format="webp" alt="" />
+      <div>
+        <div class="relative">
+          <Image src={tile.img} width={350} aspectRatio="1:1" format="webp" fit="cover" position="center" alt="" />
           <ImageBG width={tile.img.width} height={tile.img.height} />
         </div>
-        <p>{tile.title}</p>
+        <p class="font-dsans text-2xl text-center text-midnight-blue pt-2rem">{tile.label}</p>
       </div>    
     ))
   }
 </section>
-
-<style>
-.tiles {
-  padding: 25px 3px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.tile-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.tile-1:not(:last-of-type) {
-  margin-right: 26px;
-}
-.tile-image {
-  margin-bottom: 25px;
-  padding: 0 0 36px 38px;
-  position: relative;
-}
-.rectangle-9 {
-  width: 310px;
-  height: 328px;
-  background-color: var(--gainsboro-2);
-  position: relative;
-}
-.rectangle-8 {
-  width: 310px;
-  height: 328px;
-  background-color: var(--dark-slate-blue);
-  position: absolute;
-  right: 18px;
-  top: 16px;
-}
-.rectangle-7 {
-  width: 310px;
-  height: 328px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.tile-label {
-  color: var(--dim-gray);
-  font-family: var(--dm-sans-23-bold-family);
-  font-size: var(--dm-sans-23-bold-size);
-  font-weight: var(--dm-sans-23-bold-weight);
-  line-height: var(--dm-sans-23-bold-line-height);
-}
-.tile-image-two {
-  margin-bottom: 37px;
-  padding: 18px 15px 16px;
-  position: relative;
-}
-.rectangle-10 {
-  width: 332px;
-  height: 328px;
-  background-color: var(--gainsboro-2);
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.rectangle-9-two {
-  width: 338px;
-  height: 328px;
-  background-color: var(--dark-slate-blue);
-  position: relative;
-}
-.bahavioral-1 {
-  width: 330px;
-  height: 326px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.tile-label-two {
-  height: 30px;
-  width: 273px;
-  color: var(--dim-gray);
-  display: flex;
-  font-family: var(--dm-sans-23-bold-family);
-  font-size: var(--dm-sans-23-bold-size);
-  font-weight: var(--dm-sans-23-bold-weight);
-  line-height: var(--dm-sans-23-bold-line-height);
-}
-.tile-image-three {
-  margin-bottom: 37px;
-  padding: 18px 22px 16px;
-  position: relative;
-}
-.rectangle-11 {
-  width: 354px;
-  height: 328px;
-  background-color: var(--gainsboro-2);
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.rectangle-10-two {
-  width: 358px;
-  height: 328px;
-  background-color: var(--dark-slate-blue);
-  position: relative;
-}
-.love-1 {
-  width: 358px;
-  height: 326px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.tile-label-three {
-  width: 446px;
-  color: var(--dim-gray);
-  font-family: var(--dm-sans-23-bold-family);
-  font-size: var(--dm-sans-23-bold-size);
-  font-weight: var(--dm-sans-23-bold-weight);
-  line-height: var(--dm-sans-23-bold-line-height);
-}
-</style>

@@ -8,25 +8,11 @@ const imgUrl = (color) => `https://via.placeholder.com/${width}x${height}/${colo
 const gainsboro = imgUrl(Color.rgb(217, 225, 232).hex().split('#')[1])
 const darkSlateBlue = imgUrl(Color.rgb(66, 104, 141).hex().split('#')[1])
 ---
-<div 
-  class:list={[
-    'bg-gainsboro',
-    'absolute',
-    'z-5',
-    'bottom-55px',
-    'z-1',
-    '-right-50px'
-    ]} 
-    id="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <img class="absolute z-0 -top-50px -right-50px" src={gainsboro} id="gains" />
-<div 
-  class:list={[
-    'bg-dark-slate-blue',
-    'absolute',
-    'z-5',
-    'bottom-30px',
-    'z-6',
-    '-right-25px'
-    ]} 
-    id="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 <img class="absolute z-5 -top-25px -right-25px" src={darkSlateBlue} id="blue" />
+
+<style>
+  img {
+    transform: scaleX(-1)
+  }
+</style>
