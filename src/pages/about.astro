@@ -60,7 +60,7 @@ const helpful = [
 <Interior>
   <FullWidthHero>About Me</FullWidthHero>
   <GroupsServed />
-  <article class="flex flex-row items-start justify-center mt-6rem">
+  <section class="flex flex-row items-start justify-center mt-6rem">
     <aside class="flex flex-col justify-evenly items-center w-2/5 h-full">
       <div class="mb-8">
         <Image src={profile} width={profile.width} format="webp" alt="" />
@@ -78,7 +78,7 @@ const helpful = [
         }
       </ul>
   </aside>
-    <section class="w-3/5">
+    <article class="w-3/5">
       <h2 class="font-dserif text-5xl text-center text-midnight-blue pb-12">Meet Richard Breuner</h2>
       <div>
         {
@@ -89,10 +89,8 @@ const helpful = [
           ))
         }
       </div>
-    </section>   
-  </article>
-  <!-- ABOUT ME -->
-  <!-- HELPFUL INFO Component -->
+    </article>   
+  </section>
   <section class:list={['flex', 'flex-row', 'justify-evenly', 'items-center', 'pt-4rem']}>
     {
       helpful.map((info) => (

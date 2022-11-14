@@ -1,47 +1,25 @@
 ---
-import Interior from '../layouts/Interior.astro'
-import GroupsServed from '../components/GroupsServed.astro';
-
+import { Picture } from '@astrojs/image/components';
+import Base from '../layouts/Base.astro'
+import lake from '../assets/images/lake.png'
+import Form from '../components/Form.vue'
 ---
-<Interior>
-  <div><h1>Change starts with a single step forward</h1></div>
-  <!-- FORM -->
-  <div class="contact-form">
-    <div class="form-box">
-      <div class="form-fields">
-        <h2 class="heading">Let&#039;s Connect</h2>
-        <div class="name-fields">
-          <div class="first-name-wrapper">
-            <input class="first-name" placeholder="First name" />
-            <div class="rectangle"></div>
-          </div>
-          <div class="first-name-wrapper">
-            <input class="last-name" placeholder="Last name" />
-            <div class="rectangle-two"></div>
+<Base>
+  <section class="pl-8rem pb-3rem">
+    <h1 class="hidden">Contact</h1>
+    <h2 class="w-1/3 font-dserif text-midnight-blue text-6xl mb-4">Change starts with a single step forward</h2>
+  </section>
+  <section id="nt-cta" class="relative flex flex-col bg-white w-full px-3.5rem">
+    <Picture alt="" sizes="" src={lake} widths={[lake.width]} />
+    <div class="absolute flex flex-row justify-end items-center w-4/5 h-full z-15">
+        <div id="cta-card" class="flex flex-col justify-evenly items-center w-2/5 h-1/2 bg-white shadow-md">
+          <div id="form" class="h-full flex flex-col justify-between items-center p-12">
+            <h2 id="card-header" class="font-dserif text-5xl text-midnight-blue" >Let's Connect</h2>
+              <Form client:only/>
           </div>
         </div>
-        <div class="email-wrapper">
-          <input class="email" placeholder="Email" />
-          <div class="rectangle-three"></div>
-        </div>
-        <div class="email-wrapper">
-          <input class="phone" placeholder="Phone number" />
-          <div class="rectangle-four"></div>
-        </div>
-        <div class="email-wrapper">
-          <textarea
-            class="leave-message"
-            placeholder="Leave a message"
-          ></textarea>
-          <div class="rectangle-five"></div>
-          <div class="rectangle-six"></div>
-        </div>
-        <button class="form-submit">
-          <p class="btn-text">Send</p>
-        </button>
-      </div>
     </div>
-  </div>
+  </section>
   <!-- CONTACT INFO & SESSION OPTIONS -->
   <div class="info">
     <div class="contact-info-two">
@@ -87,7 +65,7 @@ import GroupsServed from '../components/GroupsServed.astro';
       </div>
     </div>
   </div>
-</Interior>
+</Base>
 
 <style>
 /* FORM CSS */
