@@ -2,121 +2,111 @@
   import Base from '../layouts/Base.astro'
   import Tiles from '../components/Tiles.astro'
   import AssessmentFacets from '../components/AssessmentFacets.astro'
+  import FullWidthHero from '../components/FullWidthHero.astro'
+  import Interior from '../layouts/Interior.astro'
+  import GroupsServed from '../components/GroupsServed.astro';
+  import CtaButton from '../components/CtaButton.astro';
+  import DividerDot from '../components/DividerDot.astro';
+  const steps = [
+    {
+      title: 'Informal Assessment',
+      body: `The Informal Assessement is a Casual Conversation.
+
+            This is an opportunity for me to learn about you or your loved one. You get to tell me about what's working and what's not. 
+
+            Are there specific behaviors to target for a change?
+            I may want you to tell some specifics. 
+
+            Is there a medical diagnosis and are there medications prescribed?
+            
+            What is an example of a concerning target behavior? 
+
+            What are your goals and ideal outcomes?`
+    },
+    {
+      title: 'The Facets of Behavioral Analysis Approach',
+      body: `The Assessment is the first step in an evaluation to expose where your current approach to your life is and is not consistent with what is important to you. 
+
+              How are you participating in what is important to you and how are you avoiding what is important to you? 
+
+              And what are you getting instead? Maybe we can experiment with something else`,
+      components: 'AssessmentFacets'
+    },
+    {
+      title: 'Dynamic Assessment & Personalized Plan',
+      body: `The Assessment is the first step in an evaluation to expose where your current approach to your life is and is not consistent with what is important to you. 
+
+              How are you participating in what is important to you and how are you avoiding what is important to you? 
+
+              And what are you getting instead? Maybe we can experiment with something else`
+    },
+    {
+      title: 'Dynamic Assessment & Personalized Plan',
+      body: `Periodic assessments that measure daily living performance expose changes that may be required to produce ongoing success and aging well.`
+    },
+    {
+      title: `Therapeutic Activities`,
+      body: ``,
+      // components: 'Tiles'
+    },
+    // { grid }
+  ]
 ---
-<Base>
-  <FullWidthHero></FullWidthHero>
-  <div class="assessment-content">
-    <h2 class="section-title">Introduction here</h2>
-    <div class="process-step">
-      <div class="process-step">
-        <!-- TODO Number Bullet Implementation -->
-        <div class="bullet-marker">
-          <div class="ellipse-2"></div>
-          <p class="num-2">2</p>
-        </div>
-        <div class="text-box">
-          <p class="the-facets-of-behavioral-analysis-approa">
-            The facets of behavioral analysis approach
-          </p>
-          <p class="the-assessment-is-the-first-step-in-an-e">
-            The Assessment is the first step in an evaluation to expose where
-            your current approach to your life is and is not consistent with
-            what is important to you.
-            <br />
-            <br />
-            How are you participating in what is important to you and how are
-            you avoiding what is important to you?
-            <br />
-            <br />
-            And what are you getting instead? Maybe we can experiment with
-            something else
-          </p>
-        </div>
-      </div>
-    </div>
-    <AssessmentFacets></AssessmentFacets>
-    <div class="process-step">
-      <!-- Include here the component "ProcessStep" -->
-    </div>
-  </div>
+<Interior>
+  <FullWidthHero>A Tailored Assessment coupled with Therapeutic Activity</FullWidthHero>
+  <ol class="w-1/2 m-auto flex flex-col justify-center items-center mb-10rem">
+    {
+      steps.map((step) => (
+        <li class="w-2/3 flex flex-col justify-center items-center step">
+          <h2 class="font-dserif text-4xl text-midnight-blue pb-8">{step.title}</h2>
+          <p class="font-inter text-dim-gray text-3xl">{step.body}</p>
+          { step.components === 'AssessmentFacets' && <AssessmentFacets /> }
+        </li>
+      ))
+    }
+  </ol>
   <Tiles></Tiles>
   <!-- <CallToAction></CallToAction> -->
-</Base>
+</Interior>
 
 <style>
-.assessment-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ol {
+  clear: both;
+  list-style: none;
 }
-.section-title {
-  height: 55px;
-  width: 683px;
-  color: var(--black-2);
-  display: flex;
-  text-align: center;
-  margin-bottom: 39px;
-  font-family: var(--dm-sans-23-regular-family);
-  font-size: var(--dm-sans-23-regular-size);
-  font-weight: var(--dm-sans-23-regular-weight);
-  line-height: var(--dm-sans-23-regular-line-height);
-}
-.process-step:not(:last-of-type) {
-  margin-bottom: 39px;
-}
-.process-step {
-  display: flex;
-  align-items: flex-start;
-}
-.bullet-marker {
-  margin-right: 87px;
-  padding: 0 1px 0 2px;
+ol li {
+  margin: 2em 0;
+  padding-top: 1em;
+  display: block;
   position: relative;
+  counter-increment: inst;
 }
-.ellipse-2 {
-  width: 100%;
-  height: 100%;
-  background-color: var(--midnight-blue);
-  border-radius: 50%;
-  position: relative;
-}
-.num-2 {
-  width: 100%;
-  height: 48.52%;
-  color: var(--white);
+ol li::before {
+  content: counter(inst);
+  width: 30%;
+  padding: 2rem;
+  background: rgba(0, 51, 102);
+  color: #fff;  
+  border-radius: 8rem;
+  font-size: 5rem;
   text-align: center;
+  left: -45%;
+  height: 200px;
+  width: 200px; 
   position: absolute;
-  left: 0;
-  top: 39px;
-  font-family: var(--dm-serif-text-60-regular-family);
-  font-size: var(--dm-serif-text-60-regular-size);
-  font-weight: var(--dm-serif-text-60-regular-weight);
-  line-height: var(--dm-serif-text-60-regular-line-height);
+  transition: all 0.2s ease-in-out;
 }
-.text-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.the-facets-of-behavioral-analysis-approa {
-  height: 24px;
-  width: 587px;
-  color: var(--midnight-blue);
-  display: flex;
-  margin-bottom: 40px;
-  font-family: var(--dm-serif-text-29-regular-family);
-  font-size: var(--dm-serif-text-29-regular-size);
-  font-weight: var(--dm-serif-text-29-regular-weight);
-  line-height: var(--dm-serif-text-29-regular-line-height);
-}
-.the-assessment-is-the-first-step-in-an-e {
-  height: 329px;
-  width: 746px;
-  color: var(--dim-gray);
-  display: flex;
-  font-family: var(--dm-sans-23-regular-family);
-  font-size: var(--dm-sans-23-regular-size);
-  font-weight: var(--dm-sans-23-regular-weight);
-  line-height: var(--dm-sans-23-regular-line-height);
+@media (min-width: 33em) {
+  /* ol li:before {
+    border-radius: 50%;
+    font-size: 1.5em;
+    height: 1.35em;
+    margin-left: 2.5%;
+    padding-left: 0;
+    padding-top: 0;
+    top: -0.15em;
+    width: 1.35em;
+    z-index: -1;
+  } */
 }
 </style>

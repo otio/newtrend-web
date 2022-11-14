@@ -1,29 +1,38 @@
-<div class="tiles">
-  <div class="tile-1">
-    <div class="tile-image">
-      <div class="rectangle-9"></div>
-      <div class="rectangle-8"></div>
-      <img alt="" class="rectangle-7" src="~/assets/images/tiles-1.png" />
-    </div>
-    <p class="tile-label">Mindful Training</p>
-  </div>
-  <div class="tile-1">
-    <div class="tile-image-two">
-      <div class="rectangle-10"></div>
-      <div class="rectangle-9-two"></div>
-      <img alt="" class="bahavioral-1" src="~/assets/images/tiles-2.png" />
-    </div>
-    <p class="tile-label-two">Behavioral Skills Training</p>
-  </div>
-  <div class="tile-1">
-    <div class="tile-image-three">
-      <div class="rectangle-11"></div>
-      <div class="rectangle-10-two"></div>
-      <img alt="" class="love-1" src="~/assets/images/tiles-3.png" />
-    </div>
-    <p class="tile-label-three">Acceptance and Commitment Training</p>
-  </div>
-</div>
+---
+import { Image, Picture } from '@astrojs/image/components';
+import ImageBG from '../components/ImageBG.astro'
+import tile1 from '../assets/images/tiles-1.png'
+import tile2 from '../assets/images/tiles-2.png'
+import tile3 from '../assets/images/tiles-3.png'
+const tiles = [
+  {
+    title: 'Mindful Training',
+    img: tile1,
+  },
+  {
+    title: 'Behavioral Skills Training',
+    img: tile2,
+  },
+  {
+    title: 'Acceptance and Commitment Training',
+    img: tile3,
+  },
+]
+---
+
+<section id="tiles" class="flex flex-row justify-evenly items-center">
+  {
+    tiles.map((tile) => (
+      <div id="tile">
+        <div id="tile-image" class="relative">
+          <Image src={tile.img} width={tile.img.width} format="webp" alt="" />
+          <ImageBG width={tile.img.width} height={tile.img.height} />
+        </div>
+        <p>{tile.title}</p>
+      </div>    
+    ))
+  }
+</section>
 
 <style>
 .tiles {
