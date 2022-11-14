@@ -1,88 +1,16 @@
 ---
-import { Image, Picture } from '@astrojs/image/components';
+import { Picture } from '@astrojs/image/components';
 import plant from "../assets/images/plant-bg.png"
-const title = 'The Approach'
-const clientele = ['Adults', 'Elders', 'Caretakers']
 ---
 <section id="nt-cta" class="relative flex flex-col items-center bg-white w-full px-3.5rem">
   <Picture alt="" id="cta-bg-img" sizes="" src={plant} widths={[plant.width]} />
  <div class="absolute flex flex-row justify-center items-center w-full h-full">
     <div id="cta-card" class="flex flex-col justify-start items-center w-2/5 h-1/2 bg-transparent">
       <div id="content" class="h-full flex flex-col justify-between items-center p-12">
-        <h1 id="card-header" class="font-dserif text-5xl text-midnight-blue" >{title}</h1>
+        <h1 id="card-header" class="font-dserif text-5xl text-midnight-blue" >
+          <slot />
+        </h1>
       </div>
     </div>
  </div>
-  <div class="groups-served" class:list={['flex', 'flex-row', 'justify-center', 'font-dsans']}>
-
-    {clientele.map((client) => (
-      <div class:list={['bg-white','py-2rem', 'px-10rem']}>
-        <p class="fonst-dsans text-2xl text-midnight-blue">{client}</p>
-      </div>
-    ))}
-  </div>
 </section>
-
-<style>
-.full-width-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hero-content {
-  background-size: 100% 100%;
-  background-position: center;
-  background-image: url("");
-  margin-bottom: 15px;
-  padding: 103px 210px;
-  display: flex;
-  align-items: center;
-}
-.page-title {
-  width: 800px;
-  color: var(--midnight-blue);
-  text-align: center;
-  font-family: var(--dm-serif-text-64-regular-family);
-  font-size: var(--dm-serif-text-64-regular-size);
-  font-weight: var(--dm-serif-text-64-regular-weight);
-  line-height: var(--dm-serif-text-64-regular-line-height);
-}
-.groups-served {
-  display: flex;
-  align-items: flex-start;
-}
-.group-box {
-  background-color: var(--white);
-  padding: 18px 145px 10px 128px;
-  display: flex;
-  align-items: flex-start;
-  border: 1px solid var(--midnight-blue-2);
-}
-.adults {
-  width: 105px;
-  color: var(--midnight-blue);
-  text-align: center;
-  font-family: var(--dm-sans-33-regular-family);
-  font-size: var(--dm-sans-33-regular-size);
-  font-weight: var(--dm-sans-33-regular-weight);
-  line-height: var(--dm-sans-33-regular-line-height);
-}
-.group-box-two {
-  background-color: var(--white);
-  padding: 18px 99px 10px;
-  display: flex;
-  align-items: flex-start;
-  border: 1px solid var(--midnight-blue-2);
-}
-.caretakers {
-  height: 43px;
-  width: 180px;
-  color: var(--midnight-blue);
-  display: flex;
-  text-align: center;
-  font-family: var(--dm-sans-33-regular-family);
-  font-size: var(--dm-sans-33-regular-size);
-  font-weight: var(--dm-sans-33-regular-weight);
-  line-height: var(--dm-sans-33-regular-line-height);
-}
-</style>

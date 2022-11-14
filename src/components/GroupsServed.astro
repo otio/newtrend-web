@@ -1,0 +1,10 @@
+---
+const clientele = ['Adults', 'Elders', 'Caretakers']
+---
+<section class:list={[ 'w-full','flex', 'flex-row', 'justify-center', 'items-center', 'font-dsans']}>
+    {clientele.map((client) => (
+      <div class:list={['bg-white','py-2rem', 'px-10rem']}>
+        <p class="fonst-dsans text-2xl text-midnight-blue">{client}</p>
+      </div>
+    ))}
+</section>

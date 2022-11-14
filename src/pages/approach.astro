@@ -1,7 +1,7 @@
 ---
-  import Base from '../layouts/Base.astro'
+  import Interior from '../layouts/Interior.astro'
   import FullWidthHero from '../components/FullWidthHero.astro'
-  import CallToAction from '../components/CallToAction.astro'
+  import GroupsServed from '../components/GroupsServed.astro';
   import CtaButton from '../components/CtaButton.astro';
   const textContent = [
     `Aging is often tentative and frightful for the aging individual as
@@ -19,8 +19,9 @@
           alternatives whenever possible.`
   ]
 ---
-  <Base>
-    <FullWidthHero></FullWidthHero>
+  <Interior>
+    <FullWidthHero>The Approach</FullWidthHero>
+    <GroupsServed />
     <section id="approach-content" class="flex flex-col items-center">
       <article class="flex flex-col items-center pb-8rem">
         {
@@ -38,7 +39,7 @@
       </div>
     </section>
    
-  </Base>
+  </Interior>
 
 <style>
 .ellipse-6 {
