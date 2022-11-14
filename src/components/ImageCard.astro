@@ -4,15 +4,9 @@ const { reverse = false, file } = Astro.props
 const layout = () => reverse ? 'flex-row-reverse' : 'flex-row'
 const visible = () => file.src ? true : false 
 ---
-<section class="w-full">
-    <!-- <div class:list={['w-full','flex', layout(), 'items-center']}> -->
-    <div class:list={['w-full', 'auto-cols-auto']}>
-        
-            <slot/>
-
-        <!-- <Image src={file.src} width={file.width} format="webp" aspectRatio="3.6:4.4" fit="cover" alt="" /> -->
-    </div>
-</section>
+<article class:list={[ 'w-full', 'h-full', 'flex', 'justify-center' ,'items-center', layout(), ]}>
+    <slot/>
+</article>
 <!-- <section class="w-full flex flex-row items-center">
   <div class="w-1/2">
     <div class="flex flex-col items-center">

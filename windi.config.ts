@@ -69,6 +69,9 @@ export default defineConfig({
 				...COLORS(),
 			},
 		},
+		backgroundColor: theme => ({
+			...theme('colors'),
+		}),
 	},
 	extract: {
 		include: ['./src/**/*.{vue,html,jsx,tsx,astro}'],
