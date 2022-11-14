@@ -1,104 +1,31 @@
-<section id="nt-process">
-  <div id="image">
-    <div id="rectangle-6"></div>
-    <div id="rectangle-5"></div>
-    <img
-      alt=""
-      id="photo-1535231540604-72e8fbaf8cdb-1"
-      src="/images/process-home.png"
-    />
-  </div>
-  <div id="content">
-    <p id="header">The Process</p>
-    <p id="body">
-      When life presents changes that disrupt how you contact independence and
-      peace, finding a Behavioral Analyst with a proven method is key.<br />
-      Thank to several types of assessments, I will guide you and help you
-      reach your goal.
-    </p>
-    <div id="button">
-      <p id="text">
-        Discover<br />
-        the Process
+---
+import { Debug } from 'astro/components';
+import { Image, Picture } from '@astrojs/image/components';
+import ImageBG from '../components/ImageBG.astro'
+import CtaButton from '../components/CtaButton.astro'
+import process from '../assets/images/process-home.png'
+---
+<section class="w-full flex flex-col items-center">
+  <div class="w-full h-full flex flex-row-reverse justify-center items-start p-16">
+    <div class="flex flex-col justify-between items-center w-2/3 h-full">
+      <h3 class="font-dsans text-5xl text-midnight-blue pb-12">The Process</h3>
+      <p class="font-inter text-dim-gray text-3xl px-48 pb-12">When life presents changes that disrupt how you contact independence and
+        peace, finding a Behavioral Analyst with a proven method is key.<br />
+        Thank to several types of assessments, I will guide you and help you
+        reach your goal.
       </p>
+      <CtaButton>Discover the Process</CtaButton>
+    </div>
+    <div class="relative w-1/5">
+      <Picture src={process} widths={[process.width]} height={process.height} sizes="" format="webp" alt="" />
+      <ImageBG width={process.width} height={process.height} />
     </div>
   </div>
 </section>
 
-<style >
-.nt-process {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.image {
-  margin-right: 14px;
-  padding: 0 0 25px 29px;
-  position: relative;
-}
-.rectangle-6 {
-  width: 560px;
-  height: 327px;
-  background-color: var(--gainsboro-2);
-  position: relative;
-}
-.rectangle-5 {
-  width: 560px;
-  height: 327px;
-  background-color: var(--dark-slate-blue);
-  position: absolute;
-  left: 5px;
-  top: 25px;
-}
-.photo-1535231540604-72e8fbaf8cdb-1 {
-  width: 547px;
-  height: 302px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.header {
-  height: 43px;
-  width: 375px;
-  color: var(--midnight-blue);
-  display: flex;
-  text-align: center;
-  font-family: var(--dm-sans-33-regular-family);
-  font-size: var(--dm-sans-33-regular-size);
-  font-weight: var(--dm-sans-33-regular-weight);
-  line-height: var(--dm-sans-33-regular-line-height);
-}
-.body {
-  height: 244px;
-  width: 471px;
-  color: var(--dim-gray);
-  display: flex;
-  text-align: center;
-  font-family: var(--dm-sans-23-regular-family);
-  font-size: var(--dm-sans-23-regular-size);
-  font-weight: var(--dm-sans-23-regular-weight);
-  line-height: var(--dm-sans-23-regular-line-height);
-}
-.button {
-  background-color: var(--midnight-blue);
-  padding: 8px 5px 9px 6px;
-  box-shadow: 0 2px 1px 0 var(--transparent-white-1);
-  display: flex;
-  align-items: center;
-}
-.text {
-  max-width: 344px;
-  color: var(--white);
-  text-align: center;
-  font-family: var(--dm-sans-30-regular-family);
-  font-size: var(--dm-sans-30-regular-size);
-  font-weight: var(--dm-sans-30-regular-weight);
-  line-height: var(--dm-sans-30-regular-line-height);
-}
+<style>
+ img {
+    position: relative;
+    z-index: 10;
+  }
 </style>

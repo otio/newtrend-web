@@ -1,16 +1,22 @@
-<section class="nt-cta">
-  <img alt="" class="cta-bg-img" src="/images/cta-bg.png" />
-  <div class="cta-card"></div>
-  <div class="content">
-    <p class="card-header">Let&#039;s Talk</p>
-    <p class="card-chaser">
-      The first step in therapy is talking. Let&#039;s find a time where we
-      can meet and talk about what&#039;s on your mind.
-    </p>
-    <div class="cta-button">
-      <p class="btn-txt">Schedule a free Informal Assessment</p>
+---
+import { Image, Picture } from '@astrojs/image/components';
+import CtaButton from './CtaButton.astro';
+import rocks from "../assets/images/cta-bg.png"
+---
+<section id="nt-cta" class="relative flex flex-col bg-white w-full px-3.5rem">
+  <Picture alt="" id="cta-bg-img" sizes="" src={rocks} widths={[rocks.width]} />
+ <div class="absolute flex flex-row justify-center items-center w-full h-full">
+    <div id="cta-card" class="flex flex-col justify-evenly items-center w-2/5 h-1/2 bg-white shadow-md">
+      <div id="content" class="h-full flex flex-col justify-between items-center p-12">
+        <h2 id="card-header" class="font-dserif text-5xl text-midnight-blue" >Let's Talk</h2>
+        <p id="card-chaser" class="font-dsans text-2xl text-midnight-blue">
+          The first step in therapy is talking. Let&#039;s find a time where we
+          can meet and talk about what&#039;s on your mind.
+        </p>
+        <CtaButton>Schedule a Free Assessment</CtaButton>
+      </div>
     </div>
-  </div>
+ </div>
 </section>
 
 <style>
