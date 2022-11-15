@@ -1,0 +1,107 @@
+---
+import { Image, Picture } from '@astrojs/image/components';
+import Interior from '../layouts/Interior.astro'
+import FullWidthHero from '../components/FullWidthHero.astro'
+import GroupsServed from '../components/GroupsServed.astro';
+import CtaButton from '../components/CtaButton.astro';
+import profile from '../assets/images/richard-profile.png'
+import checkmark from '../assets/images/check-mark.svg'
+
+const clients = [
+  'Elders (65 +)',
+  'Adults suffering from...',
+  'Caretakers and Families'
+]
+const aboutText = [
+          `I'm a native Californian but have lived in Reno for the last 8
+          years. Following a traditional life raising a family and a career in
+          real estate, I decided to go back to school to study psychology at
+          UNR. I landed in the discipline of Behavior Analysis which prepared
+          me to look at behavior with a scientific perspective. In addition to
+          my Master's degree in Psychology, I am a Board Certified Behavior
+          Analyst (BCBA), and a licensed Behavior Analyst in Nevada and an
+          Aging in Place Specialist.
+        `,
+        `I work with young adults, adults and especially aging individuals
+          and their loved ones who are experiencing or concerned with
+          behavioral challenges and aging independently and well. Regardless
+          of age, I work I assess one's lifestyle domains and activities of
+          daily living to best arrange for ongoing independence, satisfaction
+          and happiness. These experiences call for routine functional
+          analysis, cognitive assessment and the preparation of behavioral
+          support plans.
+        `,
+        ` With few exceptions, anything someone does, says or even thinks has
+          function. It is willful. When suffering, our behavior still has
+          function but it also produces uncomfortable consequences.
+        `,
+        `We may appear disabled but our will to contact reinforcement,
+          success and safety is not. Solutions present when we ask what new
+          conditions we may arrange to get what we desire but without painful
+          consequences.
+        `
+]
+const helpful = [     
+        {
+          label: 'Location',        
+          info: ` Bend, OREGON ||| Reno, NEVADA`,
+        },
+        {
+          label: 'Qualifications',
+          info: `University of Reno, NEVADA
+          Years in Practice: 3 years`,
+        },
+        {
+          label: 'Accepted Payment Methods',
+          info: 'Fee for service; cash, check, Visa, MC or mobile app'
+        }
+]
+---
+<Interior>
+  <FullWidthHero>About Me</FullWidthHero>
+  <GroupsServed />
+  <section class="flex flex-row items-start justify-center mt-6rem">
+    <aside class="flex flex-col justify-evenly items-center w-2/5 h-full">
+      <div class="mb-8">
+        <Image src={profile} width={profile.width} format="webp" alt="" />
+      </div>
+      <CtaButton>Take the test</CtaButton>
+      <p class="font-dsans text-center text-2xl text-midnight-blue py-8">I work with...</p>
+      <ul>
+        {
+          clients.map((client) => (
+            <li class="flex flex-rows items-center">
+              <Image src={checkmark} width="40" height="40" alt="" />
+              <span class="pl-4 py-4 font-dsans text-dim-gray text-2xl">{ client }</span>
+            </li>    
+          ))
+        }
+      </ul>
+  </aside>
+    <article class="w-3/5">
+      <h2 class="font-dserif text-5xl text-center text-midnight-blue pb-12">Meet Richard Breuner</h2>
+      <div>
+        {
+          aboutText.map((section) => (
+            <p class="font-inter text-dim-gray text-3xl pr-10rem pb-12">
+              { section }  
+            </p>
+          ))
+        }
+      </div>
+    </article>   
+  </section>
+  <section class:list={['flex', 'flex-row', 'justify-evenly', 'items-center', 'pt-4rem']}>
+    {
+      helpful.map((info) => (
+        <div class="flex flex-col justify-center items-center">
+          <p class="font-dsans text-center text-2xl text-midnight-blue py-8">{ info.label }</p>
+          <p class="font-inter text-center text-dim-gray text-lg pb-12">
+            { info.info }
+          </p>
+        </div>
+      ))
+    }
+
+  </section>
+</Interior>

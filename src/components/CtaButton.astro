@@ -1,0 +1,20 @@
+--- 
+const {link} = Astro.props
+---
+
+<a href={link} class="bg-midnight-blue px-6 py-8 shadow-sm">
+    <span class="font-dsans text-white text-center text-3xl">
+        <slot/>
+    </span>
+</a>
+<!-- 
+.schedule-a-free-assessment {
+    color: var(--white);
+    flex: 1;
+    align-self: stretch;
+    text-align: center;
+    font-family: var(--dm-sans-22-regular-family);
+    font-size: var(--dm-sans-22-regular-size);
+    font-weight: var(--dm-sans-22-regular-weight);
+    line-height: var(--dm-sans-22-regular-line-height);
+  } -->

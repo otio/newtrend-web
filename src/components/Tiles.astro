@@ -1,0 +1,19 @@
+---
+import { Image, Picture } from '@astrojs/image/components';
+import ImageBG from '../components/ImageBG.astro'
+const { tiles = [] } = Astro.props
+---
+
+<section id="tiles" class:list={['flex', 'flex-row', 'justify-evenly', 'items-center']}>
+  {
+    tiles.map((tile) => (
+      <div>
+        <div class="relative">
+          <Image src={tile.img} width={350} aspectRatio="1:1" format="webp" fit="cover" position="center" alt="" />
+          <ImageBG width={tile.img.width} height={tile.img.height} />
+        </div>
+        <p class="font-dsans text-2xl text-center text-midnight-blue pt-2rem">{tile.label}</p>
+      </div>    
+    ))
+  }
+</section>

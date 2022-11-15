@@ -1,0 +1,14 @@
+---
+import DividerThin from "./DividerThin.astro";
+const clientele = ['Adults', 'Elders', 'Caretakers']
+---
+<section class:list={[ 'w-full','flex', 'flex-col', 'justify-center', 'items-center', 'font-dsans']}>
+  <div class:list={[ 'w-full','flex', 'flex-row', 'justify-center', 'items-center']}>
+    {clientele.map((client) => (
+      <div class:list={['bg-white','py-2rem', 'px-10rem']}>
+        <p class="fonst-dsans text-2xl text-midnight-blue">{client}</p>
+      </div>
+    ))}
+    </div>
+    <DividerThin />
+</section>

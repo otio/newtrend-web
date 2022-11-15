@@ -1,0 +1,61 @@
+---
+  import Interior from '../layouts/Interior.astro'
+  import FullWidthHero from '../components/FullWidthHero.astro'
+  import GroupsServed from '../components/GroupsServed.astro';
+  import CtaButton from '../components/CtaButton.astro';
+  import DividerDot from '../components/DividerDot.astro';
+  const textContent = [
+    `Aging is often tentative and frightful for the aging individual as
+          well as for loved ones, when independence becomes an issue. While
+          living at home is preferred, how and where one will age best is among
+          the most fraught circumstances for a family.`,
+    `The function of an individual's behavior is found in their unique
+          environment. This includes several life domains such as family and
+          relationships, financial, intellectual, occupational, psychological,
+          physical and health, and spiritual. Once an individual's satisfaction
+          with each is assessed and the whole individual is considered, their
+          unique environment may be rearranged to optimize their performance,
+          satisfaction and independence.`,
+    `I support aging at home rather than in assisted or institutional
+          alternatives whenever possible.`
+  ]
+---
+  <Interior>
+    <FullWidthHero>The Approach</FullWidthHero>
+    <GroupsServed />
+    <section id="approach-content" class="flex flex-col items-center">
+      <article class="flex flex-col items-center pb-8rem">
+        {
+          textContent.map((text) => (
+            <p class="font-inter text-dim-gray text-3xl px-48 py-32">
+              { text }
+            </p>  
+            <DividerDot/>
+          ))
+        }
+
+     </article>
+      <div>
+        <CtaButton>Take an Assessment Now</CtaButton>
+      </div>
+    </section>
+   
+  </Interior>
+
+<style>
+.ellipse-6 {
+  width: 32px;
+  height: 33px;
+  background-color: var(--midnight-blue);
+  border-radius: 50%;
+  position: absolute;
+  right: 593px;
+  bottom: 20px;
+}
+.quote-dot-two {
+  margin-bottom: 69px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+</style>

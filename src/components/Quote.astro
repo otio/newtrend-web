@@ -1,0 +1,20 @@
+--- 
+import Divider from '../components/Divider.astro'
+const questions = [
+  'Is your peace being disrupted?',
+  'Fearful of aging?',
+  'Need support for aging independently?',
+  'Faced with supporting a challenging situation?'
+]
+---
+<section id="nt-quote" class="flex flex-col items-center justify-center">
+  <Divider/>
+  <div id="content" class="relative text-center py-16">
+    {questions.map((question) => (
+      <p class="text-midnight-blue text-5xl my-12 font-dsans">
+         {question}
+      </p>
+  ))}
+  </div>
+  <Divider/>
+</section>

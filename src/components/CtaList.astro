@@ -1,0 +1,31 @@
+--- 
+import { Image } from '@astrojs/image/components';
+import DividerThin from '../components/DividerThin.astro'
+import checkmark from '../assets/images/check-mark.svg'
+const headline = "Let's do something to produce positive change you will believe in"
+const offerings = [
+  'Get support from a qualified Behavioral Analyst',
+  'Scientific and proven methods',
+  'Witness change and improvement',
+  'Find peace again',
+  'Track your growth with personal reports'
+]
+---
+<section class="w-full h-full flex flex-col items-center mb-5rem">
+  <div class="py-24">
+    <h2 class="font-dserif text-midnight-blue text-5xl">
+      {headline}
+    </h2>
+  </div>
+  <ul>
+    {offerings.map((offer) => (
+      <li class="flex flex-row items-center justify-start mb-4rem">
+        <Image class="inline-block" src={checkmark} width="60" height="60" alt="" />
+          <span class="inline-block my-12">
+            <p class="font-inter text-dim-gray text-3xl">{offer}</p>
+          </span>
+      </li>
+    ))}
+  </ul>
+  <DividerThin/>
+</section>

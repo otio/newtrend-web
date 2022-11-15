@@ -1,0 +1,31 @@
+---
+import { Debug } from 'astro/components';
+import { Image, Picture } from '@astrojs/image/components';
+import ImageBG from '../components/ImageBG.astro'
+import CtaButton from '../components/CtaButton.astro'
+import process from '../assets/images/process-home.png'
+---
+<section class="w-full flex flex-col items-center">
+  <div class="w-full h-full flex flex-row-reverse justify-center items-start p-16">
+    <div class="flex flex-col justify-between items-center w-2/3 h-full">
+      <h3 class="font-dsans text-5xl text-midnight-blue pb-12">The Process</h3>
+      <p class="font-inter text-dim-gray text-3xl px-48 pb-12">When life presents changes that disrupt how you contact independence and
+        peace, finding a Behavioral Analyst with a proven method is key.<br />
+        Thank to several types of assessments, I will guide you and help you
+        reach your goal.
+      </p>
+      <CtaButton>Discover the Process</CtaButton>
+    </div>
+    <div class="relative w-1/5">
+      <Picture src={process} widths={[process.width]} height={process.height} sizes="" format="webp" alt="" />
+      <ImageBG width={process.width} height={process.height} />
+    </div>
+  </div>
+</section>
+
+<style>
+ img {
+    position: relative;
+    z-index: 10;
+  }
+</style>

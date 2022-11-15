@@ -1,7 +1,7 @@
 {
-  // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "types": ["nuxt-windicss"]
+    "moduleResolution": "node",
+    "jsx": "preserve"
   }
 }
