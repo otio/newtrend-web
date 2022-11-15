@@ -1,6 +1,10 @@
-<div class="text-lg text-midnight-blue">
+---
+const { align } = Astro.props
+const isAligned = () => !align ? 'text-center' : align
+---
+<div class:list={['text-lg','text-midnight-blue', isAligned()]}>
     <p>Richard W. Breuner, MA, BCBA</p>
-    <p class="">
+    <p>
       New Trend Applied Behavior Analysis
     </p>
     <a href="tel:5304141388">530-414-1388</a>

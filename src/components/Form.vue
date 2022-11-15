@@ -1,10 +1,4 @@
 <script lang="ts" setup>
-import { createApp } from 'vue'
-import type { App } from 'vue';
-import { plugin, defaultConfig } from '@formkit/vue'
-
-createApp().use(plugin, defaultConfig).mount('#form')
-
 
 const schema = [
   {
