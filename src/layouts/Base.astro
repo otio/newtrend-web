@@ -20,7 +20,7 @@ let title = 'New Trend Adult Behavior Analysis'
     <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="">
+  <body class="content">
     <Header />
     <main class="pt-48">
       <slot /> <!-- your content is injected here -->
@@ -30,8 +30,28 @@ let title = 'New Trend Adult Behavior Analysis'
 </html>
 
 <style is:global>
-   img {
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+main {
+height: 100%;
+width: 100%;
+}
+img {
     position: relative;
     z-index: 10;
-  }
+}
+.content {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+}
 </style>

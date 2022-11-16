@@ -1,130 +1,168 @@
 ---
 const navLinks = [
-    {
-        route: '/approach',
-        label: 'The Approach'
-    },
-    {
-        route: '/assessment',
-        label: 'Tailored Assessment'
-    },
-    {
-        route: '/about',
-        label: 'About'
-    },
-    {
-        route: '/contact',
-        label: 'Contact'
-    },
-]
-const { vertical = false } = Astro.props
-const layout = () => !vertical ? 'flex <lg:(flex-col)' : 'flex flex-col'
-const alignment = () => !vertical ? 'text-center' : 'py-2'
-const fontSize = () => !vertical ? 'text-2xl' : 'text-xl'
+  {
+    route: "/approach",
+    label: "The Approach",
+  },
+  {
+    route: "/assessment",
+    label: "Tailored Assessment",
+  },
+  {
+    route: "/about",
+    label: "About",
+  },
+  {
+    route: "/contact",
+    label: "Contact",
+  },
+];
+const { vertical = false } = Astro.props;
+// If the component property 'vertical' true the below variables output the expression furthest to the right
+const layout = () => (!vertical ? "flex flex-row" : "flex flex-col");
+const alignment = () => (!vertical ? "text-center" : "py-2");
+const fontSize = () => (!vertical ? "text-2xl" : "text-xl");
 ---
-<section class="flex flex-row">
-    <nav id="nav-links" class="font-dsans w-full">
-        <ul class:list={['list-none', layout(), 'justify-evenly']}>
-            {navLinks.map((link) => (
-                <li class:list={['w-full', 'px-2', alignment()]}>
-                    <a class:list={['text-midnight-blue', 'no-underline', fontSize()]} href={link.route}>{link.label}</a>
-                </li>
-            ))}
-        </ul>
-        <div>
-            <input type="checkbox" id="navigation" />
-            <label for="navigation">
-            +
-            </label>
-        </div>
-    </nav>
-</section>
+
+<aside>
+  <!-- <aside class="w-full flex flex-row justify-center items-center"> -->
+  <nav>
+    <!-- <ul class:list={['w-full', 'list-none', 'justify-around', 'items-center', layout()]}> -->
+    <div class="mobile">
+      <input type="checkbox" id="mobile-menu" />
+      <label for="mobile-menu">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </label>
+    </div>
+    <ul class:list={["asideList"]}>
+      {
+        navLinks.map((link) => (
+          <li class:list={["w-full", "px-2", alignment()]}>
+            <a class:list={["asideAnchor", fontSize()]} href={link.route}>
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- <a class:list={['text-midnight-blue', 'no-underline', fontSize()]} href={link.route}>{link.label}</a> -->
+  </nav>
+</aside>
 
 <style>
-.wrapper{
-    overflow:hidden;
-}
-section {
-    padding:30px 30px 30px 80px;
-    -moz-transition:all 200ms ease-in;
-    -webkit-transition:all 200ms ease-in;
-    -o-transition:all 200ms ease-in;
-    transition:all 200ms ease-in;
-}
-/* 
-nav {
-    position:fixed;
-    top:0;
-    left:0;
-    width:250px;
-    height:100%;
-    margin:0 0 0 -250px;
-    -moz-transition:all 200ms ease-in;
-    -webkit-transition:all 200ms ease-in;
-    -o-transition:all 200ms ease-in;
-    transition:all 200ms ease-in;
-}
-nav ul{
-    width:250px;
-    height:100%;
-    padding:0;
-    margin:0;
-    list-style:none;
-    background:#222;
-    overflow:hidden;
-}
-nav li{
-    margin:0;
-}
-nav a{
-    color:#fff;
-    font-size:1em;
-    font-family:'helvetica neue', helvetica, arial, sans-serif;
-    text-decoration:none;
-    display:block;
-    padding:12px 15px;
-    font-weight:300;
-    letter-spacing:2px;
-    border-bottom:1px solid #333;
-}
-nav a:hover{
-    background:#111;
-} */
+  aside {
+    @apply relative w-2/5 z-30 bg-white text-midnight-blue border-0
+    xl:(fixed top-0 bottom-0 right-0 border-midnight-blue border-2)
+    lg:(fixed top-0 bottom-0 right-0 border-midnight-blue border-2)
+    md:(fixed top-0 bottom-0 right-0 border-midnight-blue border-2)
+    sm:(fixed top-0 bottom-0 right-0 border-midnight-blue border-2)
+    xs:(fixed top-0 bottom-0 right-0 border-midnight-blue border-2)
+    ;
+  }
+  nav {
+    @apply flex flex-row font-dsans w-full h-full;
+  }
+  .mobile {
+    @apply hidden
+    xl:(block)
+    lg:(block)
+    md:(block)
+    sm:(block)
+    xs:(block)
+    ;
+  }
+  .asideList {
+    @apply w-full list-none text-center divide-midnight-blue
+    flex flex-row
+    xl:(border-midnight-blue border-2 mt-100px divide-y-2 flex-col)
+    lg:(border-midnight-blue border-2 mt-100px divide-y-2 flex-col)
+    md:(border-midnight-blue border-2 mt-100px divide-y-2 flex-col)
+    sm:(border-midnight-blue border-2 mt-100px divide-y-2 flex-col)
+    xs:(border-midnight-blue border-2 mt-100px divide-y-2 flex-col)
+    ;
+  }
 
-label{
-    display:block;
-    font-family:'helvetica neue', helvetica, arial, sans-serif;
-    font-weight:700;
-    background:#003366;
-    width:42px;
-    height:42px;
-    line-height:42px;
-    color:#fff;
-    text-align:center;
-    font-size:2em;
-    line-height:1.1em;
-    position:fixed;
-    top:10px;
-    left:10px;
-    -moz-transition:all 200ms ease-in;
-    -webkit-transition:all 200ms ease-in;
-    -o-transition:all 200ms ease-in;
-    transition:all 200ms ease-in;
-    z-index:500;
-}
-input[type="checkbox"]{
-    display:none;
-}
-input[type="checkbox"]:checked ~ nav{
-    margin:0;
-}
-input[type="checkbox"]:checked ~ label{
-    left:260px;
-}
-input[type="checkbox"]:checked ~ section{
-    -webkit-transform:translate3d(260px, 0, 0);
-    -moz-transform:translate3d(260px, 0, 0);
-    -o-transform:translate3d(260px, 0, 0);
-    transform:translate3d(260px, 0, 0);
-}
+  .asideAnchor {
+    @apply relative py-20px px-0 block font-sans text-midnight-blue text-2xl;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s 0.15s ease-in;
+  }
+
+  .asideAnchor::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #fff;
+    width: 0;
+    transition: width 0.3s ease-in;
+    z-index: -1;
+  }
+
+  .asideAnchor:hover {
+    color: #0799d3;
+  }
+
+  .asideAnchor:hover::after {
+    width: 100%;
+  }
+  label {
+    display: inline-block;
+    padding: 7px 10px;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    z-index: 3;
+    position: fixed;
+  }
+
+  .bar {
+    display: block;
+    background-color: #003366;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto;
+    transition: background-color 0.5s ease-in, transform 0.5s ease-in,
+      width 0.5s ease-in;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ .content {
+    transform: translateX(20%);
+  }
+
+  input[type="checkbox"]:checked ~ label .bar {
+    background-color: #003366;
+  }
+
+  input[type="checkbox"]:checked ~ label .top {
+    -webkit-transform: translateY(0px) rotateZ(45deg);
+    -moz-transform: translateY(0px) rotateZ(45deg);
+    -ms-transform: translateY(0px) rotateZ(45deg);
+    -o-transform: translateY(0px) rotateZ(45deg);
+    transform: translateY(0px) rotateZ(45deg);
+  }
+
+  input[type="checkbox"]:checked ~ label .bottom {
+    -webkit-transform: translateY(-15px) rotateZ(-45deg);
+    -moz-transform: translateY(-15px) rotateZ(-45deg);
+    -ms-transform: translateY(-15px) rotateZ(-45deg);
+    -o-transform: translateY(-15px) rotateZ(-45deg);
+    transform: translateY(-15px) rotateZ(-45deg);
+  }
+
+  input[type="checkbox"]:checked ~ label .middle {
+    width: 0;
+  }
+
+  .middle {
+    margin: 0 auto;
+  }
 </style>

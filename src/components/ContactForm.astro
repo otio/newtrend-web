@@ -13,11 +13,11 @@ const actionUrl = `https://kwesforms.com/api/foreign/forms/Uk2Iku60jQt2t34QhaWr`
     'phone',
     errorMessage,
     value => {
-        return value.test(usPhone) === true;
+        return typeof value === 'string' && value.test(usPhone) === true;
     }
 );
 </script>
-<form class="kwes-form w-full py-1rem flex flex-col" action={actionUrl} method="POST" client:load>
+<form id="contact" class="kwes-form w-full py-1rem flex flex-col" action={actionUrl} method="POST" client:load>
     <label for="first">First Name</label>
     <input type="text" name="first" rules="required|max:150">
     <label for="last">Last Name</label>
