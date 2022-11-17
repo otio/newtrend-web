@@ -1,0 +1,20 @@
+---
+import Logo from './Logo.astro'
+import Nav from './Nav.astro'
+import ContactCard from '../../components/ContactCard.astro'
+import CtaButton from '../../components/CtaButton.astro'
+const year = new Date().getFullYear()
+---
+<footer class="row-span-full w-full flex flex-col items-center bg-white px-16 py-24">
+  <div class="w-4/5 inline-grid grid-cols-3 mb-3rem">
+    <Logo/>
+    <Nav vertical />
+    <ContactCard align="text-right" />
+    <!-- <div>
+      <CtaButton>Schedule a Free Assessment</CtaButton>
+    </div> -->
+  </div>
+  <div >
+    <span class="text-lg">All Rights Reserved | Newtrendaba.com | {year}</span>
+  </div>
+</footer>

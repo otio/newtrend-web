@@ -1,0 +1,86 @@
+---
+import { Debug } from "astro/components";
+
+const navLinks = [
+  {
+    route: "/approach",
+    label: "The Approach",
+  },
+  {
+    route: "/assessment",
+    label: "Tailored Assessment",
+  },
+  {
+    route: "/about",
+    label: "About",
+  },
+  {
+    route: "/contact",
+    label: "Contact",
+  },
+];
+const { vertical = null } = Astro.props;
+
+// const layout = () => (vertical ? "flex-row" : "flex flex-col justify-center");
+// const fontSize = () => (!vertical ? "text-2xl" : "text-xl");
+---
+
+<!-- <aside class="w-full flex flex-row justify-center items-center"> -->
+<nav class:list={[
+  "bg-[#D9E0E8]",
+   "absolute top-0 bottom-0 right-0", 
+   "text-midnight-blue"
+  ]}>
+  <ul class:list={["asideList"]}>
+    {
+      navLinks.map((link) => (
+        <li
+          class:list={[`w-full`, `xl:()`, `lg:()`, `md:()`, `sm:()`, `xs:()`]}
+        >
+          <a href={link.route} class:list={[`asideAnchor`]}>
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style is:global>
+  .asideList {
+    @apply list-none p-0 m-0 mt-100px text-center;
+    border-top: 2px solid #003366;
+  }
+
+  .asideAnchor {
+    border-bottom: 2px solid #003366;
+    padding: 20px 0;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s 0.15s ease-in;
+  }
+
+  .asideAnchor::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    /* background-color: #fff; */
+    width: 0;
+    transition: width 0.3s ease-in;
+    /* z-index: -1; */
+  }
+
+  .asideAnchor:hover {
+    color: #0799d3;
+  }
+
+  .asideAnchor:hover::after {
+    width: 100%;
+  }
+</style>

@@ -1,57 +1,156 @@
 ---
-import "@fontsource/abeezee"
-import "@fontsource/acme"
-import "@fontsource/dm-sans"
-import "@fontsource/dm-serif-text"
-import "@fontsource/hanuman"
-import "@fontsource/inter"
-import "@fontsource/roboto"
-import 'virtual:windi.css'
-import 'virtual:windi-devtools'
-import '../styles/base.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import "@fontsource/abeezee";
+import "@fontsource/acme";
+import "@fontsource/dm-sans";
+import "@fontsource/dm-serif-text";
+import "@fontsource/hanuman";
+import "@fontsource/inter";
+import "@fontsource/roboto";
+import "virtual:windi.css";
+import "virtual:windi-devtools";
+import "../styles/base.css";
+import Header from "./blocks/Header.astro";
+import Footer from "./blocks/Footer.astro";
+import Nav from "./blocks/Nav.astro"
 
-let title = 'New Trend Adult Behavior Analysis'
+let title = "New Trend Adult Behavior Analysis";
 ---
+
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body class="content">
-    <Header />
-    <main class="pt-48">
-      <slot /> <!-- your content is injected here -->
+  <body>
+    <main>
+      <Nav />
+      <section class:list={[
+        'relative',
+        'w-full h-full',
+        'bg-white',
+        'overflow-y-auto',
+        'overflow-x-hidden',
+      ]}>
+ 
+          <input type="checkbox" id="mobile-menu">
+          <label 
+            class:list={[
+              `inline-block`,
+              `py-7px px-10px`,
+              'bg-transparent',
+              'cursor-pointer',
+              'm-10px',
+              'absolute right-36 top-8',
+              'z-60'
+            ]}
+            for="mobile-menu">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+          </label>
+       
+        <div class="content">
+          <slot />
+        </div>
+      </section>
     </main>
-    <Footer/>
   </body>
 </html>
 
 <style is:global>
-body, html {
+  body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-}
-main {
-height: 100%;
-width: 100%;
-}
-img {
+  grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  header {
+    grid-area: header;
+  }
+  main {
+    height: 100%;
+    width: 100%;
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+  }
+  img {
     position: relative;
-    z-index: 10;
+    /* z-index: 10; */
+  }
+  /* MENU */
+
+nav {
+  background-color: #D9E0E8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 20%;
 }
+.bar {
+  display: block;
+  background-color: #003366;
+  width: 30px;
+  height: 3px;
+  border-radius: 5px;
+  margin: 5px auto;
+  transition: background-color .5s ease-in, transform .5s ease-in, width .5s ease-in;
+}
+
 .content {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 2;
-    transition: transform 0.5s ease-in-out;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  transition: transform .5s ease-in-out;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .content {
+  transform: translateX(-20%);
+}
+input[type="checkbox"]:checked ~ nav {
+  z-index: 5;
+}
+
+input[type="checkbox"]:checked ~ label .bar {
+  background-color: #003366;
+}
+
+input[type="checkbox"]:checked ~ label .top {
+  -webkit-transform: translateY(0px) rotateZ(45deg);
+  -moz-transform: translateY(0px) rotateZ(45deg);
+  -ms-transform: translateY(0px) rotateZ(45deg);
+  -o-transform: translateY(0px) rotateZ(45deg);
+  transform: translateY(0px) rotateZ(45deg);
+}
+
+input[type="checkbox"]:checked ~ label .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+input[type="checkbox"]:checked ~ label .middle {
+  width: 0;
+}
+
+.middle {
+  margin: 0 auto;
 }
 </style>
