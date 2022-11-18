@@ -1,0 +1,39 @@
+---
+const navLinks = [
+  {
+    route: "/approach",
+    label: "Approach",
+  },
+  {
+    route: "/assessment",
+    label: "Assessment",
+  },
+  {
+    route: "/about",
+    label: "About",
+  },
+  {
+    route: "/contact",
+    label: "Contact",
+  },
+];
+const { 
+    listStyle = [], 
+    listItemStyle = [], 
+    anchorStyle = [] } = Astro.props
+---
+<ul class:list={listStyle}>
+{
+  navLinks.map((link) => (
+    <li
+      class:list={listItemStyle}>
+        <a
+        href={link.route}
+        class:list={anchorStyle}
+      >
+        {link.label}
+      </a>
+    </li>
+  ))
+}
+</ul>

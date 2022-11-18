@@ -68,6 +68,17 @@ export default defineConfig({
 			colors: {
 				...COLORS(),
 			},
+			transitionProperty: {
+				width: 'width',
+				// height: 'height',
+				// spacing: 'margin, padding',
+			},
+			gridTemplateRows: {
+				base: 'auto max-content auto',
+			},
+			// gridRowStart: {
+			// 	last: '-1',
+			// },
 		},
 		backgroundColor: theme => ({
 			...theme('colors'),

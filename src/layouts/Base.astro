@@ -9,11 +9,13 @@ import "@fontsource/roboto";
 import "virtual:windi.css";
 import "virtual:windi-devtools";
 import "../styles/base.css";
-import Header from "./blocks/Header.astro";
-import Footer from "./blocks/Footer.astro";
-import Nav from "./blocks/Nav.astro"
+import ContactCard from "./blocks/ContactCard.astro";
+import NavLinks from "./blocks/NavLinks.astro";
+import Logo from "./blocks/Logo.astro";
+
 
 let title = "New Trend Adult Behavior Analysis";
+const year = new Date().getFullYear()
 ---
 
 <html lang="en">
@@ -22,135 +24,290 @@ let title = "New Trend Adult Behavior Analysis";
     <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body>
-    <main>
-      <Nav />
-      <section class:list={[
-        'relative',
-        'w-full h-full',
-        'bg-white',
-        'overflow-y-auto',
-        'overflow-x-hidden',
-      ]}>
- 
-          <input type="checkbox" id="mobile-menu">
-          <label 
-            class:list={[
-              `inline-block`,
-              `py-7px px-10px`,
-              'bg-transparent',
-              'cursor-pointer',
-              'm-10px',
-              'absolute right-36 top-8',
-              'z-60'
-            ]}
-            for="mobile-menu">
-            <span class="bar top"></span>
-            <span class="bar middle"></span>
-            <span class="bar bottom"></span>
-          </label>
-       
-        <div class="content">
-          <slot />
-        </div>
+  <body
+    class:list={[
+      // "w-full h-full p-0 m-0",
+      // "flex flex-col",
+      // "container",
+      // "z-0",
+      "grid grid-rows-[auto,1fr,auto]",
+      // "gap-y-5rem",
+      "xl:()",
+      "lg:()",
+      "md:()",
+      "sm:()",
+      "xs:()",
+    ]}
+  >
+      <header
+        class:list={[
+          "row-start-1 row-end-2",
+          "col-start-1 col-span-full",
+          "grid",
+          "grid-cols-2",
+          "pt-3rem",
+          "z-5",
+          // "justify-items-center",
+          // "align-center",
+          // "justify-center",
+          // "items-center",
+          // "shadow-xl z-3",
+          "xl:()",
+          "lg:()",
+          "md:()",
+          "sm:()",
+          "xs:()",
+        ]}
+      >
+      <Logo />
+
+      <nav
+        class:list={[
+          "col-start-2",
+          // "content-center",
+          "flex flex-row",
+          // "items-center",
+          // "justify-self-center",
+          // "w-full",
+          // "px-5rem",
+          // "bg-white",
+          "xl:()",
+          "lg:()",
+          "md:()",
+          "sm:()",
+          "xs:()",
+        ]}
+      >
+        <NavLinks
+          listStyle={[
+            "flex flex-row basis-1/2 justify-between items-center",
+            "text-midnight-blue text-center",
+            "w-full h-full",
+            "list-none",
+            " p-0 m-0",
+            "z-1",
+            "xl:()",
+            "lg:()",
+            "md:()",
+            "sm:()",
+            "xs:()",
+          ]}
+          listItemStyle={[
+            "w-full min-w-200px",
+            "text-2xl",
+            // "2xl:(text-xl)",
+            "xl:()",
+            "lg:()",
+            "md:()",
+            "sm:()",
+            "xs:()",
+          ]}
+          anchorStyle={[
+            // "pt-20px px-0",
+            "w-full",
+            "block",
+            "uppercase",
+            "no-underline",
+            "relative",
+            // "transition-colors duration-300 delay-150 ease-in",
+            // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
+            // "hover:(text-[#0799d3] after:w-full)",
+            "xl:()",
+            "lg:()",
+            "md:()",
+            "sm:()",
+            "xs:()",
+          ]}
+        />
+      </nav>
+      <input id="mobile-menu" type="checkbox" class:list={["hidden"]} />
+      <label
+        class:list={[
+          "hidden",
+          "inline-block py-7px px-10px bg-transparent cursor-pointer m-10px absolute right-36 top-8",
+          "xl:()",
+          "lg:()",
+          "md:()",
+          "sm:()",
+          "xs:()",
+        ]}
+        for="mobile-menu"
+      >
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </label>
+    </header>
+    <main
+      class:list={[
+        // "relative",
+      ]}
+    >
+      <section
+        id="main-content"
+        class:list={[
+          // "top-0",
+          // "bottom-0",
+          // "absolute",
+          // "right-0",
+          // "left-0",
+          // "bg-white",
+          // "z-2",
+          // "transition-transform duration-500 ease-in-out",
+          // "relative",
+          // "col-span-full",
+          // "w-full h-full",
+          // "bg-white",
+          // "overflow-y-auto",
+          // "overflow-x-hidden",
+        ]}
+      >
+        <slot />
       </section>
     </main>
+    <footer
+      class:list={[
+        // "row-start-last",
+        // "col-span-full",
+        // "flex flex-row",
+        // "justify-center",
+        // "items-center",
+        // "shadow-xl z-3",
+        "xl:()",
+        "lg:()",
+        "md:()",
+        "sm:()",
+        "xs:()",
+      ]}
+    >
+        <NavLinks
+          listStyle={[
+            // "flex flex-col basis-1/2 justify-evenly items-center",
+            // "list-none",
+            // "w-11/12 h-2rem",
+            // " p-0 m-0",
+            // " mt-100px",
+            // "text-left",
+            // "text-midnight-blue",
+            // "break-word",
+            "xl:()",
+            "lg:()",
+            "md:()",
+            "sm:()",
+            "xs:()",
+          ]}
+          listItemStyle={[
+            "w-full",
+            "min-w-200px",
+            "text-2xl",
+            "2xl:(text-xl)",
+            "xl:()",
+            "lg:()",
+            "md:()",
+            "sm:()",
+            "xs:()",
+          ]}
+          anchorStyle={[
+            // "pt-20px px-0",
+            // "block",
+            // "uppercase",
+            // "no-underline",
+            // "font-medium",
+            // "relative",
+            // "transition-colors duration-300 delay-150 ease-in",
+            // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
+            // "hover:(text-[#0799d3] after:w-full)",
+            // "w-full",
+            "xl:()",
+            "lg:()",
+            "md:()",
+            "sm:()",
+            "xs:()",
+          ]}
+        />
+      <ContactCard align="text-right" />
+      <section id="disclaimer">
+        <span class="text-lg">All Rights Reserved | Newtrendaba.com | {year}</span>
+      </section>
+    </footer>
   </body>
 </html>
 
 <style is:global>
-  body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-  header {
-    grid-area: header;
-  }
-  main {
-    height: 100%;
-    width: 100%;
-    grid-area: main;
-  }
-  footer {
-    grid-area: footer;
-  }
-  img {
+  /* img {
     position: relative;
+  } 
     /* z-index: 10; */
-  }
   /* MENU */
+  /* 
+  nav {
+    background-color: #d9e0e8;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+  } 
+*/
+  .bar {
+    display: block;
+    background-color: #003366;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto;
+    transition: background-color 0.5s ease-in, transform 0.5s ease-in,
+      width 0.5s ease-in;
+  }
+  #main-content {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+  }
+  /* 
+  input[type="checkbox"] {
+    display: none;
+  }
+*/
 
-nav {
-  background-color: #D9E0E8;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 20%;
-}
-.bar {
-  display: block;
-  background-color: #003366;
-  width: 30px;
-  height: 3px;
-  border-radius: 5px;
-  margin: 5px auto;
-  transition: background-color .5s ease-in, transform .5s ease-in, width .5s ease-in;
-}
+  input[type="checkbox"]:checked ~ #main-content {
+    transform: translateX(-20%);
+  }
+  input[type="checkbox"]:checked ~ nav {
+    z-index: 5;
+  }
 
-.content {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  right: 0;
-  left: 0;
-  background-color: #fff;
-  z-index: 2;
-  transition: transform .5s ease-in-out;
-}
+  /* ICON ANIMATION */
+  input[type="checkbox"]:checked ~ label .bar {
+    background-color: #003366;
+  }
 
-input[type="checkbox"] {
-  display: none;
-}
+  input[type="checkbox"]:checked ~ label .top {
+    -webkit-transform: translateY(0px) rotateZ(45deg);
+    -moz-transform: translateY(0px) rotateZ(45deg);
+    -ms-transform: translateY(0px) rotateZ(45deg);
+    -o-transform: translateY(0px) rotateZ(45deg);
+    transform: translateY(0px) rotateZ(45deg);
+  }
 
-input[type="checkbox"]:checked ~ .content {
-  transform: translateX(-20%);
-}
-input[type="checkbox"]:checked ~ nav {
-  z-index: 5;
-}
+  input[type="checkbox"]:checked ~ label .bottom {
+    -webkit-transform: translateY(-15px) rotateZ(-45deg);
+    -moz-transform: translateY(-15px) rotateZ(-45deg);
+    -ms-transform: translateY(-15px) rotateZ(-45deg);
+    -o-transform: translateY(-15px) rotateZ(-45deg);
+    transform: translateY(-15px) rotateZ(-45deg);
+  }
 
-input[type="checkbox"]:checked ~ label .bar {
-  background-color: #003366;
-}
+  input[type="checkbox"]:checked ~ label .middle {
+    width: 0;
+  }
 
-input[type="checkbox"]:checked ~ label .top {
-  -webkit-transform: translateY(0px) rotateZ(45deg);
-  -moz-transform: translateY(0px) rotateZ(45deg);
-  -ms-transform: translateY(0px) rotateZ(45deg);
-  -o-transform: translateY(0px) rotateZ(45deg);
-  transform: translateY(0px) rotateZ(45deg);
-}
-
-input[type="checkbox"]:checked ~ label .bottom {
-  -webkit-transform: translateY(-15px) rotateZ(-45deg);
-  -moz-transform: translateY(-15px) rotateZ(-45deg);
-  -ms-transform: translateY(-15px) rotateZ(-45deg);
-  -o-transform: translateY(-15px) rotateZ(-45deg);
-  transform: translateY(-15px) rotateZ(-45deg);
-}
-
-input[type="checkbox"]:checked ~ label .middle {
-  width: 0;
-}
-
-.middle {
-  margin: 0 auto;
-}
+  .middle {
+    margin: 0 auto;
+  }
 </style>

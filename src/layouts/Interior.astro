@@ -12,23 +12,10 @@ import "../styles/base.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
-
-let title = "New Trend Adult Behavior Analysis";
+import Base from './Base.astro'
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <slot />
-      <!-- your content is injected here -->
-      <CallToAction />
-    </main>
-    <Footer />
-  </body>
-</html>
+<Base>
+    <slot />
+    <!-- your content is injected here -->
+    <CallToAction />
+</Base>
