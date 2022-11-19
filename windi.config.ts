@@ -76,9 +76,9 @@ export default defineConfig({
 			gridTemplateRows: {
 				base: 'auto max-content auto',
 			},
-			// gridRowStart: {
-			// 	last: '-1',
-			// },
+			gridRowStart: {
+				last: '-1',
+			},
 		},
 		backgroundColor: theme => ({
 			...theme('colors'),

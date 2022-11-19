@@ -3,7 +3,7 @@ import { Image, Picture } from '@astrojs/image/components';
 import CtaButton from './CtaButton.astro';
 import rocks from "../assets/images/cta-bg.png"
 ---
-<section id="nt-cta" class="relative flex flex-col bg-white w-full px-3.5rem mt-10rem">
+<section id="nt-cta" class="flex flex-col bg-white w-full px-3.5rem mt-10rem relative">
   <Picture alt="" id="cta-bg-img" sizes="" src={rocks} widths={[rocks.width]} />
  <div class="absolute flex flex-row justify-center items-center w-full h-full">
     <div id="cta-card" class="flex flex-col justify-evenly items-center w-2/5 h-1/2 bg-white shadow-md">

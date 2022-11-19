@@ -2,7 +2,6 @@
 // Layouts
 import Base from "../layouts/Base.astro";
 // Components
-import CallToAction from "../components/CallToAction.astro";
 import CtaButton from "../components/CtaButton.astro";
 import Divider from "../components/Divider.astro";
 import DividerThin from "../components/DividerThin.astro";
@@ -14,6 +13,7 @@ import approach from "../assets/images/approach-home.png";
 import process from "../assets/images/process-home.png";
 import profile from "../assets/images/profile.png";
 import checkmark from "../assets/images/check-mark.svg";
+import rocks from "../assets/images/cta-bg.png"
 // Content
 const headline =
   "Let's do something to produce positive change you will believe in";
@@ -33,7 +33,7 @@ const questions = [
 ---
 
 <Base>
-  <section id="hero" class="flex-row justify-center items-center">
+  <section id="hero" class="flex-row justify-center">
     <header class="w-1/2">
       <div id="content" class="flex flex-col items-center">
         <div class="flex flex-col mb-36 text-midnight-blue font-dserif">
@@ -47,7 +47,7 @@ const questions = [
       <img class="w-full" src={hero} width="575" alt="" />
     </aside>
   </section>
-  <section id="quote" class="flex-col items-center justify-center">
+  <section id="quote" class="flex-col justify-center">
     <Divider />
     <div id="content" class="relative text-center py-16">
       {
@@ -58,7 +58,7 @@ const questions = [
     </div>
     <Divider />
   </section>
-  <section id="offerings-list" class="flex-col items-center mb-5rem">
+  <section id="offerings-list" class="flex-col mb-5rem">
     <div class="py-24">
       <h2 class="font-dserif text-midnight-blue text-5xl">
         {headline}
@@ -78,7 +78,7 @@ const questions = [
     </ul>
     <DividerThin />
   </section>
-  <section id="approach" class="flex-col items-center">
+  <section id="approach" class="flex-col">
     <h2 class="font-dserif text-5xl text-midnight-blue">Your circumstances</h2>
     <div class="w-full h-full flex flex-row justify-center items-start p-16">
       <div class="flex flex-col justify-between items-center w-2/3 h-full">
@@ -106,7 +106,7 @@ const questions = [
       </div>
     </div>
   </section>
-  <section id="process" class="flex-col items-center">
+  <section id="process" class="flex-col">
     <div
       class="w-full h-full flex flex-row-reverse justify-center items-start p-16"
     >
@@ -136,7 +136,7 @@ const questions = [
       </div>
     </div>
   </section>
-  <section id="profile" class="flex-col items-center">
+  <section id="profile" class="flex-col">
     <div class="w-full h-full flex flex-row justify-center items-start p-16">
       <div class="flex flex-col justify-between items-center w-2/3 h-full">
         <h3 class="font-dsans text-5xl text-midnight-blue pb-12">
@@ -165,11 +165,25 @@ const questions = [
       </div>
     </div>
   </section>
-  <CallToAction />
+  <section id="cta" class="flex-col bg-white px-3.5rem mt-10rem">
+    <Picture alt="" id="cta-bg-img" sizes="" src={rocks} widths={[rocks.width]} />
+   <div class="absolute flex flex-row justify-center items-center w-full h-full">
+      <div id="cta-card" class="flex flex-col justify-evenly items-center w-2/5 h-1/2 bg-white shadow-md">
+        <div id="content" class="h-full flex flex-col justify-between items-center p-12">
+          <h2 id="card-header" class="font-dserif text-5xl text-midnight-blue" >Let's Talk</h2>
+          <p id="card-chaser" class="font-dsans text-center text-3xl text-midnight-blue">
+            The first step in therapy is talking. Let&#039;s find a time where we
+            can meet and talk about what's on your mind.
+          </p>
+          <CtaButton>Schedule a Free Assessment</CtaButton>
+        </div>
+      </div>
+   </div>
+  </section>
 </Base>
 
 <style>
   section {
-    @apply w-full h-full flex;
+    @apply w-full items-center flex;
   }
 </style>

@@ -11,14 +11,23 @@ import "virtual:windi-devtools";
 import "../styles/base.css";
 import ContactCard from "./blocks/ContactCard.astro";
 import NavLinks from "./blocks/NavLinks.astro";
+import MobileIcon from "./blocks/MobileIcon.astro";
 import Logo from "./blocks/Logo.astro";
 
-
 let title = "New Trend Adult Behavior Analysis";
-const year = new Date().getFullYear()
+const year = new Date().getFullYear();
 ---
 
-<html lang="en">
+<html
+  lang="en"
+  class:list={[
+    // "xl:()",
+    // "lg:()",
+    // "md:()",
+    // "sm:()",
+    // "xs:()",
+  ]}
+>
   <head>
     <meta charset="utf-8" />
     <title>{title}</title>
@@ -26,44 +35,32 @@ const year = new Date().getFullYear()
   </head>
   <body
     class:list={[
-      // "w-full h-full p-0 m-0",
-      // "flex flex-col",
-      // "container",
-      // "z-0",
-      "grid grid-rows-[auto,1fr,auto]",
-      // "gap-y-5rem",
-      "xl:()",
-      "lg:()",
-      "md:()",
-      "sm:()",
-      "xs:()",
+      // "xl:()",
+      // "lg:()",
+      // "md:()",
+      // "sm:()",
+      // "xs:()",
     ]}
   >
-      <header
-        class:list={[
-          "row-start-1 row-end-2",
-          "col-start-1 col-span-full",
-          "grid",
-          "grid-cols-2",
-          "pt-3rem",
-          "z-5",
-          // "justify-items-center",
-          // "align-center",
-          // "justify-center",
-          // "items-center",
-          // "shadow-xl z-3",
-          "xl:()",
-          "lg:()",
-          "md:()",
-          "sm:()",
-          "xs:()",
-        ]}
-      >
+    <header
+      class:list={[
+        "flex",
+        "flex-row",
+        "items-center",
+        "justify-evenly",
+        
+        // "xl:()",
+        // "lg:()",
+        // "md:()",
+        // "sm:()",
+        // "xs:()",
+      ]}
+    >
       <Logo />
 
       <nav
         class:list={[
-          "col-start-2",
+          // "col-start-2",
           // "content-center",
           "flex flex-row",
           // "items-center",
@@ -120,66 +117,39 @@ const year = new Date().getFullYear()
           ]}
         />
       </nav>
-      <input id="mobile-menu" type="checkbox" class:list={["hidden"]} />
-      <label
-        class:list={[
-          "hidden",
-          "inline-block py-7px px-10px bg-transparent cursor-pointer m-10px absolute right-36 top-8",
-          "xl:()",
-          "lg:()",
-          "md:()",
-          "sm:()",
-          "xs:()",
-        ]}
-        for="mobile-menu"
-      >
-        <span class="bar top"></span>
-        <span class="bar middle"></span>
-        <span class="bar bottom"></span>
-      </label>
+      <MobileIcon />
     </header>
-    <main
-      class:list={[
-        // "relative",
-      ]}
-    >
-      <section
+    <main class:list={[]}>
+      <slot />
+      <!-- <section
         id="main-content"
-        class:list={[
-          // "top-0",
-          // "bottom-0",
-          // "absolute",
-          // "right-0",
-          // "left-0",
-          // "bg-white",
-          // "z-2",
-          // "transition-transform duration-500 ease-in-out",
-          // "relative",
-          // "col-span-full",
-          // "w-full h-full",
-          // "bg-white",
-          // "overflow-y-auto",
-          // "overflow-x-hidden",
-        ]}
+        class:list={[]}
       >
-        <slot />
-      </section>
+      </section> -->
     </main>
     <footer
       class:list={[
-        // "row-start-last",
-        // "col-span-full",
-        // "flex flex-row",
-        // "justify-center",
-        // "items-center",
-        // "shadow-xl z-3",
-        "xl:()",
-        "lg:()",
-        "md:()",
-        "sm:()",
-        "xs:()",
+        "flex",
+        "flex-col",
+        "justify-evenly",
+        "items-center",
+
+        // "xl:()",
+        // "lg:()",
+        // "md:()",
+        // "sm:()",
+        // "xs:()",
       ]}
     >
+      <section
+        class:list={[
+          "w-11/12",
+          // "h-full",
+          "flex flex-row",
+          "justify-evenly"
+        ]}
+      >
+        <Logo />
         <NavLinks
           listStyle={[
             // "flex flex-col basis-1/2 justify-evenly items-center",
@@ -197,10 +167,10 @@ const year = new Date().getFullYear()
             "xs:()",
           ]}
           listItemStyle={[
-            "w-full",
-            "min-w-200px",
-            "text-2xl",
-            "2xl:(text-xl)",
+            // "w-full",
+            // "min-w-200px",
+            // "text-2xl",
+            // "2xl:(text-xl)",
             "xl:()",
             "lg:()",
             "md:()",
@@ -225,89 +195,35 @@ const year = new Date().getFullYear()
             "xs:()",
           ]}
         />
-      <ContactCard align="text-right" />
+        <ContactCard align="text-right" />
+      </section>
       <section id="disclaimer">
-        <span class="text-lg">All Rights Reserved | Newtrendaba.com | {year}</span>
+        <span class="text-lg"
+          >All Rights Reserved | Newtrendaba.com | {year}</span
+        >
       </section>
     </footer>
   </body>
 </html>
 
-<style is:global>
-  /* img {
-    position: relative;
-  } 
-    /* z-index: 10; */
-  /* MENU */
-  /* 
-  nav {
-    background-color: #d9e0e8;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 20%;
-  } 
-*/
-  .bar {
-    display: block;
-    background-color: #003366;
-    width: 30px;
-    height: 3px;
-    border-radius: 5px;
-    margin: 5px auto;
-    transition: background-color 0.5s ease-in, transform 0.5s ease-in,
-      width 0.5s ease-in;
+<style>
+  body {
+    /* min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto; */
+    @apply min-h-screen grid grid-rows-[300px,1fr,350px];
   }
-  #main-content {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 2;
-    transition: transform 0.5s ease-in-out;
-  }
-  /* 
-  input[type="checkbox"] {
-    display: none;
-  }
-*/
-
-  input[type="checkbox"]:checked ~ #main-content {
-    transform: translateX(-20%);
-  }
-  input[type="checkbox"]:checked ~ nav {
-    z-index: 5;
+  header,
+  footer {
+    /* display: grid;
+    place-items: center; */
+    @apply grid place-items-center shadow-xl z-3;
   }
 
-  /* ICON ANIMATION */
-  input[type="checkbox"]:checked ~ label .bar {
-    background-color: #003366;
-  }
-
-  input[type="checkbox"]:checked ~ label .top {
-    -webkit-transform: translateY(0px) rotateZ(45deg);
-    -moz-transform: translateY(0px) rotateZ(45deg);
-    -ms-transform: translateY(0px) rotateZ(45deg);
-    -o-transform: translateY(0px) rotateZ(45deg);
-    transform: translateY(0px) rotateZ(45deg);
-  }
-
-  input[type="checkbox"]:checked ~ label .bottom {
-    -webkit-transform: translateY(-15px) rotateZ(-45deg);
-    -moz-transform: translateY(-15px) rotateZ(-45deg);
-    -ms-transform: translateY(-15px) rotateZ(-45deg);
-    -o-transform: translateY(-15px) rotateZ(-45deg);
-    transform: translateY(-15px) rotateZ(-45deg);
-  }
-
-  input[type="checkbox"]:checked ~ label .middle {
-    width: 0;
-  }
-
-  .middle {
+  main {
+    padding: 1rem;
+    min-width: 80ch;
     margin: 0 auto;
+    outline: 2px dashed grey;
   }
 </style>
