@@ -32,15 +32,15 @@ const COLORS = () => ({
 })
 
 const SCREENS = () => ({
-	xs: { max: '530px' },
-	sm: { max: '640px', min: '531px' },
-	md: { max: '768px', min: '641px' },
-	lg: { max: '1024px', min: '769px' },
-	xl: { max: '1280px', min: '1025px' },
-	'2xl': { max: '1536px', min: '1281px' },
-	hd: { max: '1920px', min: '1537px' },
-	'2k': { max: '2048px', min: '1921px' },
-	'4k': { max: '3840px', min: '2049px' },
+	xs: { min: '0px', max: '530px'},
+	sm: { min: '531px' , max: '640px'},
+	md: { min: '641px' , max: '768px'},
+	lg: { min: '769px' , max: '1024px'},
+	xl: { min: '1025px' , max: '1280px'},
+	'2xl': { min: '1281px' , max: '1536px'},
+	hd: { min: '1537px' , max: '1920px'},
+	'2k': { min: '1921px' , max: '2048px'},
+	'4k': { min: '2049px' , max: '3840px'},
 })
 
 export default defineConfig({

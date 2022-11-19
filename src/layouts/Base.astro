@@ -48,12 +48,13 @@ const year = new Date().getFullYear();
         "flex-row",
         "items-center",
         "justify-evenly",
+        "px-auto",
         
-        // "xl:()",
-        // "lg:()",
-        // "md:()",
-        // "sm:()",
-        // "xs:()",
+        "xl:(flex-col)",
+        // "lg:(justify-start pl-10rem)" ,
+        // "md:(justify-start pl-5rem)",
+        "sm:(items-center justify-around)",
+        "xs:(flex-col items-center justify-around)",
       ]}
     >
       <Logo />
@@ -69,10 +70,10 @@ const year = new Date().getFullYear();
           // "px-5rem",
           // "bg-white",
           "xl:()",
-          "lg:()",
-          "md:()",
-          "sm:()",
-          "xs:()",
+          "lg:(hidden)",
+          "md:(hidden)",
+          "sm:(hidden)",
+          "xs:(hidden)",
         ]}
       >
         <NavLinks
@@ -206,7 +207,7 @@ const year = new Date().getFullYear();
   </body>
 </html>
 
-<style>
+<style is:global>
   body {
     /* min-height: 100vh;
     display: grid;
