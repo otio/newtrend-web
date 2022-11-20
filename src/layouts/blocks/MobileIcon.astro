@@ -1,13 +1,16 @@
 <input id="mobile-menu" type="checkbox" class:list={["hidden"]} />
 <label
   class:list={[
-    "hidden",
-    "py-7px px-10px bg-transparent cursor-pointer m-10px",
-    "xl:()",
-    "lg:(inline-block)",
-    "md:(inline-block)",
-    "sm:(inline-block)",
-    "xs:(inline-block)",
+    "py-7px",
+    "px-10px",
+    "bg-transparent",
+    "cursor-pointer",
+    "m-10px",
+    "<xl:block",
+    "<4k:hidden",
+    // "2k:hidden",
+    // "hd:hidden",
+    // "2xl:hidden",
   ]}
   for="mobile-menu"
 >
@@ -17,66 +20,65 @@
 </label>
 
 <style>
-
-    .bar {
-      display: block;
-      background-color: #003366;
-      width: 30px;
-      height: 3px;
-      border-radius: 5px;
-      margin: 5px auto;
-      transition: background-color 0.5s ease-in, transform 0.5s ease-in,
-        width 0.5s ease-in;
-    }
-    #main-content {
-      top: 0;
-      bottom: 0;
-      position: absolute;
-      right: 0;
-      left: 0;
-      background-color: #fff;
-      z-index: 2;
-      transition: transform 0.5s ease-in-out;
-    }
-    /* 
+  .bar {
+    display: block;
+    background-color: #003366;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto;
+    transition: background-color 0.5s ease-in, transform 0.5s ease-in,
+      width 0.5s ease-in;
+  }
+  #main-content {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
+    transition: transform 0.5s ease-in-out;
+  }
+  /* 
     input[type="checkbox"] {
       display: none;
     }
   */
-  
-    input[type="checkbox"]:checked ~ #main-content {
-      transform: translateX(-20%);
-    }
-    input[type="checkbox"]:checked ~ nav {
-      z-index: 5;
-    }
-  
-    /* ICON ANIMATION */
-    input[type="checkbox"]:checked ~ label .bar {
-      background-color: #003366;
-    }
-  
-    input[type="checkbox"]:checked ~ label .top {
-      -webkit-transform: translateY(0px) rotateZ(45deg);
-      -moz-transform: translateY(0px) rotateZ(45deg);
-      -ms-transform: translateY(0px) rotateZ(45deg);
-      -o-transform: translateY(0px) rotateZ(45deg);
-      transform: translateY(0px) rotateZ(45deg);
-    }
-  
-    input[type="checkbox"]:checked ~ label .bottom {
-      -webkit-transform: translateY(-15px) rotateZ(-45deg);
-      -moz-transform: translateY(-15px) rotateZ(-45deg);
-      -ms-transform: translateY(-15px) rotateZ(-45deg);
-      -o-transform: translateY(-15px) rotateZ(-45deg);
-      transform: translateY(-15px) rotateZ(-45deg);
-    }
-  
-    input[type="checkbox"]:checked ~ label .middle {
-      width: 0;
-    }
-  
-    .middle {
-      margin: 0 auto;
-    }
-  </style>
+
+  input[type="checkbox"]:checked ~ #main-content {
+    transform: translateX(-20%);
+  }
+  input[type="checkbox"]:checked ~ nav {
+    z-index: 5;
+  }
+
+  /* ICON ANIMATION */
+  input[type="checkbox"]:checked ~ label .bar {
+    background-color: #003366;
+  }
+
+  input[type="checkbox"]:checked ~ label .top {
+    -webkit-transform: translateY(0px) rotateZ(45deg);
+    -moz-transform: translateY(0px) rotateZ(45deg);
+    -ms-transform: translateY(0px) rotateZ(45deg);
+    -o-transform: translateY(0px) rotateZ(45deg);
+    transform: translateY(0px) rotateZ(45deg);
+  }
+
+  input[type="checkbox"]:checked ~ label .bottom {
+    -webkit-transform: translateY(-15px) rotateZ(-45deg);
+    -moz-transform: translateY(-15px) rotateZ(-45deg);
+    -ms-transform: translateY(-15px) rotateZ(-45deg);
+    -o-transform: translateY(-15px) rotateZ(-45deg);
+    transform: translateY(-15px) rotateZ(-45deg);
+  }
+
+  input[type="checkbox"]:checked ~ label .middle {
+    width: 0;
+  }
+
+  .middle {
+    margin: 0 auto;
+  }
+</style>

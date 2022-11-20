@@ -2,6 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 import Color from 'color'
 import formsPlugin from 'windicss/plugin/forms'
 import typographyPlugin from 'windicss/plugin/typography'
+import { processExpression } from '@vue/compiler-core'
 
 const COLORS = () => ({
     'black': Color.rgb(35, 31, 32).hex(),
@@ -32,15 +33,16 @@ const COLORS = () => ({
 })
 
 const SCREENS = () => ({
-	xs: { min: '0px', max: '530px'},
-	sm: { min: '531px' , max: '640px'},
-	md: { min: '641px' , max: '768px'},
-	lg: { min: '769px' , max: '1024px'},
-	xl: { min: '1025px' , max: '1280px'},
-	'2xl': { min: '1281px' , max: '1536px'},
-	hd: { min: '1537px' , max: '1920px'},
-	'2k': { min: '1921px' , max: '2048px'},
-	'4k': { min: '2049px' , max: '3840px'},
+	mc: { min: '0px', max: '360px'},
+	xs: { max: '530px'},
+	sm: { max: '640px'},
+	md: { max: '768px'},
+	lg: { max: '1024px'},
+	xl: { max: '1280px'},
+  '2xl':{ max: '1536px'},
+	hd: { max: '1920px'},
+  '2k': { max: '2048px'},
+  '4k': { max: '3840px'},
 })
 
 export default defineConfig({

@@ -16,6 +16,24 @@ import Logo from "./blocks/Logo.astro";
 
 let title = "New Trend Adult Behavior Analysis";
 const year = new Date().getFullYear();
+const navLinks = [
+  {
+    route: "/approach",
+    label: "Approach",
+  },
+  {
+    route: "/assessment",
+    label: "Assessment",
+  },
+  {
+    route: "/about",
+    label: "About",
+  },
+  {
+    route: "/contact",
+    label: "Contact",
+  },
+];
 ---
 
 <html
@@ -33,198 +51,238 @@ const year = new Date().getFullYear();
     <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body
-    class:list={[
-      // "xl:()",
-      // "lg:()",
-      // "md:()",
-      // "sm:()",
-      // "xs:()",
-    ]}
-  >
-    <header
-      class:list={[
-        "flex",
-        "flex-row",
-        "items-center",
-        "justify-evenly",
-        "px-auto",
-        
-        "xl:(flex-col)",
-        // "lg:(justify-start pl-10rem)" ,
-        // "md:(justify-start pl-5rem)",
-        "sm:(items-center justify-around)",
-        "xs:(flex-col items-center justify-around)",
-      ]}
-    >
-      <Logo />
-
-      <nav
+  <body class:list={[]}>
+    <header class:list={[]}>
+      <div
         class:list={[
+          // "row-start-1",
           // "col-start-2",
-          // "content-center",
-          "flex flex-row",
-          // "items-center",
-          // "justify-self-center",
-          // "w-full",
-          // "px-5rem",
-          // "bg-white",
-          "xl:()",
-          "lg:(hidden)",
-          "md:(hidden)",
-          "sm:(hidden)",
-          "xs:(hidden)",
+          // "col-end-4",
+          // "2xl:(col-start-3 col-end-8)",
         ]}
       >
-        <NavLinks
-          listStyle={[
-            "flex flex-row basis-1/2 justify-between items-center",
-            "text-midnight-blue text-center",
+        <Logo />
+      </div>
+      <nav class:list={[]}>
+        <ul
+          class:list={[
+            "flex",
+            "flex-row",
+            "mc:flex-col",
+            "basis-1/2",
+            "justify-between",
+            "items-center",
+            "text-midnight-blue",
+            "text-center",
             "w-full h-full",
             "list-none",
-            " p-0 m-0",
-            "z-1",
-            "xl:()",
-            "lg:()",
-            "md:()",
-            "sm:()",
-            "xs:()",
+            "p-0 m-0",
           ]}
-          listItemStyle={[
-            "w-full min-w-200px",
-            "text-2xl",
-            // "2xl:(text-xl)",
-            "xl:()",
-            "lg:()",
-            "md:()",
-            "sm:()",
-            "xs:()",
-          ]}
-          anchorStyle={[
-            // "pt-20px px-0",
-            "w-full",
-            "block",
-            "uppercase",
-            "no-underline",
-            "relative",
-            // "transition-colors duration-300 delay-150 ease-in",
-            // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
-            // "hover:(text-[#0799d3] after:w-full)",
-            "xl:()",
-            "lg:()",
-            "md:()",
-            "sm:()",
-            "xs:()",
-          ]}
-        />
+        >
+          {
+            navLinks.map((link) => (
+              <li
+                class:list={[
+                  "text-4xl",
+                  "mx-12",
+                ]}
+              >
+                <a
+                  href={link.route}
+                  class:list={[
+                    "block",
+                    "uppercase",
+                    "no-underline",
+                    // "relative",
+                    // "transition-colors duration-300 delay-150 ease-in",
+                    // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
+                    // "hover:(text-[#0799d3] after:w-full)",
+                  ]}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
       </nav>
       <MobileIcon />
     </header>
     <main class:list={[]}>
       <slot />
-      <!-- <section
-        id="main-content"
-        class:list={[]}
-      >
-      </section> -->
     </main>
-    <footer
-      class:list={[
-        "flex",
-        "flex-col",
-        "justify-evenly",
-        "items-center",
-
-        // "xl:()",
-        // "lg:()",
-        // "md:()",
-        // "sm:()",
-        // "xs:()",
-      ]}
-    >
+    <footer class:list={[]}>
       <section
         class:list={[
-          "w-11/12",
-          // "h-full",
-          "flex flex-row",
-          "justify-evenly"
+          "flex",
+          "flex-col-reverse",
+          "justify-evenly",
+          "items-center",
+          "mb-24",
+          "4k:flex-row 2k:flex-row hd:flex-row 2xl:flex-row",
+          "4k:w-full 2k:w-full hd:w-full 2xl:w-full",
+          // "4k:flex-row",
         ]}
       >
-        <Logo />
-        <NavLinks
-          listStyle={[
-            // "flex flex-col basis-1/2 justify-evenly items-center",
-            // "list-none",
-            // "w-11/12 h-2rem",
-            // " p-0 m-0",
-            // " mt-100px",
-            // "text-left",
-            // "text-midnight-blue",
-            // "break-word",
-            "xl:()",
-            "lg:()",
-            "md:()",
-            "sm:()",
-            "xs:()",
+        <span class:list={["block", "row-start-1", "col-start-2", "col-end-4"]}>
+          <Logo />
+        </span>
+        <nav
+          class:list={[
+            "text-5xl",
+            "col-start-4",
+            "col-end-4",
+            "hd:text-4xl",
+            "2xl:text-4xl",
           ]}
-          listItemStyle={[
-            // "w-full",
-            // "min-w-200px",
-            // "text-2xl",
-            // "2xl:(text-xl)",
-            "xl:()",
-            "lg:()",
-            "md:()",
-            "sm:()",
-            "xs:()",
-          ]}
-          anchorStyle={[
-            // "pt-20px px-0",
-            // "block",
-            // "uppercase",
-            // "no-underline",
-            // "font-medium",
-            // "relative",
-            // "transition-colors duration-300 delay-150 ease-in",
-            // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
-            // "hover:(text-[#0799d3] after:w-full)",
-            // "w-full",
-            "xl:()",
-            "lg:()",
-            "md:()",
-            "sm:()",
-            "xs:()",
-          ]}
-        />
-        <ContactCard align="text-right" />
-      </section>
-      <section id="disclaimer">
-        <span class="text-lg"
-          >All Rights Reserved | Newtrendaba.com | {year}</span
         >
+          <ul
+            class:list={[
+              "list-none",
+              "h-min",
+              "flex",
+              "flex-col",
+              "basis-full",
+              "py-24",
+              "justify-evenly ",
+              "items-center",
+              "text-midnight-blue",
+              "text-center",
+            ]}
+          >
+            {
+              navLinks.map((link) => (
+                <li class:list={["py-8"]}>
+                  <a
+                    href={link.route}
+                    class:list={[
+                      "block",
+                      "uppercase",
+                      "no-underline",
+                      "relative",
+                      // "transition-colors duration-300 delay-150 ease-in",
+                      // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
+                      // "hover:(text-[#0799d3] after:w-full)",
+                      "xl:()",
+                      "lg:()",
+                      "md:()",
+                      "sm:()",
+                      "xs:()",
+                    ]}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <div
+          id="contact-card"
+          class:list={[
+            "w-min",
+            "text-midnight-blue",
+            "leading-relaxed",
+            "text-4xl",
+            "text-center",
+            "4k:text-left",
+            "2k:text-left",
+            "hd:(text-left)",
+            "2xl:text-left",
+          ]}
+        >
+          <p class:list={["flex", "flex-col"]}>
+            <span>Richard W. Breuner MA BCBA</span>
+            <span><strong>New Trend Applied Behavior Analysis</strong></span>
+            <span>
+              <a href="tel:5304141388">+1(530)-414-1388</a>
+            </span>
+            <span>rbreuner@newtrendaba.com</span>
+          </p>
+        </div>
+      </section>
+      <section class="row-start-2 row-span-full" id="disclaimer">
+        <p
+          class:list={[
+            "text-4xl",
+            "block",
+            "flex",
+            "flex-col",
+            "items-center",
+            "4k:flex-row 2k:flex-row hd:flex-row",
+          ]}
+        >
+          <span class:list={["inline-block"]}
+            >&nbsp;All Rights Reserved&nbsp;</span
+          >
+          <span class:list={["inline-block"]}
+            >&nbsp;&copy; Newtrendaba.com&nbsp;</span
+          >
+          <span class:list={["inline-block"]}>&nbsp;{year}&nbsp;</span>
+        </p>
       </section>
     </footer>
   </body>
 </html>
 
 <style is:global>
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
   body {
-    /* min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto; */
-    @apply min-h-screen grid grid-rows-[300px,1fr,350px];
+    @apply min-w-250px 
+      overflow-x-hidden 
+      min-h-screen
+      grid 
+      grid-rows-[300px,1fr,auto];
   }
   header,
   footer {
-    /* display: grid;
-    place-items: center; */
-    @apply grid place-items-center shadow-xl z-3;
+    @apply w-full h-full 
+      grid 
+      place-items-center 
+      shadow-xl z-3;
+  }
+  header {
+    @apply 
+      grid-cols-9
+      /* 4k:grid-rows-1
+      2k:grid-rows-1
+      hd:grid-rows-1
+      2xl:grid-rows-2 */
+      place-content-center
+      /* mc:(flex flex-col)
+      md:(flex flex-col) */
+    ;
+  }
+  footer {
+    @apply 
+      flex
+      flex-col
+      place-items-center
+    ;
+  }
+  header > nav {
+    @apply 
+      hidden
+      /* col-start-5 col-end-9 */
+      /* 4k:(block row-start-1 col-start-5 col-end-9)
+      2k:(block row-start-1 col-start-5 col-end-9)
+      hd:(block row-start-1 col-start-5 col-end-9)
+      2xl:(block row-start-2 col-start-3 col-end-8) */
+      /* 2xl:block */
+      ;
   }
 
   main {
-    padding: 1rem;
-    min-width: 80ch;
-    margin: 0 auto;
+    @apply min-w-200px 
+      w-min 
+      p-4 
+      my-0 mx-auto;
     outline: 2px dashed grey;
   }
 </style>
