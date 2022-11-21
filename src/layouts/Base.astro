@@ -66,17 +66,7 @@ const navLinks = [
       <nav class:list={[]}>
         <ul
           class:list={[
-            "flex",
-            "flex-row",
-            "mc:flex-col",
-            "basis-1/2",
-            "justify-between",
-            "items-center",
-            "text-midnight-blue",
-            "text-center",
-            "w-full h-full",
-            "list-none",
-            "p-0 m-0",
+            "header-nav-list"
           ]}
         >
           {
@@ -114,17 +104,10 @@ const navLinks = [
     <footer class:list={[]}>
       <section
         class:list={[
-          "flex",
-          "flex-col-reverse",
-          "justify-evenly",
-          "items-center",
-          "mb-24",
-          "4k:flex-row 2k:flex-row hd:flex-row 2xl:flex-row",
-          "4k:w-full 2k:w-full hd:w-full 2xl:w-full",
-          // "4k:flex-row",
+          "footer-content"
         ]}
       >
-        <span class:list={["block", "row-start-1", "col-start-2", "col-end-4"]}>
+        <span class:list={["row-start-1", "col-start-2", "col-end-4"]}>
           <Logo />
         </span>
         <nav
@@ -132,22 +115,13 @@ const navLinks = [
             "text-5xl",
             "col-start-4",
             "col-end-4",
-            "hd:text-4xl",
-            "2xl:text-4xl",
+            // "hd:text-4xl",
+            // "2xl:text-4xl",
           ]}
         >
           <ul
             class:list={[
-              "list-none",
-              "h-min",
-              "flex",
-              "flex-col",
-              "basis-full",
-              "py-24",
-              "justify-evenly ",
-              "items-center",
-              "text-midnight-blue",
-              "text-center",
+              "footer-nav-list"
             ]}
           >
             {
@@ -163,11 +137,6 @@ const navLinks = [
                       // "transition-colors duration-300 delay-150 ease-in",
                       // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
                       // "hover:(text-[#0799d3] after:w-full)",
-                      "xl:()",
-                      "lg:()",
-                      "md:()",
-                      "sm:()",
-                      "xs:()",
                     ]}
                   >
                     {link.label}
@@ -185,14 +154,11 @@ const navLinks = [
             "leading-relaxed",
             "text-4xl",
             "text-center",
-            "4k:text-left",
-            "2k:text-left",
-            "hd:(text-left)",
-            "2xl:text-left",
           ]}
         >
           <p class:list={["flex", "flex-col"]}>
-            <span>Richard W. Breuner MA BCBA</span>
+            <span>Richard W. Breuner</span>
+            <span>MA BCBA</span>
             <span><strong>New Trend Applied Behavior Analysis</strong></span>
             <span>
               <a href="tel:5304141388">+1(530)-414-1388</a>
@@ -209,7 +175,7 @@ const navLinks = [
             "flex",
             "flex-col",
             "items-center",
-            "4k:flex-row 2k:flex-row hd:flex-row",
+            // "4k:flex-row 2k:flex-row hd:flex-row",
           ]}
         >
           <span class:list={["inline-block"]}
@@ -225,7 +191,7 @@ const navLinks = [
   </body>
 </html>
 
-<style is:global>
+<style >
   body,
   html {
     margin: 0;
@@ -250,6 +216,7 @@ const navLinks = [
   header {
     @apply 
       grid-cols-9
+      md:grid-cols-none
       /* 4k:grid-rows-1
       2k:grid-rows-1
       hd:grid-rows-1
@@ -268,14 +235,61 @@ const navLinks = [
   }
   header > nav {
     @apply 
-      hidden
-      /* col-start-5 col-end-9 */
+      col-start-5 col-end-9
+      /* hidden */
       /* 4k:(block row-start-1 col-start-5 col-end-9)
       2k:(block row-start-1 col-start-5 col-end-9)
       hd:(block row-start-1 col-start-5 col-end-9)
       2xl:(block row-start-2 col-start-3 col-end-8) */
       /* 2xl:block */
       ;
+  }
+  .header-nav-list {
+    @apply
+      flex
+      flex-row
+      flex-col
+      basis-1/2
+      justify-between
+      items-center
+      text-midnight-blue
+      text-center
+      w-full h-full
+      list-none
+      p-0 m-0
+    ;
+  }
+  .footer-nav-list {
+    @apply 
+      list-none
+      h-min
+      flex
+      flex-col
+      basis-full
+      py-24
+      justify-evenly 
+      items-center
+      text-midnight-blue
+      text-center 
+    /* 
+      */
+    ;
+  }
+  .footer-content {
+    @apply
+      h-full
+      /* mc:flex
+      mc:flex-col-reverse */
+      flex
+      flex-col-reverse
+      justify-evenly
+      items-center
+      mb-24
+      /* 4k:flex-row 2k:flex-row hd:flex-row 2xl:flex-row */
+      /* 4k:w-full 2k:w-full hd:w-full 2xl:w-full  */
+    /*  
+    */
+    ;
   }
 
   main {
