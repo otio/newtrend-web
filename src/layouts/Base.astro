@@ -54,7 +54,7 @@ const navLinks = [
   <body class:list={[]}>
     <header class:list={[]}>
       <div
-        class:list={["logo"]}
+        class:list={["header-logo"]}
       >
         <Logo />
       </div>
@@ -104,17 +104,11 @@ const navLinks = [
           "footer-content"
         ]}
       >
-        <span class:list={["row-start-1", "col-start-2", "col-end-4"]}>
+        <span class:list={["footer-logo"]}>
           <Logo />
         </span>
         <nav
-          class:list={[
-            "text-5xl",
-            "col-start-4",
-            "col-end-4",
-            // "hd:text-4xl",
-            // "2xl:text-4xl",
-          ]}
+          class:list={[]}
         >
           <ul
             class:list={[
@@ -123,7 +117,7 @@ const navLinks = [
           >
             {
               navLinks.map((link) => (
-                <li class:list={["py-8"]}>
+                <li class:list={[]}>
                   <a
                     href={link.route}
                     class:list={[
@@ -144,13 +138,9 @@ const navLinks = [
           </ul>
         </nav>
         <div
-          id="contact-card"
+          id="contact-info"
           class:list={[
-            "w-min",
-            "text-midnight-blue",
-            "leading-relaxed",
-            "text-4xl",
-            "text-center",
+            "contact-card"
           ]}
         >
           <p class:list={["flex", "flex-col"]}>
@@ -164,7 +154,7 @@ const navLinks = [
           </p>
         </div>
       </section>
-      <section class="row-start-2 row-span-full" id="disclaimer">
+      <section class="" id="disclaimer">
         <p
           class:list={[
             "text-4xl",
@@ -222,12 +212,18 @@ const navLinks = [
     @apply
       flex
       flex-col
-      place-items-center
     ;
   }
   header > nav {
     @apply
       col-start-5 col-end-9
+      ;
+  }
+  footer > nav {
+    @apply
+      w-full
+      col-start-5
+      col-end-9
       ;
   }
   .header-nav-list {
@@ -248,41 +244,49 @@ const navLinks = [
   }
   .footer-nav-list {
     @apply
-      list-none
-      h-min
       flex
-      flex-col
-      basis-full
-      py-24
-      justify-evenly
-      items-center
+      flex-row
+      list-none
       text-midnight-blue
       text-center
-    /*
-      */
+      text-3xl
+    ;
+  }
+  .footer-nav-list li {
+    @apply
+      px-8
     ;
   }
   .footer-content {
     @apply
-      h-full
-      /* mc:flex
-      mc:flex-col-reverse */
-      flex
-      flex-col-reverse
-      justify-evenly
-      items-center
-      mb-24
-      /* 4k:flex-row 2k:flex-row hd:flex-row 2xl:flex-row */
-      /* 4k:w-full 2k:w-full hd:w-full 2xl:w-full  */
-    /*
-    */
+      grid
+      grid-cols-12
+      row-start-1
+      place-content-center
     ;
   }
-  .logo {
+  .contact-card {
+    @apply
+      col-start-10
+      w-min
+      text-midnight-blue
+      leading-relaxed
+      text-3xl
+      text-left
+      ;
+  }
+  .header-logo {
     @apply 
       col-start-2 
       col-end-4
       lg:col-end-5
+    ;
+  }
+  .footer-logo {
+    @apply 
+      col-start-2 
+      col-end-4
+      /* lg:col-end-5 */
     ;
   }
 
