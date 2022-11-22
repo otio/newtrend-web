@@ -104,9 +104,9 @@ const navLinks = [
           "footer-content"
         ]}
       >
-        <span class:list={["footer-logo"]}>
+        <div class:list={["footer-logo"]}>
           <Logo />
-        </span>
+        </div>
         <nav
           class:list={[]}
         >
@@ -219,9 +219,8 @@ const navLinks = [
       col-start-5 col-end-9
       ;
   }
-  footer > nav {
+  .footer-content > nav {
     @apply
-      w-full
       col-start-5
       col-end-9
       ;
@@ -244,8 +243,9 @@ const navLinks = [
   }
   .footer-nav-list {
     @apply
-      flex
+      flex    
       flex-row
+      justify-center
       list-none
       text-midnight-blue
       text-center
@@ -286,7 +286,6 @@ const navLinks = [
     @apply 
       col-start-2 
       col-end-4
-      /* lg:col-end-5 */
     ;
   }
 
