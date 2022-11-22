@@ -54,12 +54,7 @@ const navLinks = [
   <body class:list={[]}>
     <header class:list={[]}>
       <div
-        class:list={[
-          // "row-start-1",
-          // "col-start-2",
-          // "col-end-4",
-          // "2xl:(col-start-3 col-end-8)",
-        ]}
+        class:list={[]}
       >
         <Logo />
       </div>
@@ -200,23 +195,24 @@ const navLinks = [
     width: 100%;
   }
   body {
-    @apply min-w-250px 
-      overflow-x-hidden 
+    @apply min-w-250px
+      overflow-x-hidden
       min-h-screen
-      grid 
+      grid
       grid-rows-[300px,1fr,auto];
   }
   header,
   footer {
-    @apply w-full h-full 
-      grid 
-      place-items-center 
+    @apply w-full h-full
+      grid
+      place-items-center
       shadow-xl z-3;
   }
   header {
-    @apply 
+    @apply
       grid-cols-9
-      md:grid-cols-none
+      md:flex
+      md:flex-col
       /* 4k:grid-rows-1
       2k:grid-rows-1
       hd:grid-rows-1
@@ -227,16 +223,16 @@ const navLinks = [
     ;
   }
   footer {
-    @apply 
+    @apply
       flex
       flex-col
       place-items-center
     ;
   }
   header > nav {
-    @apply 
+    @apply
       col-start-5 col-end-9
-      /* hidden */
+      md:hidden
       /* 4k:(block row-start-1 col-start-5 col-end-9)
       2k:(block row-start-1 col-start-5 col-end-9)
       hd:(block row-start-1 col-start-5 col-end-9)
@@ -260,18 +256,18 @@ const navLinks = [
     ;
   }
   .footer-nav-list {
-    @apply 
+    @apply
       list-none
       h-min
       flex
       flex-col
       basis-full
       py-24
-      justify-evenly 
+      justify-evenly
       items-center
       text-midnight-blue
-      text-center 
-    /* 
+      text-center
+    /*
       */
     ;
   }
@@ -287,15 +283,15 @@ const navLinks = [
       mb-24
       /* 4k:flex-row 2k:flex-row hd:flex-row 2xl:flex-row */
       /* 4k:w-full 2k:w-full hd:w-full 2xl:w-full  */
-    /*  
+    /*
     */
     ;
   }
 
   main {
-    @apply min-w-200px 
-      w-min 
-      p-4 
+    @apply min-w-200px
+      w-min
+      p-4
       my-0 mx-auto;
     outline: 2px dashed grey;
   }
