@@ -54,7 +54,7 @@ const navLinks = [
   <body class:list={[]}>
     <header class:list={[]}>
       <div
-        class:list={[]}
+        class:list={["logo"]}
       >
         <Logo />
       </div>
@@ -68,7 +68,9 @@ const navLinks = [
             navLinks.map((link) => (
               <li
                 class:list={[
-                  "text-4xl",
+                  "4k:text-4xl",
+                  "hd:text-3xl",
+                  "2xl:my-3",
                   "mx-12",
                 ]}
               >
@@ -213,13 +215,7 @@ const navLinks = [
       grid-cols-9
       md:flex
       md:flex-col
-      /* 4k:grid-rows-1
-      2k:grid-rows-1
-      hd:grid-rows-1
-      2xl:grid-rows-2 */
       place-content-center
-      /* mc:(flex flex-col)
-      md:(flex flex-col) */
     ;
   }
   footer {
@@ -232,19 +228,14 @@ const navLinks = [
   header > nav {
     @apply
       col-start-5 col-end-9
-      md:hidden
-      /* 4k:(block row-start-1 col-start-5 col-end-9)
-      2k:(block row-start-1 col-start-5 col-end-9)
-      hd:(block row-start-1 col-start-5 col-end-9)
-      2xl:(block row-start-2 col-start-3 col-end-8) */
-      /* 2xl:block */
       ;
   }
   .header-nav-list {
     @apply
       flex
-      flex-row
-      flex-col
+      4k:flex-row
+      2xl:flex-col 
+      lg:hidden
       basis-1/2
       justify-between
       items-center
@@ -285,6 +276,13 @@ const navLinks = [
       /* 4k:w-full 2k:w-full hd:w-full 2xl:w-full  */
     /*
     */
+    ;
+  }
+  .logo {
+    @apply 
+      col-start-2 
+      col-end-4
+      lg:col-end-5
     ;
   }
 
