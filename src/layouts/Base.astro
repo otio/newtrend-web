@@ -108,7 +108,9 @@ const navLinks = [
           <Logo />
         </div>
         <nav
-          class:list={[]}
+          class:list={[
+            "lg:row-start-2"
+          ]}
         >
           <ul
             class:list={[
@@ -154,15 +156,16 @@ const navLinks = [
           </p>
         </div>
       </section>
-      <section class="" id="disclaimer">
+      <section class:list={[
+        "mt-16"
+      ]} id="disclaimer">
         <p
           class:list={[
-            "text-4xl",
+            "text-2xl",
             "block",
             "flex",
-            "flex-col",
+            "flex-row",
             "items-center",
-            // "4k:flex-row 2k:flex-row hd:flex-row",
           ]}
         >
           <span class:list={["inline-block"]}
@@ -212,6 +215,7 @@ const navLinks = [
     @apply
       flex
       flex-col
+      py-16
     ;
   }
   header > nav {
@@ -221,8 +225,7 @@ const navLinks = [
   }
   .footer-content > nav {
     @apply
-      col-start-5
-      col-end-9
+      xl:my-12
       ;
   }
   .header-nav-list {
@@ -245,33 +248,40 @@ const navLinks = [
     @apply
       flex    
       flex-row
+      hd:flex-col
       justify-center
       list-none
       text-midnight-blue
       text-center
       text-3xl
+      mc:text-5xl
     ;
   }
   .footer-nav-list li {
     @apply
       px-8
+      hd:py-4
     ;
   }
   .footer-content {
     @apply
-      grid
-      grid-cols-12
-      row-start-1
-      place-content-center
+    flex
+    4k:flex-row 
+    xl:flex-col-reverse 
+    4k:w-11/12
+    place-items-center
+    justify-evenly
     ;
   }
   .contact-card {
     @apply
-      col-start-10
-      w-min
       text-midnight-blue
       leading-relaxed
-      text-3xl
+      4k:text-3xl
+      xl:text-2xl
+      xs:text-4xl
+      xl:text-center
+      /* mc:text-4xl */
       text-left
       ;
   }
@@ -284,8 +294,6 @@ const navLinks = [
   }
   .footer-logo {
     @apply 
-      col-start-2 
-      col-end-4
     ;
   }
 
