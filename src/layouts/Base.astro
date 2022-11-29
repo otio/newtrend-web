@@ -9,8 +9,6 @@ import "@fontsource/roboto";
 import "virtual:windi.css";
 import "virtual:windi-devtools";
 import "../styles/base.css";
-import ContactCard from "./blocks/ContactCard.astro";
-import NavLinks from "./blocks/NavLinks.astro";
 import MobileIcon from "./blocks/MobileIcon.astro";
 import Logo from "./blocks/Logo.astro";
 
@@ -38,13 +36,7 @@ const navLinks = [
 
 <html
   lang="en"
-  class:list={[
-    // "xl:()",
-    // "lg:()",
-    // "md:()",
-    // "sm:()",
-    // "xs:()",
-  ]}
+  class:list={[]}
 >
   <head>
     <meta charset="utf-8" />
@@ -52,13 +44,13 @@ const navLinks = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body class:list={[]}>
-    <header class:list={[]}>
+    <header>
       <div
         class:list={["header-logo"]}
       >
         <Logo />
       </div>
-      <nav class:list={[]}>
+      <nav>
         <ul
           class:list={[
             "header-nav-list"
@@ -80,10 +72,6 @@ const navLinks = [
                     "block",
                     "uppercase",
                     "no-underline",
-                    // "relative",
-                    // "transition-colors duration-300 delay-150 ease-in",
-                    // 'after:(content-[""] absolute left-0 bottom-0 h-full w-0 transition-width duration-300 ease-in bg-white -z-1)',
-                    // "hover:(text-[#0799d3] after:w-full)",
                   ]}
                 >
                   {link.label}
@@ -299,9 +287,9 @@ const navLinks = [
 
   main {
     @apply min-w-200px
-      w-min
-      p-4
+      w-full
+      /* p-4 */
       my-0 mx-auto;
-    outline: 2px dashed grey;
+    /* outline: 2px dashed grey; */
   }
 </style>
