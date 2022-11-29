@@ -43,7 +43,7 @@ const SCREENS = () => ({
 	hd: { max: '1920px'},
   '2k': { max: '2048px'},
   '4k': { max: '3840px'},
-})
+x})
 
 export default defineConfig({
 	preflight: true,
