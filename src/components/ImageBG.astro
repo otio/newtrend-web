@@ -2,17 +2,16 @@
 import { Debug } from 'astro/components';
 import Color from 'color'
 const { width, height } = Astro.props
-const isWidthSet = () => width ? `max-w-${width}px` : 'w-full'
-const isHeightSet = () => width ? `max-h-${height}px` : 'h-full'
+
 const imgUrl = (color) => `https://via.placeholder.com/${width}x${height}/${color}`
 const gainsboro = imgUrl(Color.rgb(217, 225, 232).hex().split('#')[1])
 const darkSlateBlue = imgUrl(Color.rgb(66, 104, 141).hex().split('#')[1])
 ---
 <img class="absolute z-0 -top-50px -right-50px" src={gainsboro} id="gains" />
-<img class="absolute z-5 -top-25px -right-25px" src={darkSlateBlue} id="blue" />
+<img class="absolute z-1 -top-25px -right-25px" src={darkSlateBlue} id="blue" />
 
 <style>
   img {
-    transform: scaleX(-1)
+    transform: scaleX(-1);
   }
 </style>

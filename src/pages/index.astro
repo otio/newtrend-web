@@ -15,6 +15,7 @@ import profile from "../assets/images/profile.png";
 import checkmark from "../assets/images/check-mark.svg";
 import rocks from "../assets/images/cta-bg.png"
 // Content
+
 const headline =
   "Let's do something to produce positive change you will believe in";
 const offerings = [
@@ -33,17 +34,17 @@ const questions = [
 ---
 
 <Base>
-  <section id="hero" class="flex-row justify-center">
-    <header class="w-1/2">
-      <div id="content" class="flex flex-col items-center">
-        <div class="flex flex-col mb-36 text-midnight-blue font-dserif">
-          <p class="w-3/5 h-2/3 text-6xl mb-4">Behavior Analysis and Therapy</p>
+  <section id="hero" class="flex-row xl:flex-col-reverse justify-center hd:p-24">
+    <header class="w-1/2 xl:w-full">
+      <div id="content" class="flex flex-col items-center xl:pb-16">
+        <div class="flex flex-col mb-36 xl:mb-16 text-midnight-blue xl:text-center font-dserif">
+          <p class="w-3/5 xl:w-full h-2/3 text-6xl mb-4">Behavior Analysis and Therapy</p>
           <p class="h-1/3 text-4xl">for Adults, Elders and Their Caretakers</p>
         </div>
         <CtaButton>Schedule a Free Assessment</CtaButton>
       </div>
     </header>
-    <aside class="w-1/2 self-start">
+    <aside class="w-1/2 self-start xl:w-full">
       <img class="w-full" src={hero} width="575" alt="" />
     </aside>
   </section>
@@ -58,19 +59,19 @@ const questions = [
     </div>
     <Divider />
   </section>
-  <section id="offerings-list" class="flex-col mb-5rem">
-    <div class="py-24">
-      <h2 class="font-dserif text-midnight-blue text-5xl">
+  <section id="offerings-list" class="flex-col justify-center mb-5rem">
+    <div class="py-24 lg:w-full">
+      <h2 class="font-dserif text-midnight-blue text-5xl 2xl:text-4xl lg:w-2/3 lg:mx-auto lg:text-center">
         {headline}
       </h2>
     </div>
     <ul>
       {
         offerings.map((offer) => (
-          <li class="flex flex-row items-center justify-start mb-4rem">
+          <li class="flex flex-row md:flex-col items-center justify-start md:justify-center mb-4rem">
             <img src={checkmark} alt="" width="60" height="60" />
-            <span class="inline-block my-12 pl-2rem">
-              <p class="font-inter text-dim-gray text-3xl">{offer}</p>
+            <span class="inline-block my-12 pl-2rem md:pl-1rem md:text-center">
+              <p class="font-inter text-dim-gray text-3xl 2xl:text-2xl">{offer}</p>
             </span>
           </li>
         ))
@@ -80,12 +81,12 @@ const questions = [
   </section>
   <section id="approach" class="flex-col">
     <h2 class="font-dserif text-5xl text-midnight-blue">Your circumstances</h2>
-    <div class="w-full h-full flex flex-row justify-center items-start p-16">
-      <div class="flex flex-col justify-between items-center w-2/3 h-full">
+    <div class="w-full h-full flex flex-row 2xl:flex-col-reverse justify-center items-start 2xl:items-center p-16">
+      <div class="flex flex-col justify-between items-center w-2/3 mc:w-full h-full 2xl:text-center">
         <h3 class="font-dsans text-5xl text-midnight-blue pb-12">
           The Approach
         </h3>
-        <p class="font-inter text-dim-gray text-3xl px-48 pb-12">
+        <p class="font-inter text-dim-gray text-3xl px-48 2xl:px-1 pb-12">
           Aging is often tentative and frightful for the aging individual as
           well as for loved ones, when independence becomes an issue. While
           living at home is preferred, how and where one will age best is among
@@ -93,28 +94,28 @@ const questions = [
         </p>
         <CtaButton>Discover the Approach</CtaButton>
       </div>
-      <div class="relative w-1/5">
-        <Picture
-          src={approach}
-          widths={[approach.width]}
-          height={approach.height}
-          sizes=""
-          format="webp"
-          alt=""
-        />
+      <div class="relative w-1/5 2xl:w-2/5 mc:w-full 2xl:m-8">        
+          <Picture
+            src={approach}
+            widths={[approach.width]}
+            height={approach.height}
+            sizes=""
+            format="webp"
+            alt=""
+          />
         <ImageBG width={approach.width} height={approach.height} />
       </div>
     </div>
   </section>
   <section id="process" class="flex-col">
     <div
-      class="w-full h-full flex flex-row-reverse justify-center items-start p-16"
+      class="w-full h-full flex flex-row-reverse 2xl:flex-col-reverse justify-center items-start 2xl:items-center p-16"
     >
-      <div class="flex flex-col justify-between items-center w-2/3 h-full">
+      <div class="flex flex-col justify-between items-center w-2/3 mc:w-full h-full 2xl:text-center">
         <h3 class="font-dsans text-5xl text-midnight-blue pb-12">
           The Process
         </h3>
-        <p class="font-inter text-dim-gray text-3xl px-48 pb-12">
+        <p class="font-inter text-dim-gray text-3xl px-48 2xl:px-1 pb-12">
           When life presents changes that disrupt how you contact independence
           and peace, finding a Behavioral Analyst with a proven method is key.<br
           />
@@ -123,7 +124,7 @@ const questions = [
         </p>
         <CtaButton>Discover the Process</CtaButton>
       </div>
-      <div class="relative w-1/5">
+      <div class="relative w-1/5 2xl:w-2/5 2xl:m-8">
         <Picture
           src={process}
           widths={[process.width]}
@@ -137,12 +138,12 @@ const questions = [
     </div>
   </section>
   <section id="profile" class="flex-col">
-    <div class="w-full h-full flex flex-row justify-center items-start p-16">
-      <div class="flex flex-col justify-between items-center w-2/3 h-full">
+    <div class="w-full h-full flex flex-row justify-center 2xl:flex-col-reverse items-start 2xl:items-center p-16">
+      <div class="flex flex-col justify-between items-center w-2/3 mc:w-full h-full 2xl:text-center">
         <h3 class="font-dsans text-5xl text-midnight-blue pb-12">
           Richard Breuner, your Behavioral Analyst
         </h3>
-        <p class="font-inter text-dim-gray text-3xl px-48 pb-12">
+        <p class="font-inter text-dim-gray text-3xl px-48 pb-12 2xl:px-1">
           I'm a native Californian but have lived in Reno for the last 8 years.
           Following a traditional life raising a family and a career in real
           estate, I decided to go back to school to study psychology at UNR. In
@@ -152,7 +153,7 @@ const questions = [
         </p>
         <CtaButton>About Me</CtaButton>
       </div>
-      <div class="relative w-1/5">
+      <div class="relative w-1/5 2xl:w-2/5 2xl:m-8">
         <Picture
           src={profile}
           widths={[profile.width]}
@@ -166,7 +167,7 @@ const questions = [
     </div>
   </section>
   <section id="cta" class="flex-col mt-10rem">
-    <Picture alt="" id="cta-bg-img" sizes="" src={rocks} widths={[3840,2048,1920,1536,1280,1024,768,640,530,360]} />
+    <Picture alt="" id="cta-bg-img" sizes="" src={rocks} widths={[3840,1280,640]} aspectRatio={"16:9"} />
    <div class="flex flex-row justify-center items-center w-full h-full">
       <div id="cta-card" class="flex flex-col justify-evenly items-center w-2/5 h-1/2 bg-white shadow-md">
         <div id="content" class="h-full flex flex-col justify-between items-center p-12">
@@ -185,5 +186,8 @@ const questions = [
 <style>
   section {
     @apply w-full items-center flex bg-white overflow-x-hidden;
+  }
+  span > picture {
+    z-index: 3;
   }
 </style>

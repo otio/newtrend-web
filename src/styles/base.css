@@ -16,6 +16,10 @@ img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+picture > img {
+  position: relative;
+  z-index: 3;
+}
 input, button, textarea, select {
   font: inherit;
 }
