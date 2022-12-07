@@ -3,6 +3,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "jsx": "preserve",
+    "baseUrl": "./",
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"]

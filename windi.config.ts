@@ -90,5 +90,9 @@ export default defineConfig({
 		include: ['./src/**/*.{vue,html,jsx,tsx,astro}'],
 		exclude: ['node_modules', '.git'],
 	},
-	plugins: [ formsPlugin, typographyPlugin ],
+	plugins: [ 
+		formsPlugin, 
+		typographyPlugin,
+		require('windicss/plugin/aspect-ratio'),
+	 ],
 })
