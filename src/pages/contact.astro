@@ -1,7 +1,7 @@
 ---
-import { Picture } from '@astrojs/image/components';
+// import { Picture } from '@astrojs/image/components';
+import { Picture } from "astro-imagetools/components";
 import Base from '../layouts/Base.astro'
-import ContactCard from '../components/ContactCard.astro';
 import ContactForm from '../components/ContactForm.astro';
 import lake from '../assets/images/lake.png'
 
@@ -33,7 +33,7 @@ const sessionOptions = [
     <h2 class="w-1/3 font-dserif text-midnight-blue text-6xl mb-4">Change starts with a single step forward</h2>
   </section>
   <section class="relative flex flex-col bg-white w-full px-3.5rem">
-    <Picture alt="" sizes="" src={lake} widths={[lake.width]} />
+    <Picture alt="" sizes="" src={lake} />
     <div class="absolute flex flex-row justify-end items-center w-4/5 h-full">
         <div class="flex flex-col justify-evenly items-center w-2/5 h-4/5 bg-white shadow-md">
           <div class="w-full h-full flex flex-col justify-evenly items-center p-12">

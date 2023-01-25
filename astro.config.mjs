@@ -1,11 +1,13 @@
 import { defineConfig } from 'astro/config';
 import WindiCSS from 'vite-plugin-windicss';
 import vue from '@astrojs/vue';
-import alpinejs from "@astrojs/alpinejs";
-import image from "@astrojs/image";
+// import alpinejs from "@astrojs/alpinejs";
+// import image from "@astrojs/image";
+import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'server',
   vite: {
     plugins: [WindiCSS()],
     ssr: {
@@ -18,11 +20,12 @@ export default defineConfig({
       // exclude:['FormKit']
       // appEntrypoint: '/src/pages/_form',
     }),
-    image(
-      {
-        serviceEntryPoint: '@astrojs/image/sharp',
-        logLevel: 'debug'
-      }
-    )
+    astroImageTools,
+    // image(
+    //   {
+    //     serviceEntryPoint: '@astrojs/image/sharp',
+    //     logLevel: 'debug'
+    //   }
+    // )
   ]
 });

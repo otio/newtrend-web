@@ -6,7 +6,9 @@ import CtaButton from "../components/CtaButton.astro";
 import Divider from "../components/Divider.astro";
 import DividerThin from "../components/DividerThin.astro";
 import ImageBG from "../components/ImageBG.astro";
-import { Picture } from "@astrojs/image/components";
+// import { Picture } from "@astrojs/image/components"
+import { Picture } from "astro-imagetools/components";
+;
 // Images
 import hero from "../assets/images/hero-cutout.svg";
 import approach from "../assets/images/approach-home.png";
@@ -96,9 +98,7 @@ const questions = [
       </div>
       <div class="relative w-1/5 2xl:w-2/5 mc:w-full 2xl:m-8">        
           <Picture
-            src={approach}
-            widths={[approach.width]}
-            height={approach.height}
+            src="/src/assets/images/approach-home.png"
             sizes=""
             format="webp"
             alt=""
@@ -126,9 +126,7 @@ const questions = [
       </div>
       <div class="relative w-1/5 2xl:w-2/5 2xl:m-8">
         <Picture
-          src={process}
-          widths={[process.width]}
-          height={process.height}
+          src="/src/assets/images/process-home.png"
           sizes=""
           format="webp"
           alt=""
@@ -155,10 +153,7 @@ const questions = [
       </div>
       <div class="relative w-1/5 2xl:w-2/5 2xl:m-8">
         <Picture
-          src={profile}
-          widths={[profile.width]}
-          height={profile.height}
-          sizes=""
+          src="/src/assets/images/profile.png"
           format="webp"
           alt=""
         />
@@ -167,7 +162,10 @@ const questions = [
     </div>
   </section>
   <section id="cta" class="flex-col mt-10rem">
-    <Picture alt="" id="cta-bg-img" sizes="" src={rocks} widths={[3840,1280,640]} aspectRatio={"16:9"} />
+    <Picture 
+      alt="" 
+      src="/src/assets/images/cta-bg.png"
+     />
    <div class="flex flex-row justify-center items-center w-full h-full">
       <div id="cta-card" class="flex flex-col justify-evenly items-center w-2/5 h-1/2 bg-white shadow-md">
         <div id="content" class="h-full flex flex-col justify-between items-center p-12">

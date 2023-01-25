@@ -1,15 +1,31 @@
 ---
-import { Picture } from '@astrojs/image/components';
+import { Img, Picture } from "astro-imagetools/components";
 import plant from "../assets/images/plant-bg.png"
 ---
 <section class="relative flex flex-col justify-center items-center bg-white w-full">
-<div class:list="aspect-w-${float}">
-  <Picture alt="" sizes="" src={plant} widths={[plant.width]} />
+<div class="">
+   <Picture 
+    alt="" 
+    src="/src/assets/images/plant-bg.png"
+    artDirectives={[
+      {
+        media: "(max-aspect-ratio: 16/9)",
+        src: "/src/assets/images/plant-bg.png",
+        width: 1024,
+        height: 1024,
+        format: ["webp"],
+        fallbackFormat: "png",
+        includeSourceFormat: false,
+        fit: 'cover',
+        position: 'left'
+      },
+    ]}
+    />
 </div>
  <div class="z-3 absolute flex flex-row justify-center items-center w-full h-full">
-    <div id="cta-card" class="flex flex-col justify-start items-center w-2/5 h-1/2 bg-transparent">
-      <div id="content" class="h-full flex flex-col justify-between items-center p-12">
-        <h1 id="card-header" class="font-dserif text-5xl text-midnight-blue" >
+    <div class="flex flex-col justify-start items-center w-2/5 h-1/2 bg-transparent">
+      <div class="h-full flex flex-col justify-between items-center p-16">
+        <h1 class="font-dserif text-6xl text-midnight-blue" >
           <slot />
         </h1>
       </div>

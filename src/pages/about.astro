@@ -1,5 +1,6 @@
 ---
-import { Image, Picture } from '@astrojs/image/components';
+import { Image } from '@astrojs/image/components';
+import { Picture } from "astro-imagetools/components";
 import Interior from '../layouts/Interior.astro'
 import FullWidthHero from '../components/FullWidthHero.astro'
 import GroupsServed from '../components/GroupsServed.astro';
@@ -63,7 +64,11 @@ const helpful = [
   <section class="flex flex-row items-start justify-center mt-6rem">
     <aside class="flex flex-col justify-evenly items-center w-2/5 h-full">
       <div class="mb-8">
-        <Image src={profile} width={profile.width} format="webp" alt="" />
+        <Picture 
+          src="/src/assets/images/richard-profile.png" 
+          format="webp" 
+          alt="" 
+        />
       </div>
       <CtaButton>Take the test</CtaButton>
       <p class="font-dsans text-center text-2xl text-midnight-blue py-8">I work with...</p>

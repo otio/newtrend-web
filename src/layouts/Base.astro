@@ -81,10 +81,10 @@ const navLinks = [
       </nav>
       <MobileIcon />
     </header>
-    <main class:list={[]}>
+    <main>
       <slot />
     </main>
-    <footer class:list={[]}>
+    <footer>
       <section
         class:list={[
           "footer-content"
@@ -175,6 +175,7 @@ const navLinks = [
     padding: 0;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
   }
   body {
     @apply min-w-250px
@@ -192,10 +193,11 @@ const navLinks = [
   }
   header {
     @apply
-      grid-cols-9
+      4k:grid-cols-9
       md:flex
       md:flex-col
       place-content-center
+
     ;
   }
   footer {
@@ -207,7 +209,8 @@ const navLinks = [
   }
   header > nav {
     @apply
-      col-start-5 col-end-9
+      4k:col-start-5 
+      4k:col-end-9
       ;
   }
   .footer-content > nav {
