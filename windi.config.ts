@@ -33,7 +33,7 @@ const COLORS = () => ({
 })
 
 const SCREENS = () => ({
-	at: { max: '250px'},
+	at: { min: '250px'},
 	mc: { max: '360px'},
 	xs: { max: '530px'},
 	sm: { max: '640px'},

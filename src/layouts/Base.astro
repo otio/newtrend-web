@@ -138,7 +138,7 @@ const navLinks = [
             <span>
               <a href="tel:5304141388">+1(530)-414-1388</a>
             </span>
-            <span>rbreuner@newtrendaba.com</span>
+            <span class="mc:text-2xl">rbreuner@newtrendaba.com</span>
           </p>
         </div>
       </section>
@@ -171,14 +171,17 @@ const navLinks = [
 <style >
   body,
   html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+    @apply 
+      m-0
+      p-0
+      h-full
+      w-full
+      overflow-x-hidden
+    ;
   }
   body {
-    @apply min-w-250px
+    @apply 
+      min-w-250px
       overflow-x-hidden
       min-h-screen
       grid
@@ -186,10 +189,13 @@ const navLinks = [
   }
   header,
   footer {
-    @apply w-full h-full
+    @apply 
+      w-full 
+      h-full
       grid
       place-items-center
-      shadow-xl z-3;
+      shadow-xl 
+      z-3;
   }
   header {
     @apply
@@ -216,7 +222,7 @@ const navLinks = [
   .footer-content > nav {
     @apply
       xl:my-12
-      ;
+    ;
   }
   .header-nav-list {
     @apply
@@ -244,7 +250,6 @@ const navLinks = [
       text-midnight-blue
       text-center
       text-3xl
-      mc:text-5xl
     ;
   }
   .footer-nav-list li {
@@ -255,12 +260,12 @@ const navLinks = [
   }
   .footer-content {
     @apply
-    flex
-    flex-row 
-    xl:flex-col-reverse 
-    w-11/12
-    place-items-center
-    justify-evenly
+      flex
+      flex-row 
+      xl:flex-col-reverse 
+      w-11/12
+      place-items-center
+      justify-evenly
     ;
   }
   .contact-card {
@@ -271,7 +276,6 @@ const navLinks = [
       xl:text-2xl
       xs:text-3xl
       xl:text-center
-      /* mc:text-4xl */
       text-left
       ;
   }
