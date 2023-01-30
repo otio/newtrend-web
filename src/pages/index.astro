@@ -36,9 +36,9 @@ const questions = [
 ---
 
 <Base>
-  <section id="hero" class="flex-row xl:flex-col-reverse justify-center hd:p-24">
+  <section id="hero" class="flex-row xl:flex-col-reverse justify-center hd:p-24 xl:p-4">
     <header class="w-1/2 xl:w-full">
-      <div id="content" class="flex flex-col items-center xl:pb-16">
+      <div id="content" class="flex flex-col items-center xl:p-8">
         <div class="flex flex-col mb-36 xl:mb-16 text-midnight-blue xl:text-center font-dserif">
           <p class="w-3/5 xl:w-full h-2/3 text-6xl mb-4">Behavior Analysis and Therapy</p>
           <p class="h-1/3 text-4xl">for Adults, Elders and Their Caretakers</p>
@@ -52,10 +52,10 @@ const questions = [
   </section>
   <section id="quote" class="flex-col justify-center">
     <Divider />
-    <div id="content" class="relative text-center py-16">
+    <div id="content" class="relative text-center py-16 xl:p-12">
       {
         questions.map((question) => (
-          <p class="text-midnight-blue text-5xl my-12 font-dsans">{question}</p>
+          <p class="text-midnight-blue text-5xl xs:text-3xl my-12 font-dsans">{question}</p>
         ))
       }
     </div>
@@ -70,10 +70,10 @@ const questions = [
     <ul>
       {
         offerings.map((offer) => (
-          <li class="flex flex-row md:flex-col items-center justify-start md:justify-center mb-4rem">
+          <li class="flex flex-row md:flex-col place-items-center justify-start md:justify-center mb-4rem xl:mb-1rem">
             <img src={checkmark} alt="" width="60" height="60" />
             <span class="inline-block my-12 pl-2rem md:pl-1rem md:text-center">
-              <p class="font-inter text-dim-gray text-3xl 2xl:text-2xl">{offer}</p>
+              <p class="font-inter text-dim-gray text-3xl 2xl:text-2xl xs:text-xl">{offer}</p>
             </span>
           </li>
         ))
@@ -81,14 +81,14 @@ const questions = [
     </ul>
     <DividerThin />
   </section>
-  <section id="approach" class="flex-col">
-    <h2 class="font-dserif text-5xl text-midnight-blue">Your circumstances</h2>
-    <div class="w-full h-full flex flex-row 2xl:flex-col-reverse justify-center items-start 2xl:items-center p-16">
+  <section id="approach" class="flex-col items-center">
+    <h2 class="font-dserif text-5xl text-center text-midnight-blue">Your circumstances</h2>
+    <div class="w-full h-full flex flex-row 2xl:flex-col-reverse justify-center items-start 2xl:items-center p-16 xl:p-4">
       <div class="flex flex-col justify-between items-center w-2/3 mc:w-full h-full 2xl:text-center">
         <h3 class="font-dsans text-5xl text-midnight-blue pb-12">
           The Approach
         </h3>
-        <p class="font-inter text-dim-gray text-3xl px-48 2xl:px-1 pb-12">
+        <p class="font-inter text-dim-gray text-3xl xs:text-xl px-48 2xl:px-0 pb-12">
           Aging is often tentative and frightful for the aging individual as
           well as for loved ones, when independence becomes an issue. While
           living at home is preferred, how and where one will age best is among
@@ -96,7 +96,7 @@ const questions = [
         </p>
         <CtaButton>Discover the Approach</CtaButton>
       </div>
-      <div class="relative w-1/5 2xl:w-2/5 mc:w-full 2xl:m-8">        
+      <div class="relative w-1/5 2xl:w-4/5 md:w-4/5 mc:w-full 2xl:m-8">        
           <Picture
             src="/src/assets/images/approach-home.png"
             sizes=""
@@ -109,13 +109,13 @@ const questions = [
   </section>
   <section id="process" class="flex-col">
     <div
-      class="w-full h-full flex flex-row-reverse 2xl:flex-col-reverse justify-center items-start 2xl:items-center p-16"
+      class="w-full h-full flex flex-row-reverse 2xl:flex-col-reverse justify-center items-start 2xl:items-center p-16 xl:p-4"
     >
       <div class="flex flex-col justify-between items-center w-2/3 mc:w-full h-full 2xl:text-center">
         <h3 class="font-dsans text-5xl text-midnight-blue pb-12">
           The Process
         </h3>
-        <p class="font-inter text-dim-gray text-3xl px-48 2xl:px-1 pb-12">
+        <p class="font-inter text-dim-gray text-3xl xs:text-xl px-48 2xl:px-0 pb-12">
           When life presents changes that disrupt how you contact independence
           and peace, finding a Behavioral Analyst with a proven method is key.<br
           />
@@ -124,7 +124,7 @@ const questions = [
         </p>
         <CtaButton>Discover the Process</CtaButton>
       </div>
-      <div class="relative w-1/5 2xl:w-2/5 2xl:m-8">
+      <div class="relative w-1/5 2xl:w-4/5 2xl:m-8">
         <Picture
           src="/src/assets/images/process-home.png"
           sizes=""
@@ -136,12 +136,12 @@ const questions = [
     </div>
   </section>
   <section id="profile" class="flex-col">
-    <div class="w-full h-full flex flex-row justify-center 2xl:flex-col-reverse items-start 2xl:items-center p-16">
+    <div class="w-full h-full flex flex-row justify-center 2xl:flex-col-reverse items-start 2xl:items-center p-16 xl:p-4">
       <div class="flex flex-col justify-between items-center w-2/3 mc:w-full h-full 2xl:text-center">
         <h3 class="font-dsans text-5xl text-midnight-blue pb-12">
           Richard Breuner, your Behavioral Analyst
         </h3>
-        <p class="font-inter text-dim-gray text-3xl px-48 pb-12 2xl:px-1">
+        <p class="font-inter text-dim-gray text-3xl xs:text-xl px-48 pb-12 2xl:px-0">
           I'm a native Californian but have lived in Reno for the last 8 years.
           Following a traditional life raising a family and a career in real
           estate, I decided to go back to school to study psychology at UNR. In
@@ -151,7 +151,7 @@ const questions = [
         </p>
         <CtaButton>About Me</CtaButton>
       </div>
-      <div class="relative w-1/5 2xl:w-2/5 2xl:m-8">
+      <div class="relative w-1/5 2xl:w-4/5 2xl:m-8">
         <Picture
           src="/src/assets/images/profile.png"
           format="webp"

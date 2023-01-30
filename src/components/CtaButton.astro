@@ -2,8 +2,8 @@
 const {link} = Astro.props
 ---
 
-<a href={link} class="bg-midnight-blue px-6 py-8 shadow-sm rounded-sm 2xl:text-center">
-    <span class="font-dsans text-white text-center text-3xl ">
+<a href={link} class="bg-midnight-blue px-6 py-8 sm:(px-4 py-4) shadow-sm rounded-sm 2xl:text-center">
+    <span class="font-dsans text-white text-center text-3xl sm:text-2xl">
         <slot/>
     </span>
 </a>
