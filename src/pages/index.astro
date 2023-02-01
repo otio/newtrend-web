@@ -1,4 +1,5 @@
 ---
+import { Debug } from 'astro/components';
 // Layouts
 import Base from "../layouts/Base.astro";
 // Components
@@ -8,6 +9,8 @@ import DividerThin from "../components/DividerThin.astro";
 import ImageBG from "../components/ImageBG.astro";
 // import { Picture } from "@astrojs/image/components"
 import { Picture } from "astro-imagetools/components";
+import ContactForm from '../components/ContactForm.vue';
+
 ;
 // Images
 import hero from "../assets/images/hero-cutout.svg";
@@ -15,7 +18,9 @@ import approach from "../assets/images/approach-home.png";
 import process from "../assets/images/process-home.png";
 import profile from "../assets/images/profile.png";
 import checkmark from "../assets/images/check-mark.svg";
-import rocks from "../assets/images/cta-bg.png"
+// import rocks from "../assets/images/cta-bg.png"
+import lake from '../assets/images/lake.png'
+
 // Content
 
 const headline =
@@ -161,7 +166,7 @@ const questions = [
       </div>
     </div>
   </section>
-  <section id="cta" class="flex-col mt-10rem">
+  <!-- <section id="cta" class="flex-col mt-10rem">
     <Picture 
       alt="" 
       src="/src/assets/images/cta-bg.png"
@@ -178,6 +183,17 @@ const questions = [
         </div>
       </div>
    </div>
+  </section> -->
+  <section class="flex-col relative">
+    <Picture alt="" sizes="" src="img/lake.png" />
+    <div class="absolute flex flex-row justify-end items-center w-4/5 h-full">
+        <div class="flex flex-col justify-evenly items-center w-2/5 h-4/5 bg-white shadow-md">
+          <div class="w-full h-full flex flex-col justify-evenly items-center p-12">
+            <h2 class="font-dserif text-5xl text-midnight-blue" >Let's Connect</h2>
+              <ContactForm client:visible />
+          </div>
+        </div>
+    </div>
   </section>
 </Base>
 

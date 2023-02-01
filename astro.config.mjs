@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import WindiCSS from 'vite-plugin-windicss';
 import vue from '@astrojs/vue';
-// import alpinejs from "@astrojs/alpinejs";
+import alpinejs from "@astrojs/alpinejs";
 // import image from "@astrojs/image";
 import { astroImageTools } from "astro-imagetools";
 
@@ -17,8 +17,7 @@ export default defineConfig({
   integrations: [
     alpinejs(),
     vue({
-      // exclude:['FormKit']
-      // appEntrypoint: '/src/pages/_form',
+      appEntrypoint:'/src/pages/_form'
     }),
     astroImageTools,
     // image(

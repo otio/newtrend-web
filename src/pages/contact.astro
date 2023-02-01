@@ -2,7 +2,7 @@
 // import { Picture } from '@astrojs/image/components';
 import { Picture } from "astro-imagetools/components";
 import Base from '../layouts/Base.astro'
-import ContactForm from '../components/ContactForm.astro';
+import ContactForm from '../components/ContactForm.vue';
 import lake from '../assets/images/lake.png'
 
 const sessionOptions = [
@@ -46,7 +46,7 @@ const sessionOptions = [
   <!-- CONTACT INFO & SESSION OPTIONS -->
   <section id="info" class="w-full flex flex-col justify-center items-center">
     <h3 class="w-1/3 font-dserif text-center text-midnight-blue text-6xl py-5rem">Contact<br>Information</h3>
-      <ContactCard />
+      <!-- <ContactCard /> -->
   </section>
   <section class="w-full flex flex-col justify-center items-center">
     <h3 class="w-1/3 font-dserif text-center text-midnight-blue text-6xl py-5rem">Session Options Including:</h3>
