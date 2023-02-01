@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   integrations: [
-    // alpinejs(),
+    alpinejs(),
     vue({
       // exclude:['FormKit']
       // appEntrypoint: '/src/pages/_form',

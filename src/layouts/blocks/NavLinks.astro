@@ -26,10 +26,19 @@ const {
 {
   navLinks.map((link) => (
     <li
-      class:list={listItemStyle}>
+      class:list={[
+                "4k:text-4xl",
+                "hd:text-3xl",
+                "2xl:my-3",
+                "mx-12",
+                ]}>
         <a
         href={link.route}
-        class:list={anchorStyle}
+        class:list={[
+                    "block",
+                    "uppercase",
+                    "no-underline",
+                  ]}
       >
         {link.label}
       </a>
