@@ -27,6 +27,8 @@
     "@fontsource/hanuman": "^4.5.11",
     "@fontsource/inter": "^4.5.15",
     "@fontsource/roboto": "^4.5.8",
+    "@formkit/icons": "^1.0.0-beta.14",
+    "@formkit/themes": "^1.0.0-beta.15-6f87a41",
     "@formkit/vue": "^1.0.0-beta.14",
     "@types/alpinejs": "^3.0.0",
     "alpinejs": "^3.11.1",

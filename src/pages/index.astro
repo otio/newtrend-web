@@ -11,6 +11,8 @@ import ImageBG from "../components/ImageBG.astro";
 import { Picture } from "astro-imagetools/components";
 import ContactForm from '../components/ContactForm.vue';
 
+
+
 ;
 // Images
 import hero from "../assets/images/hero-cutout.svg";
@@ -99,7 +101,7 @@ const questions = [
           living at home is preferred, how and where one will age best is among
           the most fraught circumstances for a family.
         </p>
-        <CtaButton>Discover the Approach</CtaButton>
+        <!-- <CtaButton>Discover the Approach</CtaButton> -->
       </div>
       <div class="relative w-1/5 2xl:w-4/5 md:w-4/5 mc:w-full 2xl:m-8">        
           <Picture
@@ -127,7 +129,7 @@ const questions = [
           Thank to several types of assessments, I will guide you and help you reach
           your goal.
         </p>
-        <CtaButton>Discover the Process</CtaButton>
+        <!-- <CtaButton>Discover the Process</CtaButton> -->
       </div>
       <div class="relative w-1/5 2xl:w-4/5 2xl:m-8">
         <Picture
@@ -154,7 +156,7 @@ const questions = [
           Behavior Analyst (BCBA), and a licensed Behavior Analyst in Nevada and
           an Aging in Place Specialist.
         </p>
-        <CtaButton>About Me</CtaButton>
+        <!-- <CtaButton>About Me</CtaButton> -->
       </div>
       <div class="relative w-1/5 2xl:w-4/5 2xl:m-8">
         <Picture
@@ -185,9 +187,26 @@ const questions = [
    </div>
   </section> -->
   <section class="flex-col relative">
-    <Picture alt="" sizes="" src="img/lake.png" />
-    <div class="absolute flex flex-row justify-end items-center w-4/5 h-full">
-        <div class="flex flex-col justify-evenly items-center w-2/5 h-4/5 bg-white shadow-md">
+    <!-- <Picture alt="" sizes="" src="img/lake.png" format="webp" /> -->
+    <Picture 
+    alt="" 
+    src="img/lake.png"
+    artDirectives={[
+      {
+        media: "(max-aspect-ratio: 16/9)",
+        src:"img/lake.png",
+        width: 1024,
+        height: 1280,
+        format: ["webp"],
+        fallbackFormat: "png",
+        includeSourceFormat: false,
+        fit: 'cover',
+        position: 'right'
+      },
+    ]}
+    />
+    <div class="absolute flex flex-row justify-center items-center w-full h-full">
+        <div class="flex flex-col justify-evenly items-center w-full h-4/5 bg-white shadow-md">
           <div class="w-full h-full flex flex-col justify-evenly items-center p-12 z-5">
             <h2 class="font-dserif text-5xl text-midnight-blue" >Let's Connect</h2>
               <ContactForm client:load />
