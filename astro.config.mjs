@@ -2,8 +2,11 @@ import { defineConfig } from 'astro/config';
 import WindiCSS from 'vite-plugin-windicss';
 import vue from '@astrojs/vue';
 import alpinejs from "@astrojs/alpinejs";
-// import image from "@astrojs/image";
+import image from "@astrojs/image";
 import { astroImageTools } from "astro-imagetools";
+
+// https://astro.build/config
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,20 +14,19 @@ export default defineConfig({
   vite: {
     plugins: [WindiCSS()],
     ssr: {
-      noExternal: ['@formkit/vue'],
-    },
+      noExternal: ['@formkit/vue']
+    }
   },
-  integrations: [
-    alpinejs(),
-    vue({
-      appEntrypoint:'/src/pages/_form'
-    }),
-    astroImageTools,
-    // image(
-    //   {
-    //     serviceEntryPoint: '@astrojs/image/sharp',
-    //     logLevel: 'debug'
-    //   }
-    // )
-  ]
+  integrations: [alpinejs(), vue({
+    appEntrypoint: '/src/pages/_form'
+  }), 
+  astroImageTools,
+  image(
+    {
+      serviceEntryPoint: '@astrojs/image/sharp',
+      logLevel: 'debug'
+    }
+  )
+  ],
+  adapter: netlify()
 });

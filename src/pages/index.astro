@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import { Debug } from 'astro/components';
 // Layouts
 import Base from "../layouts/Base.astro";
@@ -8,7 +9,7 @@ import Divider from "../components/Divider.astro";
 import DividerThin from "../components/DividerThin.astro";
 import ImageBG from "../components/ImageBG.astro";
 // import { Picture } from "@astrojs/image/components"
-import { Picture } from "astro-imagetools/components";
+import { Img, Picture } from "astro-imagetools/components";
 import ContactForm from '../components/ContactForm.vue';
 
 
@@ -110,7 +111,7 @@ const questions = [
             format="webp"
             alt=""
           />
-        <ImageBG width={approach.width} height={approach.height} />
+        <!-- <ImageBG width={approach.width} height={approach.height} /> -->
       </div>
     </div>
   </section>
@@ -138,7 +139,7 @@ const questions = [
           format="webp"
           alt=""
         />
-        <ImageBG width={process.width} height={process.height} />
+        <!-- <ImageBG width={process.width} height={process.height} /> -->
       </div>
     </div>
   </section>
@@ -164,7 +165,7 @@ const questions = [
           format="webp"
           alt=""
         />
-        <ImageBG width={profile.width} height={profile.height} />
+        <!-- <ImageBG width={profile.width} height={profile.height} /> -->
       </div>
     </div>
   </section>
@@ -186,33 +187,65 @@ const questions = [
       </div>
    </div>
   </section> -->
-  <section class="flex-col relative">
-    <!-- <Picture alt="" sizes="" src="img/lake.png" format="webp" /> -->
+  <section class="relative overflow-y-hidden">
     <Picture 
     alt="" 
     src="img/lake.png"
     artDirectives={[
+      // {
+        // media: "(max-aspect-ratio: 16/9)",
+        // src:"img/lake.png",
+        // height: 1920
+        // format: ["webp"],
+        // fallbackFormat: "png",
+        // includeSourceFormat: false,
+        // fit: 'cover',
+        // position: 'right'
+      // },
       {
-        media: "(max-aspect-ratio: 16/9)",
         src:"img/lake.png",
-        width: 1024,
-        height: 1280,
-        format: ["webp"],
-        fallbackFormat: "png",
-        includeSourceFormat: false,
-        fit: 'cover',
-        position: 'right'
+        sizes:"(max-width: 3840px) and (min-width: 1920px) 2048px, 100vw",
+        width: 2048,
+        // // height: 1080,
+        // format: ["webp"],
+        // fallbackFormat: "png",
+        // includeSourceFormat: false,
+        // fit: 'fill',
+        // position: 'right'
       },
+      // {
+      //   src:"img/lake.png",
+      //   sizes:"(max-width: 1536px) 1920px, 80vw",
+      //   width: 1920,
+      //   height: 1720,
+      //   format: ["webp", "png"],
+      //   fallbackFormat: "png",
+      //   includeSourceFormat: false,
+      //   objectFit: 'fill',
+      //   position: 'right'
+      // },
+      // {
+      //   src:"img/lake.png",
+      //   sizes:"(min-width: 360px) 530px",
+      //   width: 530,
+      //   height: 1060,
+      //   format: ["webp", "png"],
+      //   fallbackFormat: "png",
+      //   includeSourceFormat: false,
+      //   objectFit: 'fill',
+      //   position: 'right'
+      // },
     ]}
     />
-    <div class="absolute flex flex-row justify-center items-center w-full h-full">
-        <div class="flex flex-col justify-evenly items-center w-full h-4/5 bg-white shadow-md">
-          <div class="w-full h-full flex flex-col justify-evenly items-center p-12 z-5">
-            <h2 class="font-dserif text-5xl text-midnight-blue" >Let's Connect</h2>
-              <ContactForm client:load />
+
+        <!-- <Img alt="" src="img/lake.png" format="webp" /> -->
+        <div class="absolute flex flex-col items-center w-full h-full">
+          <div class="relative w-full flex flex-col items-center 4k:w-3/5 xl:w-4/5 z-5">
+            <h2 class="font-dserif text-5xl text-midnight-blue mb-12" >Let's Connect</h2>
+            <ContactForm />
           </div>
         </div>
-    </div>
+
   </section>
 </Base>
 

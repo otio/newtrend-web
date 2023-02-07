@@ -10,10 +10,10 @@
       <FormKit type="email" placeholder="Email" name="email" validation="required|email" />
       <FormKit
         type="tel"
-        placeholder="Phone: xxx-xxx-xxxx"
+        placeholder="Phone: 555-555-5555"
         validation="matches:/(?:\d{1}\s)?\(?(\d{3})\)?-?\s?(\d{3})-?\s?(\d{4})/"
         :validation-messages="{
-          matches: 'Phone number must be in the format xxx-xxx-xxxx',
+          matches: 'Phone number must be in the format 555-555-5555',
         }"
         validation-visibility="dirty"
       />
@@ -29,5 +29,4 @@
 .formkit-form {
   width: 100%;
 }
-
 </style>
