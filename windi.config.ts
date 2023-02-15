@@ -2,7 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 import Color from 'color'
 import formsPlugin from 'windicss/plugin/forms'
 import typographyPlugin from 'windicss/plugin/typography'
-import { processExpression } from '@vue/compiler-core'
+import flowbite from "flowbite-windicss-plugin";
 
 
 
@@ -50,7 +50,7 @@ const SCREENS = () => ({
 
 export default defineConfig({
 	preflight: true,
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	// content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	alias: {
 		'hstack': 'flex flex-row',
 		'vstack': 'flex flex-col',
@@ -96,6 +96,8 @@ export default defineConfig({
 	plugins: [ 
 		formsPlugin, 
 		typographyPlugin,
+		flowbite,
 		require('windicss/plugin/aspect-ratio'),
+		// require('flowbite/plugin-windicss')
 	 ],
 })
