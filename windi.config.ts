@@ -34,6 +34,19 @@ const COLORS = () => ({
     'white-smoke-1': Color.rgb(250, 243, 243).hex(),
 })
 
+export const SCREENS_BASIC = [
+	 250,
+	 360,
+	 530,
+	 640,
+	 768,
+	 1024,
+	 1280,
+  	 1536,
+	 1920,
+ 	 2048,
+  	 3840
+]
 const SCREENS = () => ({
 	at: { min: '250px'},
 	mc: { max: '360px'},
@@ -69,6 +82,9 @@ export default defineConfig({
 				'inter': ['Inter', 'sans-serif'],
 				'roboto': ['Roboto', 'sans-serif'],
 			},
+			backgroundImage: {
+				'rocks': "url('/img/lake.png')",
+			},
 			fontSize:{},
 			colors: {
 				...COLORS(),
@@ -97,7 +113,7 @@ export default defineConfig({
 		formsPlugin, 
 		typographyPlugin,
 		flowbite,
-		require('windicss/plugin/aspect-ratio'),
+		// require('windicss/plugin/aspect-ratio'),
 		// require('flowbite/plugin-windicss')
 	 ],
 })

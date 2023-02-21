@@ -37,7 +37,7 @@
     "@types/alpinejs": "^3.0.0",
     "alpinejs": "^3.11.1",
     "astro": "^2.0.5",
-    "astro-imagetools": "^0.7.6",
+    "astro-imagetools": "^0.8.1",
     "kwesforms": "^2.1.27",
     "tailwindcss": "^3.0.24",
     "vue": "^3.2.30"

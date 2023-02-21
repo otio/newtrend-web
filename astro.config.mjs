@@ -20,7 +20,7 @@ export default defineConfig({
   integrations: [alpinejs(), vue({
     appEntrypoint: '/src/pages/_form'
   }), 
-  astroImageTools,
+  // astroImageTools,
   image(
     {
       serviceEntryPoint: '@astrojs/image/sharp',

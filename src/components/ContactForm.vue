@@ -27,6 +27,6 @@
 </template>
 <style>
 .formkit-form {
-  width: 100%;
+  @apply grid grid-cols-1 gap-8 p-6 mx-auto mb-16 max-w-screen-md bg-white rounded-lg border border-gray-200 shadow-sm lg:mb-28 dark:(bg-gray-800 border-gray-700) sm:grid-cols-2;
 }
 </style>
