@@ -19,7 +19,7 @@ export default (app: App) => {
           fieldset: 'max-w-md border border-gray-400 rounded px-2 pb-1',
           help: 'text-xs text-gray-500',
           inner: 'formkit-disabled:bg-gray-200 formkit-disabled:cursor-not-allowed formkit-disabled:pointer-events-none',
-          input: 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light',
+          input: 'block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light',
           label: 'block mb-1 font-bold text-sm',
           legend: 'font-bold text-sm',
           loaderIcon: 'inline-flex items-center w-4 text-gray-600 animate-spin',
@@ -31,47 +31,47 @@ export default (app: App) => {
         },
       
         // Family styles apply to all inputs that share a common family
-        'family:box': {
-          decorator: 'block relative h-5 w-5 mr-2 rounded bg-white bg-gradient-to-b from-transparent to-gray-200 ring-1 ring-gray-400 peer-checked:ring-blue-500 text-transparent peer-checked:text-blue-500',
-          decoratorIcon: 'flex p-[3px] w-full h-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2',
-          help: 'mb-2 mt-1.5',
-          input: 'fixed left-[999em] w-0 h-0 overflow-hidden opacity-0 pointer-events-none peer',
-          label: '$reset text-sm text-gray-700 mt-1 select-none',
-          wrapper: 'flex items-center mb-1',
-        },
+        // 'family:box': {
+        //   decorator: 'block relative h-5 w-5 mr-2 rounded bg-white bg-gradient-to-b from-transparent to-gray-200 ring-1 ring-gray-400 peer-checked:ring-blue-500 text-transparent peer-checked:text-blue-500',
+        //   decoratorIcon: 'flex p-[3px] w-full h-full absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2',
+        //   help: 'mb-2 mt-1.5',
+        //   input: 'fixed left-[999em] w-0 h-0 overflow-hidden opacity-0 pointer-events-none peer',
+        //   label: '$reset text-sm text-gray-700 mt-1 select-none',
+        //   wrapper: 'flex items-center mb-1',
+        // },
         'family:button': {
           input: '$reset bg-midnight-blue shadow-sm rounded-sm 2xl:text-center font-dsans text-white text-center text-3xl sm:text-2xl w-2/5 self-center px-6 py-8 sm:(px-4 py-4)',
           wrapper: 'mb-1 flex flex-row justify-center',
           prefixIcon: '$reset block w-4 -ml-2 mr-2 stretch',
           suffixIcon: '$reset block w-4 ml-2 stretch',
         },
-        'family:dropdown': {
-          dropdownWrapper: 'my-2 w-full drop-shadow-lg rounded [&::-webkit-scrollbar]:hidden',
-          inner: 'max-w-md relative flex ring-1 ring-gray-400 focus-within:ring-blue-500 focus-within:ring-2 rounded mb-1 formkit-disabled:focus-within:ring-gray-400 formkit-disabled:focus-within:ring-1 [&>span:first-child]:focus-within:text-blue-500',
-          input: 'w-full px-3 py-2',
-          listbox: 'bg-white drop-shadow-lg rounded overflow-hidden',
-          listboxButton: 'flex w-12 self-stretch justify-center mx-auto',
-          listitem: 'pl-7 relative hover:bg-gray-300 data-[is-active="true"]:bg-gray-300 data-[is-active="true"]:aria-selected:bg-blue-600 aria-selected:bg-blue-600 aria-selected:text-white',
-          loaderIcon: 'ml-auto',
-          loadMoreInner: 'flex items-center justify-center text-sm p-2 text-center w-full text-blue-500 formkit-loading:text-gray-500 cursor-pointer [&>span]:mr-3 [&>span]:ml-0',
-          option: 'p-2.5',
-          optionLoading: 'text-gray-500',
-          placeholder: 'p-2.5 text-gray-400',
-          selector: 'flex w-full justify-between items-center [&u]',
-          selectedIcon: 'block absolute top-1/2 left-2 w-3 -translate-y-1/2',
-          selectIcon: 'flex box-content w-4 px-2 self-stretch grow-0 shrink-0',
-        },
-        'family:text': {
-          inner: 'flex items-center max-w-md ring-1 ring-gray-400 focus-within:ring-blue-500 focus-within:ring-2 [&>label:first-child]:focus-within:text-blue-500 rounded mb-1',
-          input: 'w-full px-3 py-2 border-none text-base text-gray-700 placeholder-gray-400',
-        },
+        // 'family:dropdown': {
+        //   dropdownWrapper: 'my-2 w-full drop-shadow-lg rounded [&::-webkit-scrollbar]:hidden',
+        //   inner: 'max-w-md relative flex ring-1 ring-gray-400 focus-within:ring-blue-500 focus-within:ring-2 rounded mb-1 formkit-disabled:focus-within:ring-gray-400 formkit-disabled:focus-within:ring-1 [&>span:first-child]:focus-within:text-blue-500',
+        //   input: 'w-full px-3 py-2',
+        //   listbox: 'bg-white drop-shadow-lg rounded overflow-hidden',
+        //   listboxButton: 'flex w-12 self-stretch justify-center mx-auto',
+        //   listitem: 'pl-7 relative hover:bg-gray-300 data-[is-active="true"]:bg-gray-300 data-[is-active="true"]:aria-selected:bg-blue-600 aria-selected:bg-blue-600 aria-selected:text-white',
+        //   loaderIcon: 'ml-auto',
+        //   loadMoreInner: 'flex items-center justify-center text-sm p-2 text-center w-full text-blue-500 formkit-loading:text-gray-500 cursor-pointer [&>span]:mr-3 [&>span]:ml-0',
+        //   option: 'p-2.5',
+        //   optionLoading: 'text-gray-500',
+        //   placeholder: 'p-2.5 text-gray-400',
+        //   selector: 'flex w-full justify-between items-center [&u]',
+        //   selectedIcon: 'block absolute top-1/2 left-2 w-3 -translate-y-1/2',
+        //   selectIcon: 'flex box-content w-4 px-2 self-stretch grow-0 shrink-0',
+        // },
+        // 'family:text': {
+        //   inner: 'flex items-center max-w-md ring-1 ring-gray-400 focus-within:ring-blue-500 focus-within:ring-1 [&>label:first-child]:focus-within:text-blue-500 rounded mb-1',
+        //   input: 'w-full px-3 py-2 border-none text-base text-gray-700 placeholder-gray-400',
+        // },
       
-        // Specific styles apply only to a given input type
-        color: {
-          inner: 'flex max-w-[5.5em] w-full formkit-prefix-icon:max-w-[7.5em] formkit-suffix-icon:formkit-prefix-icon:max-w-[10em]',
-          input: '$reset appearance-none w-full cursor-pointer border-none rounded p-0 m-0 bg-transparent [&::-webkit-color-swatch-wrapper]:p-0 [&::-webkit-color-swatch]:border-none',
-          suffixIcon: 'min-w-[2.5em] pr-0 pl-0 m-auto'
-        },
+        // // Specific styles apply only to a given input type
+        // color: {
+        //   inner: 'flex max-w-[5.5em] w-full formkit-prefix-icon:max-w-[7.5em] formkit-suffix-icon:formkit-prefix-icon:max-w-[10em]',
+        //   input: '$reset appearance-none w-full cursor-pointer border-none rounded p-0 m-0 bg-transparent [&::-webkit-color-swatch-wrapper]:p-0 [&::-webkit-color-swatch]:border-none',
+        //   suffixIcon: 'min-w-[2.5em] pr-0 pl-0 m-auto'
+        // },
         file: {
           fileItem: 'flex items-center text-gray-800 mb-1 last:mb-0',
           fileItemIcon: 'w-4 mr-2 shrink-0',
